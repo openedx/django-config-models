@@ -15,12 +15,6 @@ from django.core.cache import caches
 from django.test import TestCase, override_settings
 from django.conf import settings
 
-# TODO: Figure out how to do this!
-# from django.contrib import sites
-
-# TODO: How to do this?
-# from request_cache.middleware import RequestCache
-
 
 class CacheIsolationMixin(object):
     """
@@ -113,15 +107,6 @@ class CacheIsolationMixin(object):
         # over our list of overridden caches, instead.
         for cache in settings.CACHES:
             caches[cache].clear()
-
-        # The sites framework caches in a module-level dictionary.
-        # Clear that.
-        # TODO: Figure out how to do this!
-        # sites.models.SITE_CACHE.clear()
-
-        # TODO: Figure out how to make this request cache clearing decoupled from
-        # edx-platform's request cache. Make the cache pluggable?
-        # RequestCache.clear_request_cache()
 
 
 class CacheIsolationTestCase(CacheIsolationMixin, TestCase):
