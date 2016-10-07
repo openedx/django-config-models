@@ -1,0 +1,10 @@
+[run]
+branch = True
+data_file = .coverage
+source=config_models
+omit =
+    test_settings
+    *migrations*
+    *admin.py
+    *static*
+    *templates*
