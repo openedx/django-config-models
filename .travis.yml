@@ -1,41 +1,29 @@
-# Config file for automatic testing at travis-ci.org
-
 language: python
-
 python:
-  - 2.7
-  - 3.5
-
+- 2.7
 env:
-  - TOXENV=django18
-  - TOXENV=django19
-  - TOXENV=django110
-
+- TOXENV=django18
+- TOXENV=django19
 matrix:
   include:
-    - python: 3.5
-      env: TOXENV=quality
-    - python: 3.5
-      env: TOXENV=docs
-
+  - python: 2.7
+    env: TOXENV=quality
+  - python: 2.7
+    env: TOXENV=docs
 cache:
-  - pip
-
+- pip
 install:
-  - pip install -r requirements/travis.txt
-
+- pip install -r requirements/travis.txt
 script:
-  - tox
-
+- tox
 after_success:
-  - codecov
-
-# Set password via "travis encrypt --add deploy.password"; for details, see
-# https://docs.travis-ci.com/user/deployment/pypi
+- codecov
 deploy:
   provider: pypi
   user: edx
   distributions: sdist bdist_wheel
   on:
     tags: true
-    condition: '$TOXENV = py35-django19'
+    condition: "$TOXENV = quality"
+  password:
+    secure: Mk/97Np4pwZte72JOOiJtv/nKJR+JBvtOkEnvWcMWVhJ36n4/nVOlzX+/3kA8CjIHJQHF6LGbx+XPAcTxBqVzJW8EjN94kFitLsb6Xvl/ucADElGfXyN2wXZODtv8SFFY711MEmILqrd8E58JLhbzD+mcvngkS3DCT0msZB224zRn6w+6tmfatW6D4oFqisJnULUSRKRvZiRgrtyweMcXgLaEQAF4Lc4oO9/Nfq9pX3zqH/y5GyuRJlVQPGn32gvZtiiulMfJYQfCX/9/swPYe44Nv8jACaPgvILVGJ9UeltUIuif1HHw3S2isJq9ZFA8BAcTOsjdDRazem0QHxKdO5ZF3Eqtgcr4LA3QtGIcIuUP+prn4lg71HrPIs4TMQzDozpmwF0lr+IYYbeTO9QgBjcbrx7Nc5SMbr5wvSbd9EGOIlZ6shjS1H2Z78OYBiuRmZW5FuF2QDx1qa4kBdtQtewS+IMpUzhwXs6mN6Rbz+Mkm7xSjP8TeZSmcs20zBp3sLirZc0ypep8GaPjKwJrb7+vai40u4t2/rJQKsoDVUmL/FjLmwazQ3Dacgsr+44MZMlw7uLOynP72P24h6MGv6F9k2FcChVpQ9+DjldU7FDVUZLdgXn8oiO8HpfPAYKqjRLOy+q4ed2zqfBw4w5JCV9A02j50WNi0ZeEqpvnDk=
