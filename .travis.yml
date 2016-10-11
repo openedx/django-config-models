@@ -15,7 +15,7 @@ cache:
 install:
 - pip install -r requirements/travis.txt
 script:
-- make validate
+- make test-all
 after_success:
 - codecov
 deploy:
