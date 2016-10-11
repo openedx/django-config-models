@@ -34,7 +34,7 @@ README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst')).read()
 
 setup(
-    name='config_models',
+    name='django-config-models',
     version=VERSION,
     description="""Configuration models for Django allowing config management with auditing.""",
     long_description=README + '\n\n' + CHANGELOG,
@@ -46,7 +46,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'django>=1.8,<1.11',
+        'django>=1.8,<1.10',
         'djangorestframework>=3.4.7',
     ],
     license="AGPL 3.0",
@@ -57,13 +57,10 @@ setup(
         'Framework :: Django',
         'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.9',
-        'Framework :: Django :: 1.10',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
         'Natural Language :: English',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
     ],
 )
