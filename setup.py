@@ -47,7 +47,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'django>=1.8,<1.10',
-        'djangorestframework>=3.4.7',
+        'djangorestframework>=3.2.3',
     ],
     license="AGPL 3.0",
     zip_safe=False,
