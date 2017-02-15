@@ -4,5 +4,5 @@
 #
 #    pip-compile --output-file requirements/base.txt requirements/base.in
 #
-Django==1.10.2
-djangorestframework==3.4.7
+Django==1.9.12
+djangorestframework==3.5.4
