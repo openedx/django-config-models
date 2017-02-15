@@ -7,7 +7,7 @@
 appdirs==1.4.0            # via setuptools
 coverage==4.3.4           # via pytest-cov
 ddt==1.1.1
-djangorestframework==3.5.4
+djangorestframework==3.2.5
 freezegun==0.3.8
 funcsigs==1.0.2           # via mock
 mock==2.0.0
