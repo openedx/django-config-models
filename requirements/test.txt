@@ -4,17 +4,24 @@
 #
 #    pip-compile --output-file requirements/test.txt requirements/base.in requirements/test.in
 #
-coverage==4.2             # via pytest-cov
-ddt==1.1.0
-djangorestframework==3.4.7
-freezegun==0.3.7
+appdirs==1.4.0            # via setuptools
+coverage==4.3.4           # via pytest-cov
+ddt==1.1.1
+djangorestframework==3.2.5
+freezegun==0.3.8
 funcsigs==1.0.2           # via mock
 mock==2.0.0
+packaging==16.8           # via setuptools
 pbr==1.10.0               # via mock
-py==1.4.31                # via pytest, pytest-catchlog
+py==1.4.32                # via pytest, pytest-catchlog
+pyparsing==2.1.10         # via packaging
 pytest-catchlog==1.2.2
-pytest-cov==2.3.1
-pytest-django==3.0.0
-pytest==3.0.3             # via pytest-catchlog, pytest-cov, pytest-django
-python-dateutil==2.5.3    # via freezegun
-six==1.10.0               # via freezegun, mock, python-dateutil
+pytest-cov==2.4.0
+pytest-django==3.1.2
+pytest==3.0.6             # via pytest-catchlog, pytest-cov, pytest-django
+python-dateutil==2.6.0    # via freezegun
+six==1.10.0               # via freezegun, mock, packaging, python-dateutil, setuptools
+
+# The following packages are commented out because they are
+# considered to be unsafe in a requirements file:
+# setuptools                # via pytest
