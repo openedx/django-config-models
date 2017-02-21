@@ -58,8 +58,11 @@ Configuration
 -------------
 
 The current ``ConfigurationModel`` will be cached in the ``configuration`` django cache,
-or in the ``default`` cache if ``configuration`` doesn't exist. You can specify the cache
-timeout in each ``ConfigurationModel`` by setting the ``cache_timeout`` property.
+or in the ``default`` cache if ``configuration`` doesn't exist. The ``configuration`` and ``default`` caches
+are specified in the django ``CACHES`` setting. The caching can be per-process, per-machine, per-cluster, or
+some other strategy, depending on the cache configuration.
+
+You can specify the cache timeout in each ``ConfigurationModel`` by setting the ``cache_timeout`` property.
 
 You can change the name of the cache key used by the ``ConfigurationModel`` by overriding
 the ``cache_key_name`` function.
