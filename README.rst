@@ -28,6 +28,8 @@ Usage
 Create a subclass of ``ConfigurationModel``, with fields for each
 value that needs to be configured::
 
+    from config_models.models import ConfigurationModel
+
     class MyConfiguration(ConfigurationModel):
         frobble_timeout = IntField(default=10)
         frazzle_target = TextField(defalut="debug")
