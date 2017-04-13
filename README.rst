@@ -32,7 +32,7 @@ value that needs to be configured::
 
     class MyConfiguration(ConfigurationModel):
         frobble_timeout = IntField(default=10)
-        frazzle_target = TextField(defalut="debug")
+        frazzle_target = TextField(default="debug")
 
 This is a normal django model, so it must be synced and migrated as usual.
 
