@@ -63,13 +63,12 @@ class ConfigurationModelManager(models.Manager):
                     subquery=subquery,
                 )}
             )
-        else:
-            return self.get_queryset().extra(           # pylint: disable=no-member
-                select={'is_active': "{table_name}.id = {pk}".format(
-                    table_name=self.model._meta.db_table,  # pylint: disable=protected-access, no-member
-                    pk=self.model.current().pk,  # pylint: disable=no-member
-                )}
-            )
+        return self.get_queryset().extra(           # pylint: disable=no-member
+            select={'is_active': "{table_name}.id = {pk}".format(
+                table_name=self.model._meta.db_table,  # pylint: disable=protected-access, no-member
+                pk=self.model.current().pk,  # pylint: disable=no-member
+            )}
+        )
 
 
 class ConfigurationModel(models.Model):
@@ -103,7 +102,7 @@ class ConfigurationModel(models.Model):
     )
     enabled = models.BooleanField(default=False, verbose_name=_("Enabled"))
 
-    def save(self, *args, **kwargs):
+    def save(self, *args, **kwargs):  # pylint: disable=arguments-differ
         """
         Clear the cached value when saving a new configuration entry
         """

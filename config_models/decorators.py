@@ -31,7 +31,6 @@ def require_config(config_model):
             """
             if not config_model.current().enabled:
                 return HttpResponseNotFound()
-            else:
-                return func(*args, **kwargs)
+            return func(*args, **kwargs)
         return _inner
     return _decorator
