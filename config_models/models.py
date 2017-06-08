@@ -102,13 +102,19 @@ class ConfigurationModel(models.Model):
     )
     enabled = models.BooleanField(default=False, verbose_name=_("Enabled"))
 
-    def save(self, *args, **kwargs):  # pylint: disable=arguments-differ
+    def save(self, force_insert=False, force_update=False, using=None,
+             update_fields=None):
         """
         Clear the cached value when saving a new configuration entry
         """
         # Always create a new entry, instead of updating an existing model
         self.pk = None  # pylint: disable=invalid-name
-        super(ConfigurationModel, self).save(*args, **kwargs)
+        super(ConfigurationModel, self).save(
+            force_insert,
+            force_update,
+            using,
+            update_fields
+        )
         cache.delete(self.cache_key_name(*[getattr(self, key) for key in self.KEY_FIELDS]))
         if self.KEY_FIELDS:
             cache.delete(self.key_values_cache_key_name())
