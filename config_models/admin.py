@@ -128,19 +128,19 @@ class ShowHistoryFilter(ListFilter):
         """ Should this filter be shown? """
         return True
 
-    def choices(self, cl):
+    def choices(self, changelist):
         """ Returns choices ready to be output in the template. """
         show_all = self.used_parameters.get(self.parameter_name) == "1"
         return (
             {
                 'display': _('Current Configuration'),
                 'selected': not show_all,
-                'query_string': cl.get_query_string({}, [self.parameter_name]),
+                'query_string': changelist.get_query_string({}, [self.parameter_name]),
             },
             {
                 'display': _('All (Show History)'),
                 'selected': show_all,
-                'query_string': cl.get_query_string({self.parameter_name: "1"}, []),
+                'query_string': changelist.get_query_string({self.parameter_name: "1"}, []),
             }
         )
 

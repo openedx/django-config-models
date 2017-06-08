@@ -4,7 +4,6 @@ Populates a ConfigurationModel by deserializing JSON data contained in a file.
 from __future__ import unicode_literals, absolute_import
 
 import os
-from optparse import make_option
 
 from django.core.management.base import BaseCommand, CommandError
 from django.utils.translation import ugettext_lazy as _
@@ -44,18 +43,24 @@ class Command(BaseCommand):
         $ ... populate_model -f path/to/file.json -u username
     """
 
-    option_list = BaseCommand.option_list + (  # pylint: disable=no-member
-        make_option('-f', '--file',
-                    metavar='JSON_FILE',
-                    dest='file',
-                    default=False,
-                    help='JSON file to import ConfigurationModel data'),
-        make_option('-u', '--username',
-                    metavar='USERNAME',
-                    dest='username',
-                    default=False,
-                    help='username to specify who is executing the command'),
-    )
+    def add_arguments(self, parser):
+        parser.add_argument(
+            '-f',
+            '--file',
+            metavar='JSON_FILE',
+            dest='file',
+            default=False,
+            help='JSON file to import ConfigurationModel data'
+        )
+
+        parser.add_argument(
+            '-u',
+            '--username',
+            metavar='USERNAME',
+            dest='username',
+            default=False,
+            help='username to specify who is executing the command'
+        )
 
     def handle(self, *args, **options):
         if 'file' not in options or not options['file']:

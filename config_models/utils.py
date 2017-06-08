@@ -17,6 +17,7 @@ def get_serializer_class(configuration_model):
         class Meta(object):
             """Meta information for AutoConfigModelSerializer."""
             model = configuration_model
+            fields = '__all__'
 
         def create(self, validated_data):
             if "changed_by_username" in self.context:

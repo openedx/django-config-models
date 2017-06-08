@@ -10,7 +10,7 @@ codecov==2.0.9
 coverage==4.4.1           # via codecov
 idna==2.5                 # via requests
 pluggy==0.4.0             # via tox
-py==1.4.33                # via tox
+py==1.4.34                # via tox
 requests==2.17.3          # via codecov
 tox-battery==0.4
 tox==2.7.0
