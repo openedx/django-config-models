@@ -5,6 +5,7 @@ env:
 - TOXENV=django18
 - TOXENV=django19
 - TOXENV=django110
+- TOXENV=django111
 matrix:
   include:
   - python: 2.7
