@@ -1,4 +1,4 @@
 # Core requirements for using this application
 
-Django>=1.8,<1.11                    # Web application framework
+Django>=1.8,<2                    # Web application framework
 djangorestframework>=3.2.3,<3.7
