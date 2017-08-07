@@ -14,6 +14,14 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[0.1.9] - 2017-08-07
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed
+-------
+* Updated Django REST Framework dependency to 3.6 as we were not actually compatible with 3.2.
+
+
 [0.1.8] - 2017-06-19
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
