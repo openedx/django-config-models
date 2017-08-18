@@ -1,5 +1,6 @@
 # Requirements for documentation validation
 
+ddt                       # Used in tests, docs are breaking without it
 readme_renderer           # Validates README.rst for usage on PyPI
 Sphinx                    # Documentation builder
 sphinx_rtd_theme          # ReadTheDocs theme for Sphinx output

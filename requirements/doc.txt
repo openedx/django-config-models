@@ -9,6 +9,7 @@ babel==2.4.0              # via sphinx
 bleach==2.0.0             # via readme-renderer
 certifi==2017.4.17        # via requests
 chardet==3.0.3            # via requests
+ddt==1.1.1
 docutils==0.13.1          # via readme-renderer, sphinx
 html5lib==0.999999999     # via bleach
 idna==2.5                 # via requests
