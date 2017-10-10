@@ -142,35 +142,61 @@ class ConfigurationModel(models.Model):
             return 'configuration/{}/current'.format(cls.__name__)
 
     @classmethod
-    def current(cls, *args):
+    def current(cls, *args, **kwargs):
         """
         Return the active configuration entry, either from cache,
         from the database, or by creating a new empty entry (which is not
         persisted).
+
+        Keyword Arguments:
+            query_db: if False, an empty entry will always be returned in
+                the case of a cache miss instead of performing a database
+                query for the value.
         """
+        query_db = kwargs.get('query_db', True)
         cached = cache.get(cls.cache_key_name(*args))
         if cached is not None:
             return cached
 
         key_dict = dict(zip(cls.KEY_FIELDS, args))
-        try:
-            current = cls.objects.filter(**key_dict).order_by('-change_date')[0]
-        except IndexError:
+        if query_db:
+            try:
+                current = cls.objects.filter(**key_dict).order_by('-change_date')[0]
+            except IndexError:
+                current = cls(**key_dict)
+        else:
             current = cls(**key_dict)
 
         cache.set(cls.cache_key_name(*args), current, cls.cache_timeout)
         return current
 
     @classmethod
-    def is_enabled(cls, *key_fields):
+    def warm_cache(cls):
+        """
+        Query all configuration entries for this class from the database
+        in one query and save them in the cache.
+        """
+        current_configs = cls.objects.all().order_by('change_date')
+        for config in current_configs:
+            cache.set(cls.cache_key_name([getattr(config, field) for field in cls.KEY_FIELDS]),
+                      config, cls.cache_timeout)
+
+    @classmethod
+    def is_enabled(cls, *key_fields, **kwargs):
         """
         Returns True if this feature is configured as enabled, else False.
 
         Arguments:
             key_fields: The positional arguments are the KEY_FIELDS used to identify the
                 configuration to be checked.
+
+        Keyword Arguments:
+            query_db: if False, an empty entry will always be returned in
+                the case of a cache miss instead of performing a database
+                query for the value.
         """
-        return cls.current(*key_fields).enabled
+        query_db = kwargs.get('query_db', True)
+        return cls.current(*key_fields, query_db=query_db).enabled
 
     @classmethod
     def key_values_cache_key_name(cls, *key_fields):

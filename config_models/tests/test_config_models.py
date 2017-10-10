@@ -99,6 +99,21 @@ class ConfigurationModelTests(TestCase):
 
         mock_cache.set.assert_called_with(ExampleConfig.cache_key_name(), first, 300)
 
+    def test_cache_get_with_no_db(self, mock_cache):
+        mock_cache.get.return_value = None
+        with self.assertNumQueries(0):
+            current = ExampleConfig.current(query_db=False)
+        self.assertEquals(current.int_field, 10)
+        self.assertEquals(current.string_field, '')
+
+    def test_warm_cache(self, mock_cache):
+        first = ExampleConfig.objects.create(string_field='first')
+        second = ExampleConfig.objects.create(string_field='second')
+        ExampleConfig.warm_cache()
+
+        mock_cache.set.assert_any_call(ExampleConfig.cache_key_name(), first, 300)
+        mock_cache.set.assert_any_call(ExampleConfig.cache_key_name(), second, 300)
+
     def test_active_annotation(self, mock_cache):
         mock_cache.get.return_value = None
 
