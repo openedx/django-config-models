@@ -14,8 +14,17 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
-[0.1.9] - 2017-08-07
+[0.2.0] - 2017-10-10
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Added
+-----
+* Add warm_cache method that fills the cache with all instances of a ConfigurationModel.
+* Add query_db option to current and is_enabled methods that triggers whether
+  they will query the database on a cache miss.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0.1.9] - 2017-08-07
 
 Changed
 -------
