@@ -5,28 +5,31 @@
 #    pip-compile --output-file requirements/doc.txt requirements/doc.in
 #
 alabaster==0.7.10         # via sphinx
-babel==2.4.0              # via sphinx
-bleach==2.0.0             # via readme-renderer
-certifi==2017.4.17        # via requests
-chardet==3.0.3            # via requests
-docutils==0.13.1          # via readme-renderer, sphinx
-html5lib==0.999999999     # via bleach
-idna==2.5                 # via requests
-imagesize==0.7.1          # via sphinx
-jinja2==2.9.6             # via sphinx
+babel==2.5.3              # via sphinx
+bleach==2.1.3             # via readme-renderer
+certifi==2018.4.16        # via requests
+cffi==1.11.5              # via cmarkgfm
+chardet==3.0.4            # via requests
+cmarkgfm==0.4.2           # via readme-renderer
+docutils==0.14            # via readme-renderer, sphinx
+future==0.16.0            # via readme-renderer
+html5lib==1.0.1           # via bleach
+idna==2.6                 # via requests
+imagesize==1.0.0          # via sphinx
+jinja2==2.10              # via sphinx
 markupsafe==1.0           # via jinja2
+packaging==17.1           # via sphinx
+pycparser==2.18           # via cffi
 pygments==2.2.0           # via readme-renderer, sphinx
-pytz==2017.2              # via babel
-readme-renderer==17.2
-requests==2.17.3          # via sphinx
-six==1.10.0               # via bleach, html5lib, readme-renderer, sphinx
+pyparsing==2.2.0          # via packaging
+pytz==2018.4              # via babel
+readme-renderer==20.0
+requests==2.18.4          # via sphinx
+six==1.11.0               # via bleach, html5lib, packaging, readme-renderer, sphinx
 snowballstemmer==1.2.1    # via sphinx
-sphinx-rtd-theme==0.2.4
-sphinx==1.6.2
+sphinx-rtd-theme==0.3.1
+sphinx==1.7.4
 sphinxcontrib-websupport==1.0.1  # via sphinx
-typing==3.6.1             # via sphinx
-urllib3==1.21.1           # via requests
+typing==3.6.4             # via sphinx
+urllib3==1.22             # via requests
 webencodings==0.5.1       # via html5lib
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools                # via html5lib, sphinx
