@@ -4,7 +4,7 @@ Django Model baseclass for database-backed configuration.
 from __future__ import absolute_import, unicode_literals
 
 from django.db import connection, models
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.core.cache import caches, InvalidCacheBackendError
 from django.utils.translation import ugettext_lazy as _
 
@@ -102,7 +102,7 @@ class ConfigurationModel(models.Model):
 
     change_date = models.DateTimeField(auto_now_add=True, verbose_name=_("Change date"))
     changed_by = models.ForeignKey(
-        User,
+        settings.AUTH_USER_MODEL,
         editable=False,
         null=True,
         on_delete=models.PROTECT,

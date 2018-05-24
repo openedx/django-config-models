@@ -4,7 +4,7 @@ Utilities for working with ConfigurationModels.
 from __future__ import unicode_literals, absolute_import
 
 from django.apps import apps
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from rest_framework.parsers import JSONParser
 from rest_framework.serializers import ModelSerializer
 
@@ -21,7 +21,8 @@ def get_serializer_class(configuration_model):
 
         def create(self, validated_data):
             if "changed_by_username" in self.context:
-                validated_data['changed_by'] = User.objects.get(username=self.context["changed_by_username"])
+                model = get_user_model()
+                validated_data['changed_by'] = model.objects.get(username=self.context["changed_by_username"])
             return super(AutoConfigModelSerializer, self).create(validated_data)
 
     return AutoConfigModelSerializer

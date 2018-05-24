@@ -4,5 +4,6 @@
 #
 #    pip-compile --output-file requirements/base.txt requirements/base.in
 #
-django==1.10.7
-djangorestframework==3.6.3
+django==1.11.13
+djangorestframework==3.6.4
+pytz==2018.4              # via django

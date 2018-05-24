@@ -49,7 +49,7 @@ extract_translations: ## extract strings to be translated, outputting .mo files
 fake_translations: extract_translations dummy_translations compile_translations ## generate and compile dummy translation files
 
 pip-compile: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
-	pip install -q pip-tools
+	pip install --user -q pip-tools
 	pip-compile --upgrade -o requirements/base.txt requirements/base.in
 	pip-compile --upgrade -o requirements/dev.txt requirements/dev.in
 	pip-compile --upgrade -o requirements/doc.txt requirements/doc.in
