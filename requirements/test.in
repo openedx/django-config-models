@@ -1,6 +1,6 @@
 # Requirements for test runs.
 
-
+futures ; python_version == "2.7"
 pytest-cov                # pytest extension for code coverage statistics
 pytest-django             # pytest extension for better Django support
 ddt

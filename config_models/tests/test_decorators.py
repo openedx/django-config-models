@@ -7,13 +7,16 @@ from __future__ import unicode_literals, absolute_import
 from config_models import decorators
 from config_models.models import ConfigurationModel
 from config_models.tests.utils import CacheIsolationTestCase
+from django.utils import six
 
 
+# pylint: disable=model-missing-unicode
+@six.python_2_unicode_compatible
 class ExampleDecoratorConfig(ConfigurationModel):
     """
     Test model for testing the require_config decorator
     """
-    def __unicode__(self):
+    def __str__(self):
         return "ExampleDecoratorConfig(enabled={})".format(self.enabled)
 
 

@@ -8,6 +8,7 @@ import ddt
 from django.contrib.auth.models import User
 from django.db import models
 from django.test import TestCase
+from django.utils import six
 from rest_framework.test import APIRequestFactory
 
 from freezegun import freeze_time
@@ -17,6 +18,8 @@ from config_models.models import ConfigurationModel
 from config_models.views import ConfigurationModelCurrentAPIView
 
 
+# pylint: disable=model-missing-unicode
+@six.python_2_unicode_compatible
 class ExampleConfig(ConfigurationModel):
     """
     Test model for testing ``ConfigurationModels``.
@@ -26,12 +29,14 @@ class ExampleConfig(ConfigurationModel):
     string_field = models.TextField()
     int_field = models.IntegerField(default=10)
 
-    def __unicode__(self):
+    def __str__(self):
         return "ExampleConfig(enabled={}, string_field={}, int_field={})".format(
             self.enabled, self.string_field, self.int_field
         )
 
 
+# pylint: disable=model-missing-unicode
+@six.python_2_unicode_compatible
 class ManyToManyExampleConfig(ConfigurationModel):
     """
     Test model configuration with a many-to-many field.
@@ -41,7 +46,7 @@ class ManyToManyExampleConfig(ConfigurationModel):
     string_field = models.TextField()
     many_user_field = models.ManyToManyField(User, related_name='topic_many_user_field')
 
-    def __unicode__(self):
+    def __str__(self):
         return "ManyToManyExampleConfig(enabled={}, string_field={})".format(self.enabled, self.string_field)
 
 
@@ -60,19 +65,19 @@ class ConfigurationModelTests(TestCase):
         mock_cache.delete.assert_called_with(ExampleConfig.cache_key_name())
 
     def test_cache_key_name(self, __):
-        self.assertEquals(ExampleConfig.cache_key_name(), 'configuration/ExampleConfig/current')
+        self.assertEqual(ExampleConfig.cache_key_name(), 'configuration/ExampleConfig/current')
 
     def test_no_config_empty_cache(self, mock_cache):
         mock_cache.get.return_value = None
 
         current = ExampleConfig.current()
-        self.assertEquals(current.int_field, 10)
-        self.assertEquals(current.string_field, '')
+        self.assertEqual(current.int_field, 10)
+        self.assertEqual(current.string_field, '')
         mock_cache.set.assert_called_with(ExampleConfig.cache_key_name(), current, 300)
 
     def test_no_config_full_cache(self, mock_cache):
         current = ExampleConfig.current()
-        self.assertEquals(current, mock_cache.get.return_value)
+        self.assertEqual(current, mock_cache.get.return_value)
 
     def test_config_ordering(self, mock_cache):
         mock_cache.get.return_value = None
@@ -86,7 +91,7 @@ class ConfigurationModelTests(TestCase):
         second.string_field = 'second'
         second.save()
 
-        self.assertEquals(ExampleConfig.current().string_field, 'second')
+        self.assertEqual(ExampleConfig.current().string_field, 'second')
 
     def test_cache_set(self, mock_cache):
         mock_cache.get.return_value = None
@@ -120,7 +125,7 @@ class ConfigurationModelTests(TestCase):
         config.string_field = 'second'
         config.save()
 
-        self.assertEquals(2, ExampleConfig.objects.all().count())
+        self.assertEqual(2, ExampleConfig.objects.all().count())
 
     def test_equality(self, mock_cache):
         mock_cache.get.return_value = None
@@ -181,6 +186,8 @@ class ConfigurationModelTests(TestCase):
         )
 
 
+# pylint: disable=model-missing-unicode
+@six.python_2_unicode_compatible
 class ExampleKeyedConfig(ConfigurationModel):
     """
     Test model for testing ``ConfigurationModels`` with keyed configuration.
@@ -197,7 +204,7 @@ class ExampleKeyedConfig(ConfigurationModel):
     string_field = models.TextField()
     int_field = models.IntegerField(default=10)
 
-    def __unicode__(self):
+    def __str__(self):
         return "ExampleKeyedConfig(enabled={}, left={}, right={}, string_field={}, int_field={})".format(
             self.enabled, self.left, self.right, self.string_field, self.int_field
         )
@@ -217,7 +224,7 @@ class KeyedConfigurationModelTests(TestCase):
     @ddt.data(('a', 'b'), ('c', 'd'))
     @ddt.unpack
     def test_cache_key_name(self, left, right, _mock_cache):
-        self.assertEquals(
+        self.assertEqual(
             ExampleKeyedConfig.cache_key_name(left, right),
             'configuration/ExampleKeyedConfig/current/{},{}'.format(left, right)
         )
@@ -229,7 +236,7 @@ class KeyedConfigurationModelTests(TestCase):
     )
     @ddt.unpack
     def test_key_values_cache_key_name(self, args, expected_key, _mock_cache):
-        self.assertEquals(
+        self.assertEqual(
             ExampleKeyedConfig.key_values_cache_key_name(*args),
             'configuration/ExampleKeyedConfig/key_values/{}'.format(expected_key))
 
@@ -239,15 +246,15 @@ class KeyedConfigurationModelTests(TestCase):
         mock_cache.get.return_value = None
 
         current = ExampleKeyedConfig.current(left, right)
-        self.assertEquals(current.int_field, 10)
-        self.assertEquals(current.string_field, '')
+        self.assertEqual(current.int_field, 10)
+        self.assertEqual(current.string_field, '')
         mock_cache.set.assert_called_with(ExampleKeyedConfig.cache_key_name(left, right), current, 300)
 
     @ddt.data(('a', 'b'), ('c', 'd'))
     @ddt.unpack
     def test_no_config_full_cache(self, left, right, mock_cache):
         current = ExampleKeyedConfig.current(left, right)
-        self.assertEquals(current, mock_cache.get.return_value)
+        self.assertEqual(current, mock_cache.get.return_value)
 
     def test_config_ordering(self, mock_cache):
         mock_cache.get.return_value = None
@@ -280,8 +287,8 @@ class KeyedConfigurationModelTests(TestCase):
             string_field='second_b',
         ).save()
 
-        self.assertEquals(ExampleKeyedConfig.current('left_a', 'right_a').string_field, 'second_a')
-        self.assertEquals(ExampleKeyedConfig.current('left_b', 'right_b').string_field, 'second_b')
+        self.assertEqual(ExampleKeyedConfig.current('left_a', 'right_a').string_field, 'second_a')
+        self.assertEqual(ExampleKeyedConfig.current('left_b', 'right_b').string_field, 'second_b')
 
     def test_cache_set(self, mock_cache):
         mock_cache.get.return_value = None
@@ -309,11 +316,11 @@ class KeyedConfigurationModelTests(TestCase):
         ExampleKeyedConfig(left='left_b', right='right_b', changed_by=self.user).save()
 
         unique_key_pairs = ExampleKeyedConfig.key_values()
-        self.assertEquals(len(unique_key_pairs), 2)
-        self.assertEquals(set(unique_key_pairs), set([('left_a', 'right_a'), ('left_b', 'right_b')]))
+        self.assertEqual(len(unique_key_pairs), 2)
+        self.assertEqual(set(unique_key_pairs), set([('left_a', 'right_a'), ('left_b', 'right_b')]))
         unique_left_keys = ExampleKeyedConfig.key_values('left', flat=True)
-        self.assertEquals(len(unique_left_keys), 2)
-        self.assertEquals(set(unique_left_keys), set(['left_a', 'left_b']))
+        self.assertEqual(len(unique_left_keys), 2)
+        self.assertEqual(set(unique_left_keys), set(['left_a', 'left_b']))
 
     def test_key_string_values(self, mock_cache):
         """ Ensure str() vs unicode() doesn't cause duplicate cache entries """
@@ -369,12 +376,12 @@ class KeyedConfigurationModelTests(TestCase):
 
     def test_key_values_cache(self, mock_cache):
         mock_cache.get.return_value = None
-        self.assertEquals(ExampleKeyedConfig.key_values(), [])
+        self.assertEqual(ExampleKeyedConfig.key_values(), [])
         mock_cache.set.assert_called_with(ExampleKeyedConfig.key_values_cache_key_name(), [], 300)
 
         fake_result = [('a', 'b'), ('c', 'd')]
         mock_cache.get.return_value = fake_result
-        self.assertEquals(ExampleKeyedConfig.key_values(), fake_result)
+        self.assertEqual(ExampleKeyedConfig.key_values(), fake_result)
 
     def test_equality(self, mock_cache):
         mock_cache.get.return_value = None
@@ -440,42 +447,42 @@ class ConfigurationModelAPITests(TestCase):
         self.addCleanup(patcher.stop)
 
     def test_insert(self):
-        self.assertEquals("", ExampleConfig.current().string_field)
+        self.assertEqual("", ExampleConfig.current().string_field)
 
         request = self.factory.post('/config/ExampleConfig', {"string_field": "string_value"})
         request.user = self.user
         __ = self.current_view(request)
 
-        self.assertEquals("string_value", ExampleConfig.current().string_field)
-        self.assertEquals(self.user, ExampleConfig.current().changed_by)
+        self.assertEqual("string_value", ExampleConfig.current().string_field)
+        self.assertEqual(self.user, ExampleConfig.current().changed_by)
 
     def test_multiple_inserts(self):
-        for i in xrange(3):  # pylint: disable=xrange-builtin
-            self.assertEquals(i, ExampleConfig.objects.all().count())
+        for i in six.moves.range(3):  # pylint: disable=no-member
+            self.assertEqual(i, ExampleConfig.objects.all().count())
 
             request = self.factory.post('/config/ExampleConfig', {"string_field": str(i)})
             request.user = self.user
             response = self.current_view(request)
-            self.assertEquals(201, response.status_code)
+            self.assertEqual(201, response.status_code)
 
-            self.assertEquals(i + 1, ExampleConfig.objects.all().count())
-            self.assertEquals(str(i), ExampleConfig.current().string_field)
+            self.assertEqual(i + 1, ExampleConfig.objects.all().count())
+            self.assertEqual(str(i), ExampleConfig.current().string_field)
 
     def test_get_current(self):
         request = self.factory.get('/config/ExampleConfig')
         request.user = self.user
         response = self.current_view(request)
-        self.assertEquals('', response.data['string_field'])
-        self.assertEquals(10, response.data['int_field'])
-        self.assertEquals(None, response.data['changed_by'])
-        self.assertEquals(False, response.data['enabled'])
-        self.assertEquals(None, response.data['change_date'])
+        self.assertEqual('', response.data['string_field'])
+        self.assertEqual(10, response.data['int_field'])
+        self.assertEqual(None, response.data['changed_by'])
+        self.assertEqual(False, response.data['enabled'])
+        self.assertEqual(None, response.data['change_date'])
 
         ExampleConfig(string_field='string_value', int_field=20).save()
 
         response = self.current_view(request)
-        self.assertEquals('string_value', response.data['string_field'])
-        self.assertEquals(20, response.data['int_field'])
+        self.assertEqual('string_value', response.data['string_field'])
+        self.assertEqual(20, response.data['int_field'])
 
     @ddt.data(
         ('get', [], 200),
@@ -491,8 +498,8 @@ class ConfigurationModelAPITests(TestCase):
             password='no-perms',
         )
         response = self.current_view(request)
-        self.assertEquals(403, response.status_code)
+        self.assertEqual(403, response.status_code)
 
         request.user = self.user
         response = self.current_view(request)
-        self.assertEquals(status_code, response.status_code)
+        self.assertEqual(status_code, response.status_code)
