@@ -4,6 +4,7 @@ Populates a ConfigurationModel by deserializing JSON data contained in a file.
 from __future__ import unicode_literals, absolute_import
 
 import os
+import io
 
 from django.core.management.base import BaseCommand, CommandError
 from django.utils.translation import ugettext_lazy as _
@@ -74,7 +75,7 @@ class Command(BaseCommand):
             raise CommandError(_("File {0} does not exist").format(json_file))  # pylint: disable=no-member
 
         self.stdout.write(_("Importing JSON data from file {0}").format(json_file))  # pylint: disable=no-member
-        with open(json_file) as data:  # pylint: disable=open-builtin
+        with io.open(json_file, "rb") as data:
             created_entries = deserialize_json(data, options['username'])
             # pylint: disable=no-member
             self.stdout.write(_("Import complete, {0} new entries created").format(created_entries))

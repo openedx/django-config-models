@@ -7,9 +7,9 @@ from django.db import connection, models
 from django.conf import settings
 from django.core.cache import caches, InvalidCacheBackendError
 from django.utils.translation import ugettext_lazy as _
+from django.utils import six
 
 from rest_framework.utils import model_meta
-
 # Config model values are cached. The caching backend configuration used has implications for how the values
 # are changed/queried in an active release. When a new key/value is saved, its current cached value is cleared
 # via deletion from the cache. Otherwise, depending on the cache backend configuration *and* on the value of
@@ -137,7 +137,7 @@ class ConfigurationModel(models.Model):
                     "cache_key_name() takes exactly {} arguments ({} given)".format(len(cls.KEY_FIELDS), len(args))
                 )
             # pylint: disable=unicode-builtin
-            return 'configuration/{}/current/{}'.format(cls.__name__, ','.join(unicode(arg) for arg in args))
+            return 'configuration/{}/current/{}'.format(cls.__name__, ','.join(six.text_type(arg) for arg in args))
         else:
             return 'configuration/{}/current'.format(cls.__name__)
 

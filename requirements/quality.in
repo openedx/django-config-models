@@ -4,3 +4,4 @@ caniusepython3            # Additional Python 3 compatibility pylint checks
 edx-lint                  # edX pylint rules and plugins
 pycodestyle               # PEP 8 compliance validation
 pydocstyle                # PEP 257 compliance validation
+futures==3.2.0 ; python_version == "2.7"  # via caniusepython3, isort
