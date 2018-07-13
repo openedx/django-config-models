@@ -1,8 +1,9 @@
 # Requirements for test runs.
 
-futures ; python_version == "2.7"
+-r base.txt               # Core dependencies of django-config-models
+
 pytest-cov                # pytest extension for code coverage statistics
 pytest-django             # pytest extension for better Django support
-ddt
-freezegun
+ddt                       # Run a test case multiple times with different input
+freezegun                 # Allows tests to mock the output of assorted datetime module functions
 mock

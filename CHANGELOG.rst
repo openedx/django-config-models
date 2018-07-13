@@ -14,6 +14,20 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[0.2.0] - 2018-07-13
+~~~~~~~~~~~~~~~~~~~~
+
+Added
+-----
+* Support for Python 3.6
+
+Removed
+-------
+* Testing against Django 1.8 - 1.10
+
+Changed
+-------
+* Updated dependency management to follow OEP-18
 
 [0.1.10] - 2018-05-21
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

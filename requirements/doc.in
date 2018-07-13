@@ -1,5 +1,7 @@
 # Requirements for documentation validation
 
+-r test.txt               # Core and test dependencies so sphinx-apidoc can import the code to document
+
 readme_renderer           # Validates README.rst for usage on PyPI
 Sphinx                    # Documentation builder
 sphinx_rtd_theme          # ReadTheDocs theme for Sphinx output
