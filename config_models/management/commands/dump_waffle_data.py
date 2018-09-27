@@ -52,12 +52,10 @@ class Command(BaseCommand):
                 model_data = {}
                 config_model_name = config_model.__name__
                 if config_model.KEY_FIELDS:
-                    try:
+                    if not config_model._meta.abstract:
                         config_key_values = config_model.key_values()
                         for key_value in config_key_values:
                             print key_value
-                    except:
-                        print "Ahh abstract model!"
                 else:
                     current_config_model = config_model.current()
                     serializer_class = get_serializer_class(config_model)
