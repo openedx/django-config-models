@@ -11,6 +11,10 @@ import pprint
 from django.apps import apps
 from django.core.management.base import BaseCommand
 from django.core.serializers.json import DjangoJSONEncoder
+from rest_framework.renderers import JSONRenderer
+
+from config_models.models import ConfigurationModel
+from config_models.utils import get_serializer_class
 
 class Command(BaseCommand):
     """
@@ -41,6 +45,27 @@ class Command(BaseCommand):
 
         # TODO - cleanup duplicatation
         # / make a list of models to check and loop through that instead
+        config_model_list = ConfigurationModel.__subclasses__()
+        if len(config_model_list) > 0:
+            waffle_details['config_models'] = {}
+            for config_model in config_model_list:
+                model_data = {}
+                config_model_name = config_model.__name__
+                if config_model.KEY_FIELDS:
+                    try:
+                        config_key_values = config_model.key_values()
+                        for key_value in config_key_values:
+                            print key_value
+                    except:
+                        print "Ahh abstract model!"
+                else:
+                    current_config_model = config_model.current()
+                    serializer_class = get_serializer_class(config_model)
+                    serializer = serializer_class(current_config_model)
+                    model_data = serializer.data
+                    
+                waffle_details['config_models'][config_model_name] = model_data;
+
         waffle_flag_model = apps.get_model('waffle.flag')
         waffle_flag_list = waffle_flag_model.objects.values()
         if len(waffle_flag_list) > 0:
@@ -57,14 +82,16 @@ class Command(BaseCommand):
                 waffle_switch_name = waffle_switch['name']
                 waffle_details['waffle_switches'][waffle_switch_name] = waffle_switch;
 
-        # waffle samples?
-        # waffle.sample
-        # waffle course overrides?
-        # openedx.core.djangoapps.waffle_utils.waffleflagcourseoverridemodel ? 
-        # 'openedx.core.djangoapps.waffle_utils.models.WaffleFlagCourseOverrideModel'
+        waffle_sample_model = apps.get_model('waffle.sample')
+        waffle_sample_list = waffle_sample_model.objects.values()
+        if len(waffle_sample_list) > 0:
+            waffle_details['waffle_samples'] = {}
+            for waffle_sample in waffle_sample_list:
+                waffle_sample_name = waffle_sample['name']
+                waffle_details['waffle_samples'][waffle_sample_name] = waffle_sample;
 
-        with io.open(output_file_path, 'w') as outfile:
-            outfile.write(unicode(json.dumps(waffle_details, cls=DjangoJSONEncoder)))
+        with open(output_file_path, 'w') as outfile:
+            json.dump(waffle_details, outfile, indent=4, cls=DjangoJSONEncoder, sort_keys=True)
 
         outfile.close()
-        pprint.pprint(waffle_details)
+        print "Output written!"
