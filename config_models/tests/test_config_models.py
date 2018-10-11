@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Tests of ConfigurationModel
 """
@@ -350,7 +349,7 @@ class KeyedConfigurationModelTests(TestCase):
         """ Ensure str() vs unicode() doesn't cause duplicate cache entries """
         ExampleKeyedConfig(
             left='left',
-            right=u'〉☃',
+            right=u'\N{RIGHT ANGLE BRACKET}\N{SNOWMAN}',
             enabled=True,
             int_field=10,
             user=self.user,
@@ -358,14 +357,14 @@ class KeyedConfigurationModelTests(TestCase):
         ).save()
         mock_cache.get.return_value = None
 
-        entry = ExampleKeyedConfig.current('left', u'〉☃', self.user)
+        entry = ExampleKeyedConfig.current('left', u'\N{RIGHT ANGLE BRACKET}\N{SNOWMAN}', self.user)
         key = mock_cache.get.call_args[0][0]
         self.assertEqual(entry.int_field, 10)
         mock_cache.get.assert_called_with(key)
         self.assertEqual(mock_cache.set.call_args[0][0], key)
 
         mock_cache.get.reset_mock()
-        entry = ExampleKeyedConfig.current(u'left', u'〉☃', self.user)
+        entry = ExampleKeyedConfig.current(u'left', u'\N{RIGHT ANGLE BRACKET}\N{SNOWMAN}', self.user)
         self.assertEqual(entry.int_field, 10)
         mock_cache.get.assert_called_with(key)
 
