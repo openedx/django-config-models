@@ -3,7 +3,7 @@ Django Model baseclass for database-backed configuration.
 """
 from __future__ import absolute_import, unicode_literals
 
-from django.db import connection, models
+from django.db import models
 from django.conf import settings
 from django.core.cache import caches, InvalidCacheBackendError
 from django.utils.translation import ugettext_lazy as _
@@ -36,12 +36,7 @@ class ConfigurationModelManager(models.Manager):
         all the current entries (i.e. the most recent entry for each unique set
         of key values). Only useful if KEY_FIELDS is set.
         """
-        key_fields_escaped = [connection.ops.quote_name(name) for name in self.model.KEY_FIELDS]
-        # The following assumes that the rows with the most recent date also have the highest IDs
-        return "SELECT MAX(id) FROM {table_name} GROUP BY {key_fields}".format(
-            key_fields=', '.join(key_fields_escaped),
-            table_name=self.model._meta.db_table  # pylint: disable=protected-access
-        )
+        return self.values(*self.model.KEY_FIELDS).annotate(max=models.Max('pk')).values('max')
 
     def current_set(self):
         """
@@ -51,12 +46,10 @@ class ConfigurationModelManager(models.Manager):
         necessaryily mean enbled.
         """
         assert self.model.KEY_FIELDS != (), "Just use model.current() if there are no KEY_FIELDS"
-        return self.get_queryset().extra(           # pylint: disable=no-member
-            where=["{table_name}.id IN ({subquery})".format(
-                table_name=self.model._meta.db_table,  # pylint: disable=protected-access, no-member
-                subquery=self._current_ids_subquery(),
-            )],
-            select={'is_active': 1},  # This annotation is used by the admin changelist. sqlite requires '1', not 'True'
+        return self.get_queryset().filter(
+            pk__in=self._current_ids_subquery()
+        ).annotate(
+            is_active=models.Value(1, output_field=models.IntegerField())
         )
 
     def with_active_flag(self):
@@ -65,18 +58,17 @@ class ConfigurationModelManager(models.Manager):
         if it's the most recent entry for that combination of keys.
         """
         if self.model.KEY_FIELDS:
-            subquery = self._current_ids_subquery()
-            return self.get_queryset().extra(           # pylint: disable=no-member
-                select={'is_active': "{table_name}.id IN ({subquery})".format(
-                    table_name=self.model._meta.db_table,  # pylint: disable=protected-access, no-member
-                    subquery=subquery,
-                )}
+            return self.get_queryset().annotate(
+                is_active=models.ExpressionWrapper(
+                    models.Q(pk__in=self._current_ids_subquery()),
+                    output_field=models.IntegerField(),
+                )
             )
-        return self.get_queryset().extra(           # pylint: disable=no-member
-            select={'is_active': "{table_name}.id = {pk}".format(
-                table_name=self.model._meta.db_table,  # pylint: disable=protected-access, no-member
-                pk=self.model.current().pk,  # pylint: disable=no-member
-            )}
+        return self.get_queryset().annotate(
+            is_active=models.ExpressionWrapper(
+                models.Q(pk=self.model.current().pk),
+                output_field=models.IntegerField(),
+            )
         )
 
 
