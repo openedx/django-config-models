@@ -47,7 +47,8 @@ def is_requirement(line):
         line.startswith('-r') or
         line.startswith('#') or
         line.startswith('-e') or
-        line.startswith('git+')
+        line.startswith('git+') or
+        line.startswith('-c')
     )
 
 

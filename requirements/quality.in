@@ -1,4 +1,5 @@
 # Requirements for code quality checks
+-c constraints.txt
 
 -r test.txt               # Core and test dependencies, for pylint analysis
 

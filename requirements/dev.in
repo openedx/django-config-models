@@ -1,4 +1,5 @@
 # Additional requirements for development of this application
+-c constraints.txt
 
 -r pip-tools.txt          # Dependencies for requirements file management
 -r quality.txt            # All dependencies needed to run and test django-config-models
