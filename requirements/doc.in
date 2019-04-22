@@ -1,4 +1,5 @@
 # Requirements for documentation validation
+-c constraints.txt
 
 -r test.txt               # Core and test dependencies so sphinx-apidoc can import the code to document
 

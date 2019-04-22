@@ -11,7 +11,7 @@ ddt==1.2.1
 djangorestframework==3.6.4
 freezegun==0.3.11
 mock==2.0.0
-more-itertools==7.0.0     # via pytest
+more-itertools==5.0.0
 pbr==5.1.3                # via mock
 pluggy==0.9.0             # via pytest
 py==1.8.0                 # via pytest
@@ -20,4 +20,4 @@ pytest-django==3.4.8
 pytest==4.4.1             # via pytest-cov, pytest-django
 python-dateutil==2.8.0    # via freezegun
 pytz==2019.1
-six==1.12.0               # via freezegun, mock, pytest, python-dateutil
+six==1.12.0               # via freezegun, mock, more-itertools, pytest, python-dateutil
