@@ -14,7 +14,7 @@ chardet==3.0.4            # via requests
 coverage==4.5.3
 ddt==1.2.1
 django==1.11.20
-djangorestframework==3.6.4
+djangorestframework==3.9.2
 docutils==0.14            # via readme-renderer, sphinx
 freezegun==0.3.11
 idna==2.8                 # via requests
