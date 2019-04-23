@@ -13,6 +13,10 @@ Change Log
 
 Unreleased
 ~~~~~~~~~~
+[1.0.1] - 2019-04-23
+~~~~~~~~~~~~~~~~~~~~
+* Fix auto publishing to PyPI
+
 [1.0.0] - 2019-04-23
 ~~~~~~~~~~~~~~~~~~~~
 Changed
