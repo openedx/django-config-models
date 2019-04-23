@@ -19,7 +19,7 @@ coverage==4.5.3
 ddt==1.2.1
 distlib==0.2.8
 django==1.11.20
-djangorestframework==3.6.4
+djangorestframework==3.9.2
 edx-i18n-tools==0.4.8
 edx-lint==1.1.2
 filelock==3.0.10

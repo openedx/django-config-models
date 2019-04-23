@@ -18,7 +18,7 @@ coverage==4.5.3
 ddt==1.2.1
 distlib==0.2.8            # via caniusepython3
 django==1.11.20
-djangorestframework==3.6.4
+djangorestframework==3.9.2
 edx-lint==1.1.2
 freezegun==0.3.11
 idna==2.8                 # via requests
