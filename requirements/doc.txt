@@ -14,14 +14,13 @@ djangorestframework==3.9.3
 docutils==0.14            # via readme-renderer
 freezegun==0.3.11
 funcsigs==1.0.2
-mock==2.0.0
+mock==3.0.3
 more-itertools==5.0.0
 pathlib2==2.3.3
-pbr==5.2.0
 pluggy==0.9.0
 py==1.8.0
 pygments==2.3.1           # via readme-renderer
-pytest-cov==2.6.1
+pytest-cov==2.7.1
 pytest-django==3.4.8
 pytest==4.4.1
 python-dateutil==2.8.0
