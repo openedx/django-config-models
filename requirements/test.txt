@@ -10,14 +10,14 @@ coverage==4.5.3           # via pytest-cov
 ddt==1.2.1
 freezegun==0.3.11
 funcsigs==1.0.2           # via mock, pytest
-mock==3.0.3
+mock==3.0.5
 more-itertools==5.0.0     # via pytest
 pathlib2==2.3.3           # via pytest, pytest-django
-pluggy==0.9.0             # via pytest
+pluggy==0.11.0            # via pytest
 py==1.8.0                 # via pytest
 pytest-cov==2.7.1
 pytest-django==3.4.8
-pytest==4.4.1             # via pytest-cov, pytest-django
+pytest==4.4.2             # via pytest-cov, pytest-django
 python-dateutil==2.8.0    # via freezegun
 pytz==2019.1
 scandir==1.10.0           # via pathlib2
