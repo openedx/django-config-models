@@ -20,7 +20,7 @@ configparser==3.7.4
 contextlib2==0.5.5        # via importlib-metadata
 coverage==4.5.3
 ddt==1.2.1
-distlib==0.2.8
+distlib==0.2.9.post0
 django==1.11.20
 djangorestframework==3.9.4
 edx-i18n-tools==0.4.8
@@ -32,9 +32,9 @@ funcsigs==1.0.2
 future==0.17.1            # via backports.os
 futures==3.2.0 ; python_version == "2.7"
 idna==2.8
-importlib-metadata==0.11  # via path.py
-isort==4.3.18
-lazy-object-proxy==1.4.0
+importlib-metadata==0.12  # via path.py
+isort==4.3.20
+lazy-object-proxy==1.4.1
 mccabe==0.6.1
 mock==3.0.5
 more-itertools==5.0.0
@@ -54,19 +54,20 @@ pylint==1.7.6
 pyparsing==2.4.0
 pytest-cov==2.7.1
 pytest-django==3.4.8
-pytest==4.4.2
+pytest==4.5.0
 python-dateutil==2.8.0
 pytz==2019.1
 pyyaml==5.1               # via edx-i18n-tools
-requests==2.21.0
+requests==2.22.0
 scandir==1.10.0
 singledispatch==3.4.0.3
 six==1.12.0
 snowballstemmer==1.2.1
 toml==0.10.0
 tox-battery==0.5.1
-tox==3.9.0
-urllib3==1.24.3
-virtualenv==16.5.0
+tox==3.11.1
+urllib3==1.25.2
+virtualenv==16.6.0
+wcwidth==0.1.7
 wrapt==1.11.1
-zipp==0.5.0               # via importlib-metadata
+zipp==0.5.1               # via importlib-metadata
