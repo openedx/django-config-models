@@ -17,7 +17,7 @@ click==7.0                # via click-log, edx-lint
 configparser==3.7.4       # via pydocstyle, pylint
 coverage==4.5.3
 ddt==1.2.1
-distlib==0.2.8            # via caniusepython3
+distlib==0.2.9.post0      # via caniusepython3
 django==1.11.20
 djangorestframework==3.9.4
 edx-lint==1.1.2
@@ -26,8 +26,8 @@ freezegun==0.3.11
 funcsigs==1.0.2
 futures==3.2.0 ; python_version == "2.7"
 idna==2.8                 # via requests
-isort==4.3.18             # via pylint
-lazy-object-proxy==1.4.0  # via astroid
+isort==4.3.20             # via pylint
+lazy-object-proxy==1.4.1  # via astroid
 mccabe==0.6.1             # via pylint
 mock==3.0.5
 more-itertools==5.0.0
@@ -44,13 +44,14 @@ pylint==1.7.6             # via edx-lint, pylint-celery, pylint-django, pylint-p
 pyparsing==2.4.0          # via packaging
 pytest-cov==2.7.1
 pytest-django==3.4.8
-pytest==4.4.2
+pytest==4.5.0
 python-dateutil==2.8.0
 pytz==2019.1
-requests==2.21.0          # via caniusepython3
+requests==2.22.0          # via caniusepython3
 scandir==1.10.0
 singledispatch==3.4.0.3   # via astroid, pylint
 six==1.12.0
 snowballstemmer==1.2.1    # via pydocstyle
-urllib3==1.24.3           # via requests
+urllib3==1.25.2           # via requests
+wcwidth==0.1.7
 wrapt==1.11.1             # via astroid
