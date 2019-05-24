@@ -19,7 +19,7 @@ more-itertools==5.0.0
 pathlib2==2.3.3
 pluggy==0.11.0
 py==1.8.0
-pygments==2.4.0           # via readme-renderer
+pygments==2.4.1           # via readme-renderer
 pytest-cov==2.7.1
 pytest-django==3.4.8
 pytest==4.5.0

@@ -24,15 +24,15 @@ distlib==0.2.9.post0
 django==1.11.20
 djangorestframework==3.9.4
 edx-i18n-tools==0.4.8
-edx-lint==1.1.2
+edx-lint==1.2.1
 enum34==1.1.6
-filelock==3.0.10
+filelock==3.0.12
 freezegun==0.3.11
 funcsigs==1.0.2
 future==0.17.1            # via backports.os
 futures==3.2.0 ; python_version == "2.7"
 idna==2.8
-importlib-metadata==0.12  # via path.py
+importlib-metadata==0.14  # via path.py
 isort==4.3.20
 lazy-object-proxy==1.4.1
 mccabe==0.6.1
@@ -65,8 +65,8 @@ six==1.12.0
 snowballstemmer==1.2.1
 toml==0.10.0
 tox-battery==0.5.1
-tox==3.11.1
-urllib3==1.25.2
+tox==3.12.1
+urllib3==1.25.3
 virtualenv==16.6.0
 wcwidth==0.1.7
 wrapt==1.11.1
