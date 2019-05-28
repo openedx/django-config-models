@@ -5,6 +5,7 @@ owner: edx/platform-team
 nick: config_models
 tags:
     - tools
+    - library
 oeps:
     oep-2: True
     oep-3:
@@ -13,3 +14,5 @@ oeps:
     oep-5:
         state: False
         reason: TODO - Implement for this application if appropriate
+    oep-7: True
+    oep-18: True
