@@ -11,7 +11,7 @@ configparser==3.7.4
 contextlib2==0.5.5
 coverage==4.5.3
 ddt==1.2.1
-django==1.11.20
+django==1.11.21
 djangorestframework==3.9.4
 docutils==0.14            # via readme-renderer
 freezegun==0.3.12
@@ -19,13 +19,15 @@ funcsigs==1.0.2
 importlib-metadata==0.17
 mock==3.0.5
 more-itertools==5.0.0
+packaging==19.0
 pathlib2==2.3.3
 pluggy==0.12.0
 py==1.8.0
 pygments==2.4.2           # via readme-renderer
+pyparsing==2.4.0
 pytest-cov==2.7.1
-pytest-django==3.4.8
-pytest==4.5.0
+pytest-django==3.5.0
+pytest==4.6.2
 python-dateutil==2.8.0
 pytz==2019.1
 readme-renderer==24.0
