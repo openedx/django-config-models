@@ -22,7 +22,7 @@ cache:
 install:
 - pip install -r requirements/travis.txt
 script:
-- make test-all
+- tox
 after_success:
 - codecov
 deploy:
