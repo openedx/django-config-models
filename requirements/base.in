@@ -1,5 +1,5 @@
 # Core requirements for using this application
 -c constraints.txt
 
-Django>=1.8,<2                    # Web application framework
+Django>=1.8                 # Web application framework
 djangorestframework>=3.6

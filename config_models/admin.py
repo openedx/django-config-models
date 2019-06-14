@@ -8,7 +8,11 @@ from django.contrib import admin
 from django.contrib.admin import ListFilter
 from django.core.cache import caches, InvalidCacheBackendError
 from django.core.files.base import File
-from django.core.urlresolvers import reverse
+try:
+    from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
+
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.utils.translation import ugettext_lazy as _
