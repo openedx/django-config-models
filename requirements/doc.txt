@@ -28,7 +28,7 @@ markupsafe==1.1.1         # via jinja2
 mock==3.0.5
 more-itertools==5.0.0
 packaging==19.0
-pathlib2==2.3.3
+pathlib2==2.3.4
 pluggy==0.12.0
 py==1.8.0
 pygments==2.4.2           # via readme-renderer, sphinx
@@ -42,7 +42,7 @@ readme-renderer==24.0
 requests==2.22.0          # via sphinx
 scandir==1.10.0
 six==1.12.0
-snowballstemmer==1.2.1    # via sphinx
+snowballstemmer==1.9.0    # via sphinx
 sphinx-rtd-theme==0.4.3
 sphinx==1.8.5
 sphinxcontrib-websupport==1.1.2  # via sphinx
