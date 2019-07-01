@@ -33,14 +33,14 @@ future==0.17.1            # via backports.os
 futures==3.2.0 ; python_version == "2.7"
 idna==2.8
 importlib-metadata==0.18
-isort==4.3.20
+isort==4.3.21
 lazy-object-proxy==1.4.1
 mccabe==0.6.1
 mock==3.0.5
 more-itertools==5.0.0
 packaging==19.0
 path.py==11.5.2           # via edx-i18n-tools
-pathlib2==2.3.3
+pathlib2==2.3.4
 pip-tools==3.8.0
 pluggy==0.12.0
 polib==1.1.0              # via edx-i18n-tools
@@ -62,11 +62,11 @@ requests==2.22.0
 scandir==1.10.0
 singledispatch==3.4.0.3
 six==1.12.0
-snowballstemmer==1.2.1
+snowballstemmer==1.9.0
 toml==0.10.0
 tox-battery==0.5.1
 tox-travis==0.12
-tox==3.12.1
+tox==3.13.1
 urllib3==1.25.3
 virtualenv==16.6.1
 wcwidth==0.1.7
@@ -74,4 +74,4 @@ wrapt==1.11.2
 zipp==0.5.1
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==41.0.1        # via caniusepython3, tox
+# setuptools==41.0.1        # via caniusepython3
