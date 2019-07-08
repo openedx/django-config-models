@@ -4,6 +4,6 @@
 #
 #    make upgrade
 #
-django==1.11.21
+django==1.11.22
 djangorestframework==3.9.4
 pytz==2019.1              # via django
