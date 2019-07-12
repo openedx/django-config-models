@@ -27,4 +27,4 @@ tox-travis==0.12
 tox==3.13.2
 urllib3==1.25.3           # via requests
 virtualenv==16.6.1        # via tox
-zipp==0.5.1               # via importlib-metadata
+zipp==0.5.2               # via importlib-metadata
