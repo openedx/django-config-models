@@ -8,7 +8,7 @@ from django.contrib import admin
 from django.contrib.admin import ListFilter
 from django.core.cache import caches, InvalidCacheBackendError
 from django.core.files.base import File
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.utils.translation import ugettext_lazy as _
@@ -92,7 +92,7 @@ class ConfigurationModelAdmin(admin.ModelAdmin):
         """
         if queryset.count() != 1:
             self.message_user(request, _("Please select a single configuration to revert to."))
-            return
+            return None
 
         target = queryset[0]
         target.id = None

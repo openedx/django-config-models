@@ -146,7 +146,7 @@ class ConfigurationModel(models.Model):
 
         key_dict = dict(zip(cls.KEY_FIELDS, args))
         try:
-            current = cls.objects.filter(**key_dict).order_by('-change_date')[0]
+            current = cls.objects.filter(**key_dict).order_by('-change_date')[0]  # pylint: disable=no-member
         except IndexError:
             current = cls(**key_dict)
 

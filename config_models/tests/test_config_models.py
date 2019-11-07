@@ -214,7 +214,7 @@ class ExampleKeyedConfig(ConfigurationModel):
 
     left = models.CharField(max_length=30)
     right = models.CharField(max_length=30)
-    user = models.ForeignKey('auth.User')
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 
     string_field = models.TextField()
     int_field = models.IntegerField(default=10)
