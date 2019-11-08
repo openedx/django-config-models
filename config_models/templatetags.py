@@ -26,5 +26,5 @@ def submit_row(context):
             'show_save_and_continue': False,
             'show_save': False,
         })
-    else:
-        return ctx
+
+    return ctx

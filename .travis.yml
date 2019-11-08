@@ -1,17 +1,58 @@
 language: python
 python:
   - 2.7
+  - 3.5
   - 3.6
 env:
 - TOXENV=django111-drf37
 - TOXENV=django111-drf38
 - TOXENV=django111-drf39
 - TOXENV=django111-drflatest
+- TOXENV=django20-drf37
+- TOXENV=django20-drf38
+- TOXENV=django20-drf39
+- TOXENV=django20-drflatest
+- TOXENV=django21-drf37
+- TOXENV=django21-drf38
+- TOXENV=django21-drf39
+- TOXENV=django21-drflatest
+- TOXENV=django22-drf37
+- TOXENV=django22-drf38
+- TOXENV=django22-drf39
+- TOXENV=django22-drflatest
+
 matrix:
+  exclude:
+    - python: 2.7
+      env: TOXENV=django20-drf37
+    - python: 2.7
+      env: TOXENV=django20-drf38
+    - python: 2.7
+      env: TOXENV=django20-drf39
+    - python: 2.7
+      env: TOXENV=django20-drflatest
+    - python: 2.7
+      env: TOXENV=django21-drf37
+    - python: 2.7
+      env: TOXENV=django21-drf38
+    - python: 2.7
+      env: TOXENV=django21-drf39
+    - python: 2.7
+      env: TOXENV=django21-drflatest
+    - python: 2.7
+      env: TOXENV=django22-drf37
+    - python: 2.7
+      env: TOXENV=django22-drf38
+    - python: 2.7
+      env: TOXENV=django22-drf39
+    - python: 2.7
+      env: TOXENV=django22-drflatest
+
+
   include:
-  - python: 3.6
+  - python: 3.5
     env: TOXENV=quality
-  - python: 3.6
+  - python: 3.5
     env: TOXENV=docs
   - python: 2.7
     env: TOXENV=quality

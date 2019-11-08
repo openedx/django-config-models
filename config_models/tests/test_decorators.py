@@ -2,13 +2,12 @@
 Tests for config models decorators
 """
 
-from __future__ import unicode_literals, absolute_import
+from __future__ import absolute_import, unicode_literals
+from django.utils import six
 
 from config_models import decorators
 from config_models.models import ConfigurationModel
 from config_models.tests.utils import CacheIsolationTestCase
-from django.utils import six
-
 
 # pylint: disable=model-missing-unicode
 @six.python_2_unicode_compatible
