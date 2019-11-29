@@ -11,7 +11,7 @@ attrs==19.3.0
 backports.functools-lru-cache==1.6.1
 backports.os==0.1.1       # via path.py
 caniusepython3==7.2.0
-certifi==2019.9.11
+certifi==2019.11.28
 chardet==3.0.4
 click-log==0.3.2
 click==7.0
@@ -41,7 +41,7 @@ more-itertools==5.0.0
 packaging==19.2
 path.py==11.5.2           # via edx-i18n-tools
 pathlib2==2.3.5
-pip-tools==4.2.0
+pip-tools==4.3.0
 pluggy==0.13.1
 polib==1.1.0              # via edx-i18n-tools
 py==1.8.0
@@ -74,4 +74,4 @@ wrapt==1.11.2
 zipp==0.6.0
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==41.6.0        # via caniusepython3
+# setuptools==42.0.1        # via caniusepython3
