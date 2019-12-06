@@ -14,7 +14,7 @@ chardet==3.0.4            # via requests
 configparser==4.0.2
 contextlib2==0.6.0.post1
 coverage==4.5.4
-ddt==1.2.1
+ddt==1.2.2
 django==1.11.26
 djangorestframework==3.9.4
 docutils==0.15.2          # via readme-renderer, sphinx
@@ -22,7 +22,7 @@ freezegun==0.3.12
 funcsigs==1.0.2
 idna==2.8                 # via requests
 imagesize==1.1.0          # via sphinx
-importlib-metadata==0.23
+importlib-metadata==1.2.0
 jinja2==2.10.3            # via sphinx
 markupsafe==1.1.1         # via jinja2
 mock==3.0.5
@@ -36,7 +36,7 @@ pygments==2.5.2           # via readme-renderer, sphinx
 pyparsing==2.4.5
 pytest-cov==2.8.1
 pytest-django==3.7.0
-pytest==4.6.6
+pytest==4.6.7
 python-dateutil==2.8.1
 pytz==2019.3
 readme-renderer==24.0
@@ -48,7 +48,7 @@ snowballstemmer==2.0.0    # via sphinx
 sphinx-rtd-theme==0.4.3
 sphinx==1.8.5
 sphinxcontrib-websupport==1.1.2  # via sphinx
-tqdm==4.39.0              # via twine
+tqdm==4.40.1              # via twine
 twine==1.15.0
 typing==3.7.4.1           # via sphinx
 urllib3==1.25.7           # via requests
@@ -57,4 +57,4 @@ webencodings==0.5.1       # via bleach
 zipp==0.6.0
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==42.0.1        # via sphinx, twine
+# setuptools
