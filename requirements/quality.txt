@@ -17,7 +17,7 @@ click==7.0                # via click-log, edx-lint
 configparser==4.0.2
 contextlib2==0.6.0.post1
 coverage==4.5.4
-ddt==1.2.1
+ddt==1.2.2
 distlib==0.3.0            # via caniusepython3
 django==1.11.26
 djangorestframework==3.9.4
@@ -27,7 +27,7 @@ freezegun==0.3.12
 funcsigs==1.0.2
 futures==3.2.0 ; python_version == "2.7"
 idna==2.8                 # via requests
-importlib-metadata==0.23
+importlib-metadata==1.2.0
 isort==4.3.21             # via pylint
 lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
@@ -46,7 +46,7 @@ pylint==1.9.5             # via edx-lint, pylint-celery, pylint-django, pylint-p
 pyparsing==2.4.5
 pytest-cov==2.8.1
 pytest-django==3.7.0
-pytest==4.6.6
+pytest==4.6.7
 python-dateutil==2.8.1
 pytz==2019.3
 requests==2.22.0          # via caniusepython3
@@ -60,4 +60,4 @@ wrapt==1.11.2             # via astroid
 zipp==0.6.0
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==42.0.1        # via caniusepython3
+# setuptools
