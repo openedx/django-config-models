@@ -18,10 +18,10 @@ click==7.0
 codecov==2.0.15
 configparser==4.0.2
 contextlib2==0.6.0.post1
-coverage==4.5.4
+coverage==5.0
 ddt==1.2.2
 distlib==0.3.0
-django==1.11.26
+django==1.11.27
 djangorestframework==3.9.4
 edx-i18n-tools==0.5.0
 edx-lint==1.4.1
@@ -54,7 +54,7 @@ pylint==1.9.5
 pyparsing==2.4.5
 pytest-cov==2.8.1
 pytest-django==3.7.0
-pytest==4.6.7
+pytest==4.6.8
 python-dateutil==2.8.1
 pytz==2019.3
 pyyaml==5.2               # via edx-i18n-tools
@@ -68,7 +68,7 @@ tox-battery==0.5.1
 tox-travis==0.12
 tox==3.14.2
 urllib3==1.25.7
-virtualenv==16.7.8
+virtualenv==16.7.9
 wcwidth==0.1.7
 wrapt==1.11.2
 zipp==0.6.0
