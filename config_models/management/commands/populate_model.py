@@ -72,10 +72,9 @@ class Command(BaseCommand):
 
         json_file = options['file']
         if not os.path.exists(json_file):
-            raise CommandError(_("File {0} does not exist").format(json_file))  # pylint: disable=no-member
+            raise CommandError(_("File {0} does not exist").format(json_file))
 
-        self.stdout.write(_("Importing JSON data from file {0}").format(json_file))  # pylint: disable=no-member
+        self.stdout.write(_("Importing JSON data from file {0}").format(json_file))
         with io.open(json_file, "rb") as data:
             created_entries = deserialize_json(data, options['username'])
-            # pylint: disable=no-member
             self.stdout.write(_("Import complete, {0} new entries created").format(created_entries))

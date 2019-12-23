@@ -18,8 +18,6 @@ try:
 except InvalidCacheBackendError:
     from django.core.cache import cache
 
-# pylint: disable=protected-access
-
 
 class ConfigurationModelAdmin(admin.ModelAdmin):
     """

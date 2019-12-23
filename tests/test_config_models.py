@@ -5,7 +5,6 @@ from __future__ import unicode_literals, absolute_import
 
 import ddt
 from django.contrib.auth.models import User
-from django.db import models
 from django.test import TestCase
 from django.utils import six
 from rest_framework.test import APIRequestFactory
@@ -13,40 +12,9 @@ from rest_framework.test import APIRequestFactory
 from freezegun import freeze_time
 
 from mock import patch, Mock
-from config_models.models import ConfigurationModel
+
 from config_models.views import ConfigurationModelCurrentAPIView
-
-
-# pylint: disable=model-missing-unicode
-@six.python_2_unicode_compatible
-class ExampleConfig(ConfigurationModel):
-    """
-    Test model for testing ``ConfigurationModels``.
-    """
-    cache_timeout = 300
-
-    string_field = models.TextField()
-    int_field = models.IntegerField(default=10)
-
-    def __str__(self):
-        return "ExampleConfig(enabled={}, string_field={}, int_field={})".format(
-            self.enabled, self.string_field, self.int_field
-        )
-
-
-# pylint: disable=model-missing-unicode
-@six.python_2_unicode_compatible
-class ManyToManyExampleConfig(ConfigurationModel):
-    """
-    Test model configuration with a many-to-many field.
-    """
-    cache_timeout = 300
-
-    string_field = models.TextField()
-    many_user_field = models.ManyToManyField(User, related_name='topic_many_user_field')
-
-    def __str__(self):
-        return "ManyToManyExampleConfig(enabled={}, string_field={})".format(self.enabled, self.string_field)
+from example.models import ExampleConfig, ExampleKeyedConfig, ManyToManyExampleConfig
 
 
 @patch('config_models.models.cache')
@@ -197,31 +165,6 @@ class ConfigurationModelTests(TestCase):
         # The many-to-many field is ignored in comparison.
         self.assertTrue(
             ManyToManyExampleConfig.equal_to_current({"string_field": "first", "many_user_field": "removed"})
-        )
-
-
-# pylint: disable=model-missing-unicode
-@six.python_2_unicode_compatible
-class ExampleKeyedConfig(ConfigurationModel):
-    """
-    Test model for testing ``ConfigurationModels`` with keyed configuration.
-
-    Does not inherit from ExampleConfig due to how Django handles model inheritance.
-    """
-    cache_timeout = 300
-
-    KEY_FIELDS = ('left', 'right', 'user')
-
-    left = models.CharField(max_length=30)
-    right = models.CharField(max_length=30)
-    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-
-    string_field = models.TextField()
-    int_field = models.IntegerField(default=10)
-
-    def __str__(self):
-        return "ExampleKeyedConfig(enabled={}, left={}, right={}, user={}, string_field={}, int_field={})".format(
-            self.enabled, self.left, self.right, self.user, self.string_field, self.int_field
         )
 
 
