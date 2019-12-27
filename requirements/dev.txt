@@ -18,7 +18,7 @@ click==7.0
 codecov==2.0.15
 configparser==4.0.2
 contextlib2==0.6.0.post1
-coverage==5.0
+coverage==5.0.1
 ddt==1.2.2
 distlib==0.3.0
 django==1.11.27
@@ -44,14 +44,14 @@ pathlib2==2.3.5
 pip-tools==4.3.0
 pluggy==0.13.1
 polib==1.1.0              # via edx-i18n-tools
-py==1.8.0
+py==1.8.1
 pycodestyle==2.5.0
 pydocstyle==3.0.0
 pylint-celery==0.3
 pylint-django==0.11.1
 pylint-plugin-utils==0.6
 pylint==1.9.5
-pyparsing==2.4.5
+pyparsing==2.4.6
 pytest-cov==2.8.1
 pytest-django==3.7.0
 pytest==4.6.8
