@@ -55,7 +55,7 @@ singledispatch==3.4.0.3   # via astroid, pylint
 six==1.13.0
 snowballstemmer==2.0.0    # via pydocstyle
 urllib3==1.25.7           # via requests
-wcwidth==0.1.7
+wcwidth==0.1.8
 wrapt==1.11.2             # via astroid
 zipp==0.6.0
 

@@ -27,5 +27,5 @@ python-dateutil==2.8.1    # via freezegun
 pytz==2019.3
 scandir==1.10.0           # via pathlib2
 six==1.13.0               # via freezegun, mock, packaging, pathlib2, pytest, python-dateutil
-wcwidth==0.1.7            # via pytest
+wcwidth==0.1.8            # via pytest
 zipp==0.6.0               # via importlib-metadata
