@@ -14,6 +14,7 @@ import copy
 from django.core.cache import caches
 from django.test import TestCase, override_settings
 from django.conf import settings
+from edx_django_utils.cache.utils import TieredCache
 
 
 class CacheIsolationMixin(object):
@@ -107,6 +108,7 @@ class CacheIsolationMixin(object):
         # over our list of overridden caches, instead.
         for cache in settings.CACHES:
             caches[cache].clear()
+        TieredCache.dangerous_clear_all_tiers()
 
 
 class CacheIsolationTestCase(CacheIsolationMixin, TestCase):

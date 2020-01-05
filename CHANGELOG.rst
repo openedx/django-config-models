@@ -2,7 +2,7 @@ Change Log
 ----------
 
 ..
-   All enhancements and patches to cookiecutter-django-app will be documented
+   All enhancements and patches to django-config-models will be documented
    in this file.  It adheres to the structure of http://keepachangelog.com/ ,
    but in reStructuredText instead of Markdown (for ease of incorporation into
    Sphinx documentation and the PyPI description).
@@ -13,6 +13,19 @@ Change Log
 
 Unreleased
 ~~~~~~~~~~
+
+[2.0.0] - 2020-01-08
+~~~~~~~~~~~~~~~~~~~~
+* Switch to using edx-django-utils TieredCache (a two-layer cache that uses both
+  Django's cache and an internal request-level cache) to reduce the number of
+  memcached roundtrips. This was a major performance issue that accounted for
+  10-20% of transaction time for certain courseware views in edx-platform.
+* It is now REQUIRED to [add `RequestCacheMiddleware` to middleware](https://github.com/edx/edx-django-utils/tree/master/edx_django_utils/cache#tieredcachemiddleware).
+  to use ConfigModels.
+* Remove usage of the "configuration" cache setting. ConfigModels now always use
+  the default Django cache.
+* Django Rest Framework 3.7 and 3.8 are no longer supported.
+
 [1.0.1] - 2019-04-23
 ~~~~~~~~~~~~~~~~~~~~
 * Fix auto publishing to PyPI

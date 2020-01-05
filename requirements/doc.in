@@ -6,4 +6,4 @@
 readme_renderer           # Validates README.rst for usage on PyPI
 Sphinx                    # Documentation builder
 sphinx_rtd_theme          # ReadTheDocs theme for Sphinx output
-twine
+twine<2.0                 # 2.0 and above requires Python 3.6+

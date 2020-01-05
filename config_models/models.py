@@ -5,25 +5,18 @@ from __future__ import absolute_import, unicode_literals
 
 from django.db import models
 from django.conf import settings
-from django.core.cache import caches, InvalidCacheBackendError
 from django.utils.translation import ugettext_lazy as _
 from django.utils import six
 
+from edx_django_utils.cache.utils import TieredCache
 from rest_framework.utils import model_meta
-# Config model values are cached. The caching backend configuration used has implications for how the values
-# are changed/queried in an active release. When a new key/value is saved, its current cached value is cleared
-# via deletion from the cache. Otherwise, depending on the cache backend configuration *and* on the value of
-# ConfigurationModel.cache_timeout, the key/value may still exist in some caches.
-try:
-    # Use the Django settings-configured cache, which could be:
-    #  - memcache or another external networked cache (per-cluster)
-    #  - file cache (per-machine)
-    #  - local memory cache (per-process)
-    #  - other
-    cache = caches['configuration']  # pylint: disable=invalid-name
-except InvalidCacheBackendError:
-    # If no caches configured, use the default cache specified in Django CACHES setting.
-    from django.core.cache import cache
+
+# The following import exists for backwards compatibility (because a number of
+# library users assume config_models.models.cache is importable), but
+# ConfigModels will now ignore the cutom 'configuration' cache setting and just
+# use TieredCache, which will make use of a local request cache + the default
+# Django cache.
+from django.core.cache import cache  # pylint: disable=unused-import
 
 
 class ConfigurationModelManager(models.Manager):
@@ -116,9 +109,9 @@ class ConfigurationModel(models.Model):
             using,
             update_fields
         )
-        cache.delete(self.cache_key_name(*[getattr(self, key) for key in self.KEY_FIELDS]))
+        TieredCache.delete_all_tiers(self.cache_key_name(*[getattr(self, key) for key in self.KEY_FIELDS]))
         if self.KEY_FIELDS:
-            cache.delete(self.key_values_cache_key_name())
+            TieredCache.delete_all_tiers(self.key_values_cache_key_name())
 
     @classmethod
     def cache_key_name(cls, *args):
@@ -139,9 +132,10 @@ class ConfigurationModel(models.Model):
         from the database, or by creating a new empty entry (which is not
         persisted).
         """
-        cached = cache.get(cls.cache_key_name(*args))
-        if cached is not None:
-            return cached
+        cache_key = cls.cache_key_name(*args)
+        cached_response = TieredCache.get_cached_response(cache_key)
+        if cached_response.is_found:
+            return cached_response.value
 
         key_dict = dict(zip(cls.KEY_FIELDS, args))
         try:
@@ -149,7 +143,7 @@ class ConfigurationModel(models.Model):
         except IndexError:
             current = cls(**key_dict)
 
-        cache.set(cls.cache_key_name(*args), current, cls.cache_timeout)
+        TieredCache.set_all_tiers(cache_key, current, cls.cache_timeout)
         return current
 
     @classmethod
@@ -196,11 +190,12 @@ class ConfigurationModel(models.Model):
         assert not kwargs, "'flat' is the only kwarg accepted"
         key_fields = key_fields or cls.KEY_FIELDS
         cache_key = cls.key_values_cache_key_name(*key_fields)
-        cached = cache.get(cache_key)
-        if cached is not None:
-            return cached
+        cached_response = TieredCache.get_cached_response(cache_key)
+        if cached_response.is_found:
+            return cached_response.value
+
         values = list(cls.objects.values_list(*key_fields, flat=flat).order_by().distinct())
-        cache.set(cache_key, values, cls.cache_timeout)
+        TieredCache.set_all_tiers(cache_key, values, cls.cache_timeout)
         return values
 
     def fields_equal(self, instance, fields_to_ignore=("id", "change_date", "changed_by")):

@@ -5,20 +5,19 @@ from __future__ import unicode_literals, absolute_import
 
 import ddt
 from django.contrib.auth.models import User
-from django.test import TestCase
+from django.db import models
 from django.utils import six
 from rest_framework.test import APIRequestFactory
 
 from freezegun import freeze_time
 
-from mock import patch, Mock
-
+from config_models.models import ConfigurationModel
 from config_models.views import ConfigurationModelCurrentAPIView
 from example.models import ExampleConfig, ExampleKeyedConfig, ManyToManyExampleConfig
+from .utils import CacheIsolationTestCase
 
 
-@patch('config_models.models.cache')
-class ConfigurationModelTests(TestCase):
+class ConfigurationModelTests(CacheIsolationTestCase):
     """
     Tests of ConfigurationModel
     """
@@ -27,28 +26,26 @@ class ConfigurationModelTests(TestCase):
         self.user = User()
         self.user.save()
 
-    def test_cache_deleted_on_save(self, mock_cache):
-        ExampleConfig(changed_by=self.user).save()
-        mock_cache.delete.assert_called_with(ExampleConfig.cache_key_name())
+    def test_cache_key_name(self):
+        self.assertEqual(
+            ExampleConfig.cache_key_name(),
+            'configuration/ExampleConfig/current'
+        )
 
-    def test_cache_key_name(self, __):
-        self.assertEqual(ExampleConfig.cache_key_name(), 'configuration/ExampleConfig/current')
+    def test_no_config_empty_cache(self):
+        # First time reads from the database
+        with self.assertNumQueries(1):
+            current = ExampleConfig.current()
+            self.assertEqual(current.int_field, 10)
+            self.assertEqual(current.string_field, '')
 
-    def test_no_config_empty_cache(self, mock_cache):
-        mock_cache.get.return_value = None
+        # Follow-on request reads from cache with no database request.
+        with self.assertNumQueries(0):
+            cached_current = ExampleConfig.current()
+            self.assertEqual(cached_current.int_field, 10)
+            self.assertEqual(cached_current.string_field, '')
 
-        current = ExampleConfig.current()
-        self.assertEqual(current.int_field, 10)
-        self.assertEqual(current.string_field, '')
-        mock_cache.set.assert_called_with(ExampleConfig.cache_key_name(), current, 300)
-
-    def test_no_config_full_cache(self, mock_cache):
-        current = ExampleConfig.current()
-        self.assertEqual(current, mock_cache.get.return_value)
-
-    def test_config_ordering(self, mock_cache):
-        mock_cache.get.return_value = None
-
+    def test_config_ordering(self):
         with freeze_time('2012-01-01'):
             first = ExampleConfig(changed_by=self.user)
             first.string_field = 'first'
@@ -60,20 +57,23 @@ class ConfigurationModelTests(TestCase):
 
         self.assertEqual(ExampleConfig.current().string_field, 'second')
 
-    def test_cache_set(self, mock_cache):
-        mock_cache.get.return_value = None
+    def test_cache_set(self):
+        # Nothing is cached, so we take a database hit for this.
+        with self.assertNumQueries(1):
+            default = ExampleConfig.current()
+            self.assertEqual(default.string_field, '')
 
         first = ExampleConfig(changed_by=self.user)
         first.string_field = 'first'
         first.save()
 
-        ExampleConfig.current()
+        # The save() call above should have invalidated the cache, so we expect
+        # to see a query to get the current config value.
+        with self.assertNumQueries(1):
+            current = ExampleConfig.current()
+            self.assertEqual(current.string_field, 'first')
 
-        mock_cache.set.assert_called_with(ExampleConfig.cache_key_name(), first, 300)
-
-    def test_active_annotation(self, mock_cache):
-        mock_cache.get.return_value = None
-
+    def test_active_annotation(self):
         with freeze_time('2012-01-01'):
             ExampleConfig.objects.create(string_field='first')
 
@@ -86,9 +86,7 @@ class ConfigurationModelTests(TestCase):
         self.assertEqual(rows[1].string_field, 'first')
         self.assertEqual(rows[1].is_active, False)
 
-    def test_keyed_active_annotation(self, mock_cache):
-        mock_cache.get.return_value = None
-
+    def test_keyed_active_annotation(self):
         with freeze_time('2012-01-01'):
             ExampleKeyedConfig.objects.create(left='left', right='right', user=self.user, string_field='first')
 
@@ -101,7 +99,7 @@ class ConfigurationModelTests(TestCase):
         self.assertEqual(rows[1].string_field, 'first')
         self.assertEqual(rows[1].is_active, False)
 
-    def test_always_insert(self, __):
+    def test_always_insert(self):
         config = ExampleConfig(changed_by=self.user, string_field='first')
         config.save()
         config.string_field = 'second'
@@ -109,9 +107,7 @@ class ConfigurationModelTests(TestCase):
 
         self.assertEqual(2, ExampleConfig.objects.all().count())
 
-    def test_equality(self, mock_cache):
-        mock_cache.get.return_value = None
-
+    def test_equality(self):
         config = ExampleConfig(changed_by=self.user, string_field='first')
         config.save()
 
@@ -125,9 +121,7 @@ class ConfigurationModelTests(TestCase):
 
         self.assertFalse(ExampleConfig.equal_to_current({}))
 
-    def test_equality_custom_fields_to_ignore(self, mock_cache):
-        mock_cache.get.return_value = None
-
+    def test_equality_custom_fields_to_ignore(self):
         config = ExampleConfig(changed_by=self.user, string_field='first')
         config.save()
 
@@ -152,8 +146,7 @@ class ConfigurationModelTests(TestCase):
             )
         )
 
-    def test_equality_ignores_many_to_many(self, mock_cache):
-        mock_cache.get.return_value = None
+    def test_equality_ignores_many_to_many(self):
         config = ManyToManyExampleConfig(changed_by=self.user, string_field='first')
         config.save()
 
@@ -169,8 +162,7 @@ class ConfigurationModelTests(TestCase):
 
 
 @ddt.ddt
-@patch('config_models.models.cache')
-class KeyedConfigurationModelTests(TestCase):
+class KeyedConfigurationModelTests(CacheIsolationTestCase):
     """
     Tests for ``ConfigurationModels`` with keyed configuration.
     """
@@ -181,7 +173,7 @@ class KeyedConfigurationModelTests(TestCase):
 
     @ddt.data(('a', 'b'), ('c', 'd'))
     @ddt.unpack
-    def test_cache_key_name(self, left, right, _mock_cache):
+    def test_cache_key_name(self, left, right):
         self.assertEqual(
             ExampleKeyedConfig.cache_key_name(left, right, self.user),
             'configuration/ExampleKeyedConfig/current/{},{},{}'.format(left, right, self.user)
@@ -193,30 +185,27 @@ class KeyedConfigurationModelTests(TestCase):
         (('left', ), 'left')
     )
     @ddt.unpack
-    def test_key_values_cache_key_name(self, args, expected_key, _mock_cache):
+    def test_key_values_cache_key_name(self, args, expected_key):
         self.assertEqual(
             ExampleKeyedConfig.key_values_cache_key_name(*args),
             'configuration/ExampleKeyedConfig/key_values/{}'.format(expected_key))
 
     @ddt.data(('a', 'b'), ('c', 'd'))
     @ddt.unpack
-    def test_no_config_empty_cache(self, left, right, mock_cache):
-        mock_cache.get.return_value = None
+    def test_no_config_empty_cache(self, left, right):
+        # First time, it comes from the database.
+        with self.assertNumQueries(1):
+            current = ExampleKeyedConfig.current(left, right, self.user)
+            self.assertEqual(current.int_field, 10)
+            self.assertEqual(current.string_field, '')
 
-        current = ExampleKeyedConfig.current(left, right, self.user)
-        self.assertEqual(current.int_field, 10)
-        self.assertEqual(current.string_field, '')
-        mock_cache.set.assert_called_with(ExampleKeyedConfig.cache_key_name(left, right, self.user), current, 300)
+        # Second time, it should come from cache.
+        with self.assertNumQueries(0):
+            current = ExampleKeyedConfig.current(left, right, self.user)
+            self.assertEqual(current.int_field, 10)
+            self.assertEqual(current.string_field, '')
 
-    @ddt.data(('a', 'b'), ('c', 'd'))
-    @ddt.unpack
-    def test_no_config_full_cache(self, left, right, mock_cache):
-        current = ExampleKeyedConfig.current(left, right, self.user)
-        self.assertEqual(current, mock_cache.get.return_value)
-
-    def test_config_ordering(self, mock_cache):
-        mock_cache.get.return_value = None
-
+    def test_config_ordering(self):
         with freeze_time('2012-01-01'):
             ExampleKeyedConfig(
                 changed_by=self.user,
@@ -252,8 +241,10 @@ class KeyedConfigurationModelTests(TestCase):
         self.assertEqual(ExampleKeyedConfig.current('left_a', 'right_a', self.user).string_field, 'second_a')
         self.assertEqual(ExampleKeyedConfig.current('left_b', 'right_b', self.user).string_field, 'second_b')
 
-    def test_cache_set(self, mock_cache):
-        mock_cache.get.return_value = None
+    def test_cache_set(self):
+        with self.assertNumQueries(1):
+            default = ExampleConfig.current('left', 'right', self.user)
+            self.assertEqual(default.string_field, '')
 
         first = ExampleKeyedConfig(
             changed_by=self.user,
@@ -264,13 +255,11 @@ class KeyedConfigurationModelTests(TestCase):
         )
         first.save()
 
-        ExampleKeyedConfig.current('left', 'right', self.user)
+        # Cache is invalidated by the save above, so another query is made.
+        with self.assertNumQueries(1):
+            ExampleKeyedConfig.current('left', 'right', self.user)
 
-        mock_cache.set.assert_called_with(ExampleKeyedConfig.cache_key_name('left', 'right', self.user), first, 300)
-
-    def test_key_values(self, mock_cache):
-        mock_cache.get.return_value = None
-
+    def test_key_values(self):
         with freeze_time('2012-01-01'):
             ExampleKeyedConfig(left='left_a', right='right_a', user=self.user, changed_by=self.user).save()
             ExampleKeyedConfig(left='left_b', right='right_b', user=self.user, changed_by=self.user).save()
@@ -288,7 +277,7 @@ class KeyedConfigurationModelTests(TestCase):
         self.assertEqual(len(unique_left_keys), 2)
         self.assertEqual(set(unique_left_keys), set(['left_a', 'left_b']))
 
-    def test_key_string_values(self, mock_cache):
+    def test_key_string_values(self):
         """ Ensure str() vs unicode() doesn't cause duplicate cache entries """
         ExampleKeyedConfig(
             left='left',
@@ -298,22 +287,14 @@ class KeyedConfigurationModelTests(TestCase):
             user=self.user,
             changed_by=self.user
         ).save()
-        mock_cache.get.return_value = None
 
         entry = ExampleKeyedConfig.current('left', u'\N{RIGHT ANGLE BRACKET}\N{SNOWMAN}', self.user)
-        key = mock_cache.get.call_args[0][0]
         self.assertEqual(entry.int_field, 10)
-        mock_cache.get.assert_called_with(key)
-        self.assertEqual(mock_cache.set.call_args[0][0], key)
 
-        mock_cache.get.reset_mock()
         entry = ExampleKeyedConfig.current(u'left', u'\N{RIGHT ANGLE BRACKET}\N{SNOWMAN}', self.user)
         self.assertEqual(entry.int_field, 10)
-        mock_cache.get.assert_called_with(key)
 
-    def test_current_set(self, mock_cache):
-        mock_cache.get.return_value = None
-
+    def test_current_set(self):
         with freeze_time('2012-01-01'):
             ExampleKeyedConfig(left='left_a', right='right_a', int_field=0, user=self.user, changed_by=self.user).save()
             ExampleKeyedConfig(left='left_b', right='right_b', int_field=0, user=self.user, changed_by=self.user).save()
@@ -328,9 +309,7 @@ class KeyedConfigurationModelTests(TestCase):
             set([1, 2])
         )
 
-    def test_active_annotation(self, mock_cache):
-        mock_cache.get.return_value = None
-
+    def test_active_annotation(self):
         with freeze_time('2012-01-01'):
             ExampleKeyedConfig.objects.create(left='left_a', right='right_a', user=self.user, string_field='first')
             ExampleKeyedConfig.objects.create(left='left_b', right='right_b', user=self.user, string_field='first')
@@ -347,18 +326,8 @@ class KeyedConfigurationModelTests(TestCase):
                 self.assertEqual(row.string_field, 'first')
                 self.assertEqual(row.is_active, True)
 
-    def test_key_values_cache(self, mock_cache):
-        mock_cache.get.return_value = None
-        self.assertEqual(ExampleKeyedConfig.key_values(), [])
-        mock_cache.set.assert_called_with(ExampleKeyedConfig.key_values_cache_key_name(), [], 300)
 
-        fake_result = [('a', 'b'), ('c', 'd')]
-        mock_cache.get.return_value = fake_result
-        self.assertEqual(ExampleKeyedConfig.key_values(), fake_result)
-
-    def test_equality(self, mock_cache):
-        mock_cache.get.return_value = None
-
+    def test_equality(self):
         config1 = ExampleKeyedConfig(left='left_a', right='right_a', int_field=1, user=self.user, changed_by=self.user)
         config1.save()
 
@@ -420,7 +389,7 @@ class KeyedConfigurationModelTests(TestCase):
 
 
 @ddt.ddt
-class ConfigurationModelAPITests(TestCase):
+class ConfigurationModelAPITests(CacheIsolationTestCase):
     """
     Tests for the configuration model API.
     """
@@ -434,13 +403,7 @@ class ConfigurationModelAPITests(TestCase):
         )
         self.user.is_superuser = True
         self.user.save()
-
         self.current_view = ConfigurationModelCurrentAPIView.as_view(model=ExampleConfig)
-
-        # Disable caching while testing the API
-        patcher = patch('config_models.models.cache', Mock(get=Mock(return_value=None)))
-        patcher.start()
-        self.addCleanup(patcher.stop)
 
     def test_insert(self):
         self.assertEqual("", ExampleConfig.current().string_field)
