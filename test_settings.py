@@ -16,6 +16,7 @@ def root(*args):
     """
     return join(abspath(dirname(__file__)), *args)
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -30,7 +31,9 @@ DATABASES = {
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'example.apps.ExampleConfig',
     'config_models',
+    'tests'
 )
 
 LOCALE_PATHS = [

@@ -23,7 +23,7 @@ try:
     cache = caches['configuration']  # pylint: disable=invalid-name
 except InvalidCacheBackendError:
     # If no caches configured, use the default cache specified in Django CACHES setting.
-    from django.core.cache import cache  # pylint: disable=ungrouped-imports
+    from django.core.cache import cache
 
 
 class ConfigurationModelManager(models.Manager):
@@ -128,7 +128,6 @@ class ConfigurationModel(models.Model):
                 raise TypeError(
                     "cache_key_name() takes exactly {} arguments ({} given)".format(len(cls.KEY_FIELDS), len(args))
                 )
-            # pylint: disable=unicode-builtin
             return 'configuration/{}/current/{}'.format(cls.__name__, ','.join(six.text_type(arg) for arg in args))
         else:
             return 'configuration/{}/current'.format(cls.__name__)

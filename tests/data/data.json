@@ -1,5 +1,5 @@
 {
-  "model": "config_models.ExampleDeserializeConfig",
+  "model": "example.ExampleDeserializeConfig",
   "data": [
     {
       "name": "betty",

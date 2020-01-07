@@ -10,29 +10,11 @@ import io
 from django.utils import timezone, six
 from django.contrib.auth.models import User
 from django.core.management.base import CommandError
-from django.db import models
 
 from config_models.management.commands import populate_model
-from config_models.models import ConfigurationModel
 from config_models.utils import deserialize_json
-from config_models.tests.utils import CacheIsolationTestCase
-
-
-# pylint: disable=model-missing-unicode
-@six.python_2_unicode_compatible
-class ExampleDeserializeConfig(ConfigurationModel):
-    """
-    Test model for testing deserialization of ``ConfigurationModels`` with keyed configuration.
-    """
-    KEY_FIELDS = ('name',)
-
-    name = models.TextField()
-    int_field = models.IntegerField(default=10)
-
-    def __str__(self):
-        return "ExampleDeserializeConfig(enabled={}, name={}, int_field={})".format(
-            self.enabled, self.name, self.int_field
-        )
+from example.models import ExampleDeserializeConfig
+from tests.utils import CacheIsolationTestCase
 
 
 class DeserializeJSONTests(CacheIsolationTestCase):
@@ -129,7 +111,7 @@ class DeserializeJSONTests(CacheIsolationTestCase):
         """
         test_json = textwrap.dedent("""
             {
-                "model": "config_models.ExampleDeserializeConfig",
+                "model": "example.ExampleDeserializeConfig",
                 "data": [{"name": "dino"}]
             }
             """)
