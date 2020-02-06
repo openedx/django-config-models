@@ -13,7 +13,7 @@ from rest_framework.utils import model_meta
 
 # The following import exists for backwards compatibility (because a number of
 # library users assume config_models.models.cache is importable), but
-# ConfigModels will now ignore the cutom 'configuration' cache setting and just
+# ConfigModels will now ignore the custom 'configuration' cache setting and just
 # use TieredCache, which will make use of a local request cache + the default
 # Django cache.
 from django.core.cache import cache  # pylint: disable=unused-import

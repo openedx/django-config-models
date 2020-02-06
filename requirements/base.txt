@@ -4,15 +4,7 @@
 #
 #    make upgrade
 #
---index-url http://edx.devstack.devpi:3141/root/pypi/+simple/
---extra-index-url https://pypi.python.org/simple
---trusted-host edx.devstack.devpi
-
-django-waffle==0.18.0     # via edx-django-utils
-django==2.2.9
+django==2.2.10
 djangorestframework==3.11.0
-edx-django-utils==2.0.2
-newrelic==5.4.1.134       # via edx-django-utils
-psutil==1.2.1             # via edx-django-utils
 pytz==2019.3              # via django
 sqlparse==0.3.0           # via django

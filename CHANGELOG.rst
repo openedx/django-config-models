@@ -20,7 +20,8 @@ Unreleased
   Django's cache and an internal request-level cache) to reduce the number of
   memcached roundtrips. This was a major performance issue that accounted for
   10-20% of transaction time for certain courseware views in edx-platform.
-* It is now REQUIRED to [add `RequestCacheMiddleware` to middleware](https://github.com/edx/edx-django-utils/tree/master/edx_django_utils/cache#tieredcachemiddleware).
+* It is now REQUIRED to add `RequestCacheMiddleware` `to middleware
+  <https://github.com/edx/edx-django-utils/tree/master/edx_django_utils/cache#tieredcachemiddleware>`_
   to use ConfigModels.
 * Remove usage of the "configuration" cache setting. ConfigModels now always use
   the default Django cache.

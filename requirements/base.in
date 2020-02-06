@@ -3,4 +3,3 @@
 
 Django>=1.8,<3                       # Web application framework
 djangorestframework>=3.6
-edx-django-utils<3
