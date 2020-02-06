@@ -5,13 +5,11 @@ from __future__ import unicode_literals, absolute_import
 
 import ddt
 from django.contrib.auth.models import User
-from django.db import models
 from django.utils import six
 from rest_framework.test import APIRequestFactory
 
 from freezegun import freeze_time
 
-from config_models.models import ConfigurationModel
 from config_models.views import ConfigurationModelCurrentAPIView
 from example.models import ExampleConfig, ExampleKeyedConfig, ManyToManyExampleConfig
 from .utils import CacheIsolationTestCase
@@ -152,7 +150,7 @@ class ConfigurationModelTests(CacheIsolationTestCase):
 
         second_user = User(username="second_user")
         second_user.save()
-        config.many_user_field.add(second_user)  # pylint: disable=no-member
+        config.many_user_field.add(second_user)
         config.save()
 
         # The many-to-many field is ignored in comparison.
@@ -325,7 +323,6 @@ class KeyedConfigurationModelTests(CacheIsolationTestCase):
                 self.assertEqual(row.left, 'left_b')
                 self.assertEqual(row.string_field, 'first')
                 self.assertEqual(row.is_active, True)
-
 
     def test_equality(self):
         config1 = ExampleKeyedConfig(left='left_a', right='right_a', int_field=1, user=self.user, changed_by=self.user)

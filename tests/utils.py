@@ -17,7 +17,7 @@ from django.conf import settings
 from edx_django_utils.cache.utils import TieredCache
 
 
-class CacheIsolationMixin(object):
+class CacheIsolationMixin:
     """
     This class can be used to enable specific django caches for
     specific the TestCase that it's mixed into.

@@ -17,7 +17,7 @@ class ReadableOnlyByAuthors(DjangoModelPermissions):
     perms_map['GET'] = perms_map['OPTIONS'] = perms_map['HEAD'] = perms_map['POST']
 
 
-class AtomicMixin(object):
+class AtomicMixin:
     """Mixin to provide atomic transaction for as_view."""
     @classmethod
     def create_atomic_wrapper(cls, wrapped_func):

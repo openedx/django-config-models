@@ -74,7 +74,7 @@ class ConfigurationModel(models.Model):
             should be cached
     """
 
-    class Meta(object):
+    class Meta:
         abstract = True
         ordering = ("-change_date", )
 
@@ -139,7 +139,7 @@ class ConfigurationModel(models.Model):
 
         key_dict = dict(zip(cls.KEY_FIELDS, args))
         try:
-            current = cls.objects.filter(**key_dict).order_by('-change_date')[0]  # pylint: disable=no-member
+            current = cls.objects.filter(**key_dict).order_by('-change_date')[0]
         except IndexError:
             current = cls(**key_dict)
 
