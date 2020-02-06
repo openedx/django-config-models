@@ -14,7 +14,7 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
-[2.0.0] - 2020-01-08
+[2.0.0] - 2020-02-06
 ~~~~~~~~~~~~~~~~~~~~
 * Switch to using edx-django-utils TieredCache (a two-layer cache that uses both
   Django's cache and an internal request-level cache) to reduce the number of
