@@ -16,6 +16,7 @@ Unreleased
 
 [2.0.0] - 2020-02-06
 ~~~~~~~~~~~~~~~~~~~~
+* Dropping support for Python 2.7
 * Switch to using edx-django-utils TieredCache (a two-layer cache that uses both
   Django's cache and an internal request-level cache) to reduce the number of
   memcached roundtrips. This was a major performance issue that accounted for
