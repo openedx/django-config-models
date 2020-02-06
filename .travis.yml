@@ -1,6 +1,5 @@
 language: python
 python:
-  - 2.7
   - 3.5
   - 3.6
 env:
@@ -14,29 +13,10 @@ env:
 - TOXENV=django22-drflatest
 
 matrix:
-  exclude:
-    - python: 2.7
-      env: TOXENV=django20-drf39
-    - python: 2.7
-      env: TOXENV=django20-drflatest
-    - python: 2.7
-      env: TOXENV=django21-drf39
-    - python: 2.7
-      env: TOXENV=django21-drflatest
-    - python: 2.7
-      env: TOXENV=django22-drf39
-    - python: 2.7
-      env: TOXENV=django22-drflatest
-
-
   include:
   - python: 3.5
     env: TOXENV=quality
   - python: 3.5
-    env: TOXENV=docs
-  - python: 2.7
-    env: TOXENV=quality
-  - python: 2.7
     env: TOXENV=docs
 cache:
 - pip
