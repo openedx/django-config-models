@@ -16,8 +16,10 @@ click==7.0                # via click-log, edx-lint
 coverage==5.0.3
 ddt==1.2.2
 distlib==0.3.0            # via caniusepython3
+django-waffle==0.19.0
 django==2.2.10
 djangorestframework==3.11.0
+edx-django-utils==2.0.4
 edx-lint==1.4.1
 freezegun==0.3.14
 idna==2.8                 # via requests
@@ -27,9 +29,11 @@ lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
 mock==3.0.5
 more-itertools==5.0.0
+newrelic==5.6.0.135
 packaging==20.1
 pathlib2==2.3.5
 pluggy==0.13.1
+psutil==1.2.1
 py==1.8.1
 pycodestyle==2.5.0
 pydocstyle==5.0.2
