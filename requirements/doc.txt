@@ -23,7 +23,6 @@ imagesize==1.2.0          # via sphinx
 importlib-metadata==1.5.0
 jinja2==2.11.1            # via sphinx
 markupsafe==1.1.1         # via jinja2
-mock==3.0.5
 more-itertools==5.0.0
 newrelic==5.6.0.135
 packaging==20.1
@@ -46,7 +45,7 @@ six==1.14.0
 snowballstemmer==2.0.0    # via sphinx
 sphinx-rtd-theme==0.4.3
 sphinx==1.8.5
-sphinxcontrib-websupport==1.1.2  # via sphinx
+sphinxcontrib-websupport==1.2.0  # via sphinx
 sqlparse==0.3.0
 tqdm==4.42.1              # via twine
 twine==1.15.0

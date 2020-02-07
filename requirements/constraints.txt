@@ -24,5 +24,4 @@ edx-django-utils<3
 # The following packages are pinned because more recent versions require
 # Python 3.6+
 twine<2.0
-mock<4.0
 zipp<2.0
