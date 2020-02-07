@@ -4,6 +4,12 @@
 #
 #    make upgrade
 #
-django==1.11.27
-djangorestframework==3.9.4
+django-waffle==0.19.0     # via edx-django-utils
+django==2.2.10
+djangorestframework==3.11.0
+edx-django-utils==2.0.4
+newrelic==5.6.0.135       # via edx-django-utils
+psutil==1.2.1             # via edx-django-utils
 pytz==2019.3              # via django
+six==1.14.0               # via django-waffle
+sqlparse==0.3.0           # via django

@@ -7,4 +7,3 @@ pytest-cov                # pytest extension for code coverage statistics
 pytest-django             # pytest extension for better Django support
 ddt                       # Run a test case multiple times with different input
 freezegun                 # Allows tests to mock the output of assorted datetime module functions
-mock

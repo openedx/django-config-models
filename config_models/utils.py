@@ -14,7 +14,7 @@ def get_serializer_class(configuration_model):
     class AutoConfigModelSerializer(ModelSerializer):
         """Serializer class for configuration models."""
 
-        class Meta(object):
+        class Meta:
             """Meta information for AutoConfigModelSerializer."""
             model = configuration_model
             fields = '__all__'
