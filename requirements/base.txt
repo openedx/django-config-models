@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-django-waffle==0.19.0     # via edx-django-utils
+django-waffle==0.20.0     # via edx-django-utils
 django==2.2.10
 djangorestframework==3.11.0
 edx-django-utils==2.0.4
