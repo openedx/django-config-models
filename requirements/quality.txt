@@ -16,13 +16,13 @@ click==7.0                # via click-log, edx-lint
 coverage==5.0.3
 ddt==1.2.2
 distlib==0.3.0            # via caniusepython3
-django-waffle==0.19.0
+django-waffle==0.20.0
 django==2.2.10
 djangorestframework==3.11.0
 edx-django-utils==2.0.4
 edx-lint==1.4.1
-freezegun==0.3.14
-idna==2.8                 # via requests
+freezegun==0.3.15
+idna==2.9                 # via requests
 importlib-metadata==1.5.0
 isort==4.3.21             # via pylint
 lazy-object-proxy==1.4.3  # via astroid
@@ -46,7 +46,7 @@ pytest-django==3.8.0
 pytest==5.3.5
 python-dateutil==2.8.1
 pytz==2019.3
-requests==2.22.0          # via caniusepython3
+requests==2.23.0          # via caniusepython3
 six==1.14.0
 snowballstemmer==2.0.0    # via pydocstyle
 sqlparse==0.3.0
@@ -54,7 +54,7 @@ typed-ast==1.4.1          # via astroid
 urllib3==1.25.8           # via requests
 wcwidth==0.1.8
 wrapt==1.11.2             # via astroid
-zipp==1.1.0
+zipp==1.2.0
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

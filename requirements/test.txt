@@ -7,9 +7,9 @@
 attrs==19.3.0             # via pytest
 coverage==5.0.3           # via pytest-cov
 ddt==1.2.2
-django-waffle==0.19.0
+django-waffle==0.20.0
 edx-django-utils==2.0.4
-freezegun==0.3.14
+freezegun==0.3.15
 importlib-metadata==1.5.0  # via pluggy, pytest
 more-itertools==5.0.0     # via pytest
 newrelic==5.6.0.135
@@ -27,4 +27,4 @@ pytz==2019.3
 six==1.14.0
 sqlparse==0.3.0
 wcwidth==0.1.8            # via pytest
-zipp==1.1.0               # via importlib-metadata
+zipp==1.2.0               # via importlib-metadata
