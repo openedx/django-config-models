@@ -6,25 +6,25 @@
 #
 attrs==19.3.0             # via pytest
 coverage==5.0.3           # via pytest-cov
-ddt==1.2.2
-django-waffle==0.20.0
-edx-django-utils==2.0.4
-freezegun==0.3.15
+ddt==1.2.2                # via -r requirements/test.in (line 8)
+django-waffle==0.20.0     # via -r requirements/base.txt (line 7), edx-django-utils
+edx-django-utils==2.0.4   # via -c requirements/constraints.txt (line 22), -r requirements/base.txt (line 10)
+freezegun==0.3.15         # via -r requirements/test.in (line 9)
 importlib-metadata==1.5.0  # via pluggy, pytest
-more-itertools==5.0.0     # via pytest
-newrelic==5.6.0.135
+more-itertools==5.0.0     # via -c requirements/constraints.txt (line 17), pytest
+newrelic==5.8.0.136       # via -r requirements/base.txt (line 11), edx-django-utils
 packaging==20.1           # via pytest
 pathlib2==2.3.5           # via pytest
 pluggy==0.13.1            # via pytest
-psutil==1.2.1
+psutil==1.2.1             # via -r requirements/base.txt (line 12), edx-django-utils
 py==1.8.1                 # via pytest
 pyparsing==2.4.6          # via packaging
-pytest-cov==2.8.1
-pytest-django==3.8.0
+pytest-cov==2.8.1         # via -r requirements/test.in (line 6)
+pytest-django==3.8.0      # via -r requirements/test.in (line 7)
 pytest==5.3.5             # via pytest-cov, pytest-django
 python-dateutil==2.8.1    # via freezegun
-pytz==2019.3
-six==1.14.0
-sqlparse==0.3.0
+pytz==2019.3              # via -r requirements/base.txt (line 13), django
+six==1.14.0               # via -r requirements/base.txt (line 14), django-waffle, freezegun, more-itertools, packaging, pathlib2, python-dateutil
+sqlparse==0.3.0           # via -r requirements/base.txt (line 15), django
 wcwidth==0.1.8            # via pytest
-zipp==1.2.0               # via importlib-metadata
+zipp==1.2.0               # via -c requirements/constraints.txt (line 27), importlib-metadata
