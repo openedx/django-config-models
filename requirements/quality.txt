@@ -17,7 +17,7 @@ coverage==5.0.3           # via -r requirements/test.txt, pytest-cov
 ddt==1.2.2                # via -r requirements/test.txt
 distlib==0.3.0            # via caniusepython3
 django-waffle==0.20.0     # via -r requirements/test.txt, edx-django-utils
-django==2.2.10            # via -r requirements/test.txt, djangorestframework, edx-django-utils
+django==2.2.11            # via -r requirements/test.txt, djangorestframework, edx-django-utils
 djangorestframework==3.11.0  # via -r requirements/test.txt
 edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements/test.txt
 edx-lint==1.4.1           # via -r requirements/quality.in
@@ -29,7 +29,7 @@ lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
 more-itertools==5.0.0     # via -c requirements/constraints.txt, -r requirements/test.txt, pytest
 newrelic==5.8.0.136       # via -r requirements/test.txt, edx-django-utils
-packaging==20.1           # via -r requirements/test.txt, caniusepython3, pytest
+packaging==20.3           # via -r requirements/test.txt, caniusepython3, pytest
 pathlib2==2.3.5           # via -r requirements/test.txt, pytest
 pluggy==0.13.1            # via -r requirements/test.txt, pytest
 psutil==1.2.1             # via -r requirements/test.txt, edx-django-utils
