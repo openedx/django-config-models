@@ -20,7 +20,7 @@ edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements
 freezegun==0.3.15         # via -r requirements/test.txt
 idna==2.9                 # via requests
 imagesize==1.2.0          # via sphinx
-importlib-metadata==1.5.0  # via -r requirements/test.txt, pluggy, pytest
+importlib-metadata==1.5.2  # via -r requirements/test.txt, pluggy, pytest
 jinja2==2.11.1            # via sphinx
 markupsafe==1.1.1         # via jinja2
 more-itertools==5.0.0     # via -c requirements/constraints.txt, -r requirements/test.txt, pytest
@@ -45,12 +45,12 @@ six==1.14.0               # via -r requirements/test.txt, bleach, django-waffle,
 snowballstemmer==2.0.0    # via sphinx
 sphinx-rtd-theme==0.4.3   # via -r requirements/doc.in
 sphinx==1.8.5             # via -c requirements/constraints.txt, -r requirements/doc.in, sphinx-rtd-theme
-sphinxcontrib-websupport==1.2.0  # via sphinx
+sphinxcontrib-websupport==1.2.1  # via sphinx
 sqlparse==0.3.1           # via -r requirements/test.txt, django
 tqdm==4.43.0              # via twine
 twine==1.15.0             # via -c requirements/constraints.txt, -r requirements/doc.in
 urllib3==1.25.8           # via requests
-wcwidth==0.1.8            # via -r requirements/test.txt, pytest
+wcwidth==0.1.9            # via -r requirements/test.txt, pytest
 webencodings==0.5.1       # via bleach
 zipp==1.2.0               # via -c requirements/constraints.txt, -r requirements/test.txt, importlib-metadata
 
