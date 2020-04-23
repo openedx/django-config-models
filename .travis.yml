@@ -1,26 +1,17 @@
 language: python
 python:
   - 3.5
-  - 3.6
+  - 3.8
 env:
-- TOXENV=django111-drf39
-- TOXENV=django111-drflatest
-- TOXENV=django20-drf39
-- TOXENV=django20-drflatest
-- TOXENV=django21-drf39
-- TOXENV=django21-drflatest
 - TOXENV=django22-drf39
 - TOXENV=django22-drflatest
+- TOXENV=quality
+- TOXENV=docs
 
-matrix:
-  include:
-  - python: 3.5
-    env: TOXENV=quality
-  - python: 3.5
-    env: TOXENV=docs
 cache:
 - pip
 install:
+- pip install pip==20.0.2
 - pip install -r requirements/travis.txt
 script:
 - tox

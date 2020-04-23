@@ -14,6 +14,12 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[2.0.1] - 2020-05-08
+~~~~~~~~~~~~~~~~~~~~
+* Dropped support for Django<2.2
+* Dropped support for python3.6
+* Added support for python3.8
+
 [2.0.0] - 2020-02-06
 ~~~~~~~~~~~~~~~~~~~~
 * Dropping support for Python 2.7

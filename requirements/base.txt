@@ -5,11 +5,11 @@
 #    make upgrade
 #
 django-waffle==0.20.0     # via edx-django-utils
-django==2.2.12            # via -r requirements/base.in, djangorestframework, edx-django-utils
+django==2.2.12            # via -c requirements/constraints.txt, -r requirements/base.in, djangorestframework, edx-django-utils
 djangorestframework==3.11.0  # via -r requirements/base.in
 edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements/base.in
 newrelic==5.12.0.140      # via edx-django-utils
 psutil==1.2.1             # via edx-django-utils
-pytz==2019.3              # via django
+pytz==2020.1              # via django
 six==1.14.0               # via django-waffle
 sqlparse==0.3.1           # via django
