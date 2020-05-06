@@ -14,6 +14,10 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[2.0.2] - 2020-05-10
+~~~~~~~~~~~~~~~~~~~~
+* Fix html escaping of edit links in admin
+
 [2.0.1] - 2020-05-08
 ~~~~~~~~~~~~~~~~~~~~
 * Dropped support for Django<2.2
