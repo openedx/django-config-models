@@ -11,6 +11,7 @@ from django.core.files.base import File
 from django.urls import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
+from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
 
 try:
@@ -208,6 +209,5 @@ class KeyedConfigurationModelAdmin(ConfigurationModelAdmin):
             return u'--'
         update_url = reverse('admin:{}_{}_add'.format(self.model._meta.app_label, self.model._meta.model_name))
         update_url += "?source={}".format(inst.pk)
-        return u'<a href="{}">{}</a>'.format(update_url, _('Update'))
-    edit_link.allow_tags = True
+        return format_html(u'<a href="{}">{}</a>', update_url, _('Update'))
     edit_link.short_description = _('Update')
