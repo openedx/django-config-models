@@ -27,9 +27,9 @@ importlib-metadata==1.6.0  # via -r requirements/test.txt, pluggy, pytest
 isort==4.3.21             # via pylint
 lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
-more-itertools==8.2.0     # via -r requirements/test.txt, pytest
+more-itertools==8.3.0     # via -r requirements/test.txt, pytest
 newrelic==5.12.1.141      # via -r requirements/test.txt, edx-django-utils
-packaging==20.3           # via -r requirements/test.txt, caniusepython3, pytest
+packaging==20.4           # via -r requirements/test.txt, caniusepython3, pytest
 pathlib2==2.3.5           # via -r requirements/test.txt, pytest
 pluggy==0.13.1            # via -r requirements/test.txt, pytest
 psutil==1.2.1             # via -r requirements/test.txt, edx-django-utils
@@ -47,7 +47,7 @@ pytest==5.4.2             # via -r requirements/test.txt, pytest-cov, pytest-dja
 python-dateutil==2.8.1    # via -r requirements/test.txt, freezegun
 pytz==2020.1              # via -r requirements/test.txt, django
 requests==2.23.0          # via caniusepython3
-six==1.14.0               # via -r requirements/test.txt, astroid, django-waffle, edx-lint, freezegun, packaging, pathlib2, python-dateutil
+six==1.15.0               # via -r requirements/test.txt, astroid, django-waffle, edx-lint, freezegun, packaging, pathlib2, python-dateutil
 snowballstemmer==2.0.0    # via pydocstyle
 sqlparse==0.3.1           # via -r requirements/test.txt, django
 typed-ast==1.4.1          # via astroid

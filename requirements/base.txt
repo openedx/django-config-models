@@ -11,5 +11,5 @@ edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements
 newrelic==5.12.1.141      # via edx-django-utils
 psutil==1.2.1             # via edx-django-utils
 pytz==2020.1              # via django
-six==1.14.0               # via django-waffle
+six==1.15.0               # via django-waffle
 sqlparse==0.3.1           # via django
