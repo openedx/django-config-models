@@ -20,3 +20,6 @@ zipp<2.0
 
 # stay on an lts release
 django<2.3
+
+# constrained until https://github.com/signalpillar/tox-battery/pull/26 is merged
+tox-battery==0.5.2
