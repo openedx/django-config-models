@@ -35,7 +35,7 @@ packaging==20.4           # via -r requirements/quality.txt, -r requirements/tra
 path.py==12.4.0           # via edx-i18n-tools
 path==13.1.0              # via path.py
 pathlib2==2.3.5           # via -r requirements/quality.txt, pytest
-pip-tools==5.1.2          # via -r requirements/pip-tools.txt
+pip-tools==5.2.0          # via -r requirements/pip-tools.txt
 pluggy==0.13.1            # via -r requirements/quality.txt, -r requirements/travis.txt, pytest, tox
 polib==1.1.0              # via edx-i18n-tools
 psutil==1.2.1             # via -r requirements/quality.txt, edx-django-utils
@@ -58,7 +58,7 @@ six==1.15.0               # via -r requirements/pip-tools.txt, -r requirements/q
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 sqlparse==0.3.1           # via -r requirements/quality.txt, django
 toml==0.10.1              # via -r requirements/travis.txt, tox
-tox-battery==0.5.2        # via -c requirements/constraints.txt, -r requirements/travis.txt
+tox-battery==0.6.1        # via -r requirements/travis.txt
 tox-travis==0.12          # via -r requirements/travis.txt
 tox==3.15.1               # via -r requirements/travis.txt, tox-battery, tox-travis
 typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
