@@ -11,7 +11,7 @@ click==7.1.2              # via click-log, edx-lint
 coverage==5.1             # via -r requirements/test.txt, pytest-cov
 ddt==1.4.1                # via -r requirements/test.txt
 django-waffle==0.20.0     # via -r requirements/test.txt, edx-django-utils
-django==2.2.12            # via -c requirements/constraints.txt, -r requirements/test.txt, djangorestframework, edx-django-utils
+django==2.2.13            # via -c requirements/constraints.txt, -r requirements/test.txt, djangorestframework, edx-django-utils
 djangorestframework==3.11.0  # via -r requirements/test.txt
 edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements/test.txt
 edx-lint==1.4.1           # via -r requirements/quality.in
@@ -21,7 +21,7 @@ isort==4.3.21             # via pylint
 lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
 more-itertools==8.3.0     # via -r requirements/test.txt, pytest
-newrelic==5.12.1.141      # via -r requirements/test.txt, edx-django-utils
+newrelic==5.14.0.142      # via -r requirements/test.txt, edx-django-utils
 packaging==20.4           # via -r requirements/test.txt, pytest
 pathlib2==2.3.5           # via -r requirements/test.txt, pytest
 pluggy==0.13.1            # via -r requirements/test.txt, pytest
@@ -36,13 +36,13 @@ pylint==2.4.2             # via edx-lint, pylint-celery, pylint-django, pylint-p
 pyparsing==2.4.7          # via -r requirements/test.txt, packaging
 pytest-cov==2.9.0         # via -r requirements/test.txt
 pytest-django==3.9.0      # via -r requirements/test.txt
-pytest==5.4.2             # via -r requirements/test.txt, pytest-cov, pytest-django
+pytest==5.4.3             # via -r requirements/test.txt, pytest-cov, pytest-django
 python-dateutil==2.8.1    # via -r requirements/test.txt, freezegun
 pytz==2020.1              # via -r requirements/test.txt, django
 six==1.15.0               # via -r requirements/test.txt, astroid, django-waffle, edx-lint, freezegun, packaging, pathlib2, python-dateutil
 snowballstemmer==2.0.0    # via pydocstyle
 sqlparse==0.3.1           # via -r requirements/test.txt, django
 typed-ast==1.4.1          # via astroid
-wcwidth==0.1.9            # via -r requirements/test.txt, pytest
+wcwidth==0.2.3            # via -r requirements/test.txt, pytest
 wrapt==1.11.2             # via astroid
 zipp==1.2.0               # via -c requirements/constraints.txt, -r requirements/test.txt, importlib-metadata
