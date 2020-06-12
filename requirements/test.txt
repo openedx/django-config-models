@@ -10,7 +10,7 @@ ddt==1.4.1                # via -r requirements/test.in
 django-waffle==0.20.0     # via -r requirements/base.txt, edx-django-utils
 edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements/base.txt
 freezegun==0.3.15         # via -r requirements/test.in
-importlib-metadata==1.6.0  # via pluggy, pytest
+importlib-metadata==1.6.1  # via pluggy, pytest
 more-itertools==8.3.0     # via pytest
 newrelic==5.14.0.142      # via -r requirements/base.txt, edx-django-utils
 packaging==20.4           # via pytest
@@ -26,5 +26,5 @@ python-dateutil==2.8.1    # via freezegun
 pytz==2020.1              # via -r requirements/base.txt, django
 six==1.15.0               # via -r requirements/base.txt, django-waffle, freezegun, packaging, pathlib2, python-dateutil
 sqlparse==0.3.1           # via -r requirements/base.txt, django
-wcwidth==0.2.3            # via pytest
+wcwidth==0.2.4            # via pytest
 zipp==1.2.0               # via -c requirements/constraints.txt, importlib-metadata

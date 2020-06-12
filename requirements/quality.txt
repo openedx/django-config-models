@@ -16,7 +16,7 @@ djangorestframework==3.11.0  # via -r requirements/test.txt
 edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements/test.txt
 edx-lint==1.4.1           # via -r requirements/quality.in
 freezegun==0.3.15         # via -r requirements/test.txt
-importlib-metadata==1.6.0  # via -r requirements/test.txt, pluggy, pytest
+importlib-metadata==1.6.1  # via -r requirements/test.txt, pluggy, pytest
 isort==4.3.21             # via pylint
 lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
@@ -43,6 +43,6 @@ six==1.15.0               # via -r requirements/test.txt, astroid, django-waffle
 snowballstemmer==2.0.0    # via pydocstyle
 sqlparse==0.3.1           # via -r requirements/test.txt, django
 typed-ast==1.4.1          # via astroid
-wcwidth==0.2.3            # via -r requirements/test.txt, pytest
+wcwidth==0.2.4            # via -r requirements/test.txt, pytest
 wrapt==1.11.2             # via astroid
 zipp==1.2.0               # via -c requirements/constraints.txt, -r requirements/test.txt, importlib-metadata
