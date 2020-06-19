@@ -5,7 +5,6 @@ from __future__ import unicode_literals, absolute_import
 
 import ddt
 from django.contrib.auth.models import User
-from django.utils import six
 from rest_framework.test import APIRequestFactory
 
 from freezegun import freeze_time
@@ -413,7 +412,7 @@ class ConfigurationModelAPITests(CacheIsolationTestCase):
         self.assertEqual(self.user, ExampleConfig.current().changed_by)
 
     def test_multiple_inserts(self):
-        for i in six.moves.range(3):  # pylint: disable=no-member
+        for i in range(3):  # pylint: disable=no-member
             self.assertEqual(i, ExampleConfig.objects.all().count())
 
             request = self.factory.post('/config/ExampleConfig', {"string_field": str(i)})

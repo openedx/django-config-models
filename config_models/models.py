@@ -6,7 +6,6 @@ from __future__ import absolute_import, unicode_literals
 from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
-from django.utils import six
 
 from edx_django_utils.cache.utils import TieredCache
 from rest_framework.utils import model_meta
@@ -121,7 +120,7 @@ class ConfigurationModel(models.Model):
                 raise TypeError(
                     "cache_key_name() takes exactly {} arguments ({} given)".format(len(cls.KEY_FIELDS), len(args))
                 )
-            return 'configuration/{}/current/{}'.format(cls.__name__, ','.join(six.text_type(arg) for arg in args))
+            return 'configuration/{}/current/{}'.format(cls.__name__, ','.join(str(arg) for arg in args))
         else:
             return 'configuration/{}/current'.format(cls.__name__)
 
