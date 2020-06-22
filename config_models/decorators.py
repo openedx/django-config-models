@@ -1,7 +1,7 @@
 """
 Decorators for model-based configuration.
 """
-from __future__ import unicode_literals, absolute_import
+
 
 from functools import wraps
 from django.http import HttpResponseNotFound

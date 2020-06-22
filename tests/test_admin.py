@@ -1,9 +1,6 @@
 """
 ConfigurationModel Admin Module Test Cases
 """
-
-from __future__ import unicode_literals
-
 from unittest.mock import patch
 
 from django.contrib.admin.sites import AdminSite
@@ -73,7 +70,7 @@ class KeyedAdminTestCase(TestCase, AdminTestCaseMixin):
 
     def test_edit_link_xss_url(self):
         with patch.object(
-            admin, "reverse", return_value='"><script>console.log("xss!")</script>'
+                admin, "reverse", return_value='"><script>console.log("xss!")</script>'
         ):
             edit_link = self.get_edit_link()
 
@@ -87,7 +84,7 @@ class KeyedAdminTestCase(TestCase, AdminTestCaseMixin):
     def test_edit_link_xss_translation(self):
         with patch.object(admin, "reverse", return_value=""):
             with patch.object(
-                admin, "_", return_value='<script>console.log("xss!")</script>'
+                    admin, "_", return_value='<script>console.log("xss!")</script>'
             ):
                 edit_link = self.get_edit_link()
 

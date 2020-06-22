@@ -1,7 +1,7 @@
 """
 Utilities for working with ConfigurationModels.
 """
-from __future__ import unicode_literals, absolute_import
+
 
 from django.apps import apps
 from django.contrib.auth import get_user_model

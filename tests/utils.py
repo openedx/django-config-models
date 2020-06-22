@@ -7,7 +7,7 @@ Utility classes for testing django applications.
 :py:class:`CacheIsolationTestCase`
     A TestCase baseclass that has per-test isolated caches.
 """
-from __future__ import unicode_literals, absolute_import
+
 
 import copy
 
