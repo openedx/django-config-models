@@ -2,11 +2,8 @@ from config_models.models import ConfigurationModel
 from django.contrib.auth.models import User
 from django.conf import settings
 from django.db import models
-from django.utils import six
 
 
-# pylint: disable=model-missing-unicode
-@six.python_2_unicode_compatible
 class ExampleConfig(ConfigurationModel):
     """
     Test model for testing ``ConfigurationModels``.
@@ -22,8 +19,6 @@ class ExampleConfig(ConfigurationModel):
         )
 
 
-# pylint: disable=model-missing-unicode
-@six.python_2_unicode_compatible
 class ManyToManyExampleConfig(ConfigurationModel):
     """
     Test model configuration with a many-to-many field.
@@ -36,8 +31,6 @@ class ManyToManyExampleConfig(ConfigurationModel):
     def __str__(self):
         return "ManyToManyExampleConfig(enabled={}, string_field={})".format(self.enabled, self.string_field)
 
-# pylint: disable=model-missing-unicode
-@six.python_2_unicode_compatible
 class ExampleKeyedConfig(ConfigurationModel):
     """
     Test model for testing ``ConfigurationModels`` with keyed configuration.
@@ -61,8 +54,6 @@ class ExampleKeyedConfig(ConfigurationModel):
         )
 
 
-# pylint: disable=model-missing-unicode
-@six.python_2_unicode_compatible
 class ExampleDecoratorConfig(ConfigurationModel):
     """
     Test model for testing the require_config decorator
@@ -71,8 +62,6 @@ class ExampleDecoratorConfig(ConfigurationModel):
         return "ExampleDecoratorConfig(enabled={})".format(self.enabled)
 
 
-# pylint: disable=model-missing-unicode
-@six.python_2_unicode_compatible
 class ExampleDeserializeConfig(ConfigurationModel):
     """
     Test model for testing deserialization of ``ConfigurationModels`` with keyed configuration.

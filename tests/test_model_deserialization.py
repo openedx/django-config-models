@@ -7,7 +7,7 @@ import textwrap
 import os.path
 import io
 
-from django.utils import timezone, six
+from django.utils import timezone
 from django.contrib.auth.models import User
 from django.core.management.base import CommandError
 
@@ -114,11 +114,9 @@ class DeserializeJSONTests(CacheIsolationTestCase):
                 "model": "example.ExampleDeserializeConfig",
                 "data": [{"name": "dino"}]
             }
-            """)
-        if six.PY3:
-            test_json = test_json.encode('utf-8')
-        with six.assertRaisesRegex(self, Exception, "User matching query does not exist"):
-            deserialize_json(six.BytesIO(test_json), "unknown_username")
+            """).encode('utf-8')
+        with self.assertRaisesRegex(Exception, "User matching query does not exist"):
+            deserialize_json(io.BytesIO(test_json), "unknown_username")
 
     def test_invalid_json(self):
         """
@@ -128,11 +126,9 @@ class DeserializeJSONTests(CacheIsolationTestCase):
             {
                 "model": "config_models.ExampleDeserializeConfig",
                 "data": [{"name": "dino"
-            """)
-        if six.PY3:
-            test_json = test_json.encode('utf-8')
-        with six.assertRaisesRegex(self, Exception, "JSON parse error"):
-            deserialize_json(six.BytesIO(test_json), self.test_username)
+            """).encode('utf-8')
+        with self.assertRaisesRegex(Exception, "JSON parse error"):
+            deserialize_json(io.BytesIO(test_json), self.test_username)
 
     def test_invalid_model(self):
         """
@@ -143,11 +139,9 @@ class DeserializeJSONTests(CacheIsolationTestCase):
                 "model": "xxx.yyy",
                 "data":[{"name": "dino"}]
             }
-            """)
-        if six.PY3:
-            test_json = test_json.encode('utf-8')
-        with six.assertRaisesRegex(self, Exception, "No installed app"):
-            deserialize_json(six.BytesIO(test_json), self.test_username)
+            """).encode('utf-8')
+        with self.assertRaisesRegex(Exception, "No installed app"):
+            deserialize_json(io.BytesIO(test_json), self.test_username)
 
 
 class PopulateModelTestCase(CacheIsolationTestCase):
@@ -178,28 +172,28 @@ class PopulateModelTestCase(CacheIsolationTestCase):
         """
         Tests that a username must be specified.
         """
-        with six.assertRaisesRegex(self, CommandError, "A valid username must be specified"):
+        with self.assertRaisesRegex(CommandError, "A valid username must be specified"):
             _run_command(file=self.file_path)
 
     def test_bad_user_specified(self):
         """
         Tests that a username must be specified.
         """
-        with six.assertRaisesRegex(self, Exception, "User matching query does not exist"):
+        with self.assertRaisesRegex(Exception, "User matching query does not exist"):
             _run_command(file=self.file_path, username="does_not_exist")
 
     def test_no_file_specified(self):
         """
         Tests the error handling when no JSON file is supplied.
         """
-        with six.assertRaisesRegex(self, CommandError, "A file containing JSON must be specified"):
+        with self.assertRaisesRegex(CommandError, "A file containing JSON must be specified"):
             _run_command(username=self.test_username)
 
     def test_bad_file_specified(self):
         """
         Tests the error handling when the path to the JSON file is incorrect.
         """
-        with six.assertRaisesRegex(self, CommandError, "File does/not/exist.json does not exist"):
+        with self.assertRaisesRegex(CommandError, "File does/not/exist.json does not exist"):
             _run_command(file="does/not/exist.json", username=self.test_username)
 
 
