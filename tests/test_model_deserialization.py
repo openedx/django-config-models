@@ -1,7 +1,7 @@
 """
 Tests of the populate_model management command and its helper utils.deserialize_json method.
 """
-from __future__ import unicode_literals, absolute_import
+
 
 import textwrap
 import os.path

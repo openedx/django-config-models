@@ -1,7 +1,7 @@
 """
 Tests of ConfigurationModel
 """
-from __future__ import unicode_literals, absolute_import
+
 
 import ddt
 from django.contrib.auth.models import User

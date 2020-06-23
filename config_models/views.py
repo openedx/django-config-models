@@ -1,7 +1,7 @@
 """
 API view to allow manipulation of configuration models.
 """
-from __future__ import unicode_literals, absolute_import
+
 
 from rest_framework.generics import CreateAPIView, RetrieveAPIView
 from rest_framework.permissions import DjangoModelPermissions

@@ -1,7 +1,7 @@
 """
 Admin site models for managing :class:`.ConfigurationModel` subclasses.
 """
-from __future__ import unicode_literals, absolute_import
+
 
 from django.forms import models
 from django.contrib import admin
