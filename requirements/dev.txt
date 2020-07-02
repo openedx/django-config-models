@@ -7,7 +7,7 @@
 appdirs==1.4.4            # via -r requirements/travis.txt, virtualenv
 astroid==2.3.3            # via -r requirements/quality.txt, pylint, pylint-celery
 attrs==19.3.0             # via -r requirements/quality.txt, pytest
-certifi==2020.4.5.2       # via -r requirements/travis.txt, requests
+certifi==2020.6.20        # via -r requirements/travis.txt, requests
 chardet==3.0.4            # via -r requirements/travis.txt, requests
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
 click==7.1.2              # via -r requirements/pip-tools.txt, -r requirements/quality.txt, click-log, edx-lint, pip-tools
@@ -15,7 +15,7 @@ codecov==2.1.7            # via -r requirements/travis.txt
 coverage==5.1             # via -r requirements/quality.txt, -r requirements/travis.txt, codecov, pytest-cov
 ddt==1.4.1                # via -r requirements/quality.txt
 distlib==0.3.0            # via -r requirements/travis.txt, virtualenv
-django-waffle==0.20.0     # via -r requirements/quality.txt, edx-django-utils
+django-waffle==1.0.0      # via -r requirements/quality.txt, edx-django-utils
 django==2.2.13            # via -c requirements/constraints.txt, -r requirements/quality.txt, djangorestframework, edx-django-utils, edx-i18n-tools
 djangorestframework==3.11.0  # via -r requirements/quality.txt
 edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements/quality.txt
@@ -39,7 +39,7 @@ pip-tools==5.2.1          # via -r requirements/pip-tools.txt
 pluggy==0.13.1            # via -r requirements/quality.txt, -r requirements/travis.txt, pytest, tox
 polib==1.1.0              # via edx-i18n-tools
 psutil==1.2.1             # via -r requirements/quality.txt, edx-django-utils
-py==1.8.2                 # via -r requirements/quality.txt, -r requirements/travis.txt, pytest, tox
+py==1.9.0                 # via -r requirements/quality.txt, -r requirements/travis.txt, pytest, tox
 pycodestyle==2.6.0        # via -r requirements/quality.txt
 pydocstyle==5.0.2         # via -r requirements/quality.txt
 pylint-celery==0.3        # via -r requirements/quality.txt, edx-lint
@@ -54,7 +54,7 @@ python-dateutil==2.8.1    # via -r requirements/quality.txt, freezegun
 pytz==2020.1              # via -r requirements/quality.txt, django
 pyyaml==5.3.1             # via edx-i18n-tools
 requests==2.24.0          # via -r requirements/travis.txt, codecov
-six==1.15.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/travis.txt, astroid, django-waffle, edx-i18n-tools, edx-lint, freezegun, packaging, pathlib2, pip-tools, python-dateutil, tox, virtualenv
+six==1.15.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/travis.txt, astroid, edx-i18n-tools, edx-lint, freezegun, packaging, pathlib2, pip-tools, python-dateutil, tox, virtualenv
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 sqlparse==0.3.1           # via -r requirements/quality.txt, django
 toml==0.10.1              # via -r requirements/travis.txt, tox
@@ -63,8 +63,8 @@ tox-travis==0.12          # via -r requirements/travis.txt
 tox==3.15.2               # via -r requirements/travis.txt, tox-battery, tox-travis
 typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
 urllib3==1.25.9           # via -r requirements/travis.txt, requests
-virtualenv==20.0.23       # via -r requirements/travis.txt, tox
-wcwidth==0.2.4            # via -r requirements/quality.txt, pytest
+virtualenv==20.0.25       # via -r requirements/travis.txt, tox
+wcwidth==0.2.5            # via -r requirements/quality.txt, pytest
 wrapt==1.11.2             # via -r requirements/quality.txt, astroid
 zipp==1.2.0               # via -c requirements/constraints.txt, -r requirements/quality.txt, -r requirements/travis.txt, importlib-metadata, importlib-resources
 
