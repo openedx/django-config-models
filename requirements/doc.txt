@@ -13,14 +13,14 @@ chardet==3.0.4            # via requests
 coverage==5.1             # via -r requirements/test.txt, pytest-cov
 ddt==1.4.1                # via -r requirements/test.txt
 django-waffle==1.0.0      # via -r requirements/test.txt, edx-django-utils
-django==2.2.13            # via -c requirements/constraints.txt, -r requirements/test.txt, djangorestframework, edx-django-utils
+django==2.2.14            # via -c requirements/constraints.txt, -r requirements/test.txt, djangorestframework, edx-django-utils
 djangorestframework==3.11.0  # via -r requirements/test.txt
 docutils==0.16            # via readme-renderer, sphinx
 edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements/test.txt
 freezegun==0.3.15         # via -r requirements/test.txt
-idna==2.9                 # via requests
+idna==2.10                # via requests
 imagesize==1.2.0          # via sphinx
-importlib-metadata==1.6.1  # via -r requirements/test.txt, pluggy, pytest
+importlib-metadata==1.7.0  # via -r requirements/test.txt, pluggy, pytest
 jinja2==2.11.2            # via sphinx
 markupsafe==1.1.1         # via jinja2
 more-itertools==8.4.0     # via -r requirements/test.txt, pytest
@@ -52,7 +52,7 @@ sphinxcontrib-jsmath==1.0.1  # via sphinx
 sphinxcontrib-qthelp==1.0.3  # via sphinx
 sphinxcontrib-serializinghtml==1.1.4  # via sphinx
 sqlparse==0.3.1           # via -r requirements/test.txt, django
-tqdm==4.46.1              # via twine
+tqdm==4.47.0              # via twine
 twine==1.15.0             # via -c requirements/constraints.txt, -r requirements/doc.in
 urllib3==1.25.9           # via requests
 wcwidth==0.2.5            # via -r requirements/test.txt, pytest
