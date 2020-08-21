@@ -1,18 +1,14 @@
-# openedx.yaml
-
----
-owner: edx/platform-team
 nick: config_models
 tags:
     - tools
     - library
 oeps:
-    oep-2: True
+    oep-2: true
     oep-3:
-        state: False
+        state: false
         reason: TODO - Implement for this application if appropriate
     oep-5:
-        state: False
+        state: false
         reason: TODO - Implement for this application if appropriate
-    oep-7: True
-    oep-18: True
+    oep-7: true
+    oep-18: true
