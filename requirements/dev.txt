@@ -6,7 +6,7 @@
 #
 appdirs==1.4.4            # via -r requirements/travis.txt, virtualenv
 astroid==2.3.3            # via -r requirements/quality.txt, pylint, pylint-celery
-attrs==20.1.0             # via -r requirements/quality.txt, pytest
+attrs==20.2.0             # via -r requirements/quality.txt, pytest
 certifi==2020.6.20        # via -r requirements/travis.txt, requests
 chardet==3.0.4            # via -r requirements/travis.txt, requests
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
@@ -22,7 +22,7 @@ edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements
 edx-i18n-tools==0.5.3     # via -r requirements/dev.in
 edx-lint==1.5.2           # via -r requirements/quality.txt
 filelock==3.0.12          # via -r requirements/travis.txt, tox, virtualenv
-freezegun==0.3.15         # via -r requirements/quality.txt
+freezegun==1.0.0          # via -r requirements/quality.txt
 idna==2.10                # via -r requirements/travis.txt, requests
 importlib-metadata==1.7.0  # via -r requirements/quality.txt, -r requirements/travis.txt, path, pluggy, pytest, tox, virtualenv
 importlib-resources==3.0.0  # via -r requirements/travis.txt, virtualenv
@@ -55,7 +55,7 @@ python-dateutil==2.8.1    # via -r requirements/quality.txt, freezegun
 pytz==2020.1              # via -r requirements/quality.txt, django
 pyyaml==5.3.1             # via edx-i18n-tools
 requests==2.24.0          # via -r requirements/travis.txt, codecov
-six==1.15.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/travis.txt, astroid, edx-i18n-tools, edx-lint, freezegun, packaging, pathlib2, pip-tools, python-dateutil, tox, virtualenv
+six==1.15.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/travis.txt, astroid, edx-i18n-tools, edx-lint, packaging, pathlib2, pip-tools, python-dateutil, tox, virtualenv
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 sqlparse==0.3.1           # via -r requirements/quality.txt, django
 toml==0.10.1              # via -r requirements/quality.txt, -r requirements/travis.txt, pytest, tox
