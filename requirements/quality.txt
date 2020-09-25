@@ -16,13 +16,13 @@ djangorestframework==3.11.1  # via -r requirements/test.txt
 edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements/test.txt
 edx-lint==1.5.2           # via -r requirements/quality.in
 freezegun==1.0.0          # via -r requirements/test.txt
-importlib-metadata==1.7.0  # via -r requirements/test.txt, pluggy, pytest
+importlib-metadata==1.7.0  # via -c requirements/constraints.txt, -r requirements/test.txt, pluggy, pytest
 iniconfig==1.0.1          # via -r requirements/test.txt, pytest
 isort==4.3.21             # via pylint
 lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
 more-itertools==8.5.0     # via -r requirements/test.txt, pytest
-newrelic==5.18.0.148      # via -r requirements/test.txt, edx-django-utils
+newrelic==5.20.0.149      # via -r requirements/test.txt, edx-django-utils
 packaging==20.4           # via -r requirements/test.txt, pytest
 pathlib2==2.3.5           # via -r requirements/test.txt, pytest
 pluggy==0.13.1            # via -r requirements/test.txt, pytest

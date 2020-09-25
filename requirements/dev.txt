@@ -24,14 +24,14 @@ edx-lint==1.5.2           # via -r requirements/quality.txt
 filelock==3.0.12          # via -r requirements/travis.txt, tox, virtualenv
 freezegun==1.0.0          # via -r requirements/quality.txt
 idna==2.10                # via -r requirements/travis.txt, requests
-importlib-metadata==1.7.0  # via -r requirements/quality.txt, -r requirements/travis.txt, path, pluggy, pytest, tox, virtualenv
+importlib-metadata==1.7.0  # via -c requirements/constraints.txt, -r requirements/quality.txt, -r requirements/travis.txt, path, pluggy, pytest, tox, virtualenv
 importlib-resources==3.0.0  # via -r requirements/travis.txt, virtualenv
 iniconfig==1.0.1          # via -r requirements/quality.txt, pytest
 isort==4.3.21             # via -r requirements/quality.txt, pylint
 lazy-object-proxy==1.4.3  # via -r requirements/quality.txt, astroid
 mccabe==0.6.1             # via -r requirements/quality.txt, pylint
 more-itertools==8.5.0     # via -r requirements/quality.txt, pytest
-newrelic==5.18.0.148      # via -r requirements/quality.txt, edx-django-utils
+newrelic==5.20.0.149      # via -r requirements/quality.txt, edx-django-utils
 packaging==20.4           # via -r requirements/quality.txt, -r requirements/travis.txt, pytest, tox
 path.py==12.5.0           # via edx-i18n-tools
 path==13.1.0              # via path.py
