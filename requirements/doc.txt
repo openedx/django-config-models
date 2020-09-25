@@ -7,7 +7,7 @@
 alabaster==0.7.12         # via sphinx
 attrs==20.2.0             # via -r requirements/test.txt, pytest
 babel==2.8.0              # via sphinx
-bleach==3.2.0             # via readme-renderer
+bleach==3.2.1             # via readme-renderer
 certifi==2020.6.20        # via requests
 chardet==3.0.4            # via requests
 coverage==5.3             # via -r requirements/test.txt, pytest-cov
@@ -20,12 +20,12 @@ edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements
 freezegun==1.0.0          # via -r requirements/test.txt
 idna==2.10                # via requests
 imagesize==1.2.0          # via sphinx
-importlib-metadata==1.7.0  # via -r requirements/test.txt, pluggy, pytest
+importlib-metadata==1.7.0  # via -c requirements/constraints.txt, -r requirements/test.txt, pluggy, pytest
 iniconfig==1.0.1          # via -r requirements/test.txt, pytest
 jinja2==2.11.2            # via sphinx
 markupsafe==1.1.1         # via jinja2
 more-itertools==8.5.0     # via -r requirements/test.txt, pytest
-newrelic==5.18.0.148      # via -r requirements/test.txt, edx-django-utils
+newrelic==5.20.0.149      # via -r requirements/test.txt, edx-django-utils
 packaging==20.4           # via -r requirements/test.txt, bleach, pytest, sphinx
 pathlib2==2.3.5           # via -r requirements/test.txt, pytest
 pkginfo==1.5.0.1          # via twine
