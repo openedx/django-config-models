@@ -12,7 +12,7 @@ coverage==5.3             # via -r requirements/test.txt, pytest-cov
 ddt==1.4.1                # via -r requirements/test.txt
 django-waffle==2.0.0      # via -r requirements/test.txt, edx-django-utils
 django==2.2.16            # via -c requirements/constraints.txt, -r requirements/test.txt, djangorestframework, edx-django-utils
-djangorestframework==3.11.1  # via -r requirements/test.txt
+djangorestframework==3.12.1  # via -r requirements/test.txt
 edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements/test.txt
 edx-lint==1.5.2           # via -r requirements/quality.in
 freezegun==1.0.0          # via -r requirements/test.txt
@@ -21,7 +21,6 @@ iniconfig==1.0.1          # via -r requirements/test.txt, pytest
 isort==4.3.21             # via pylint
 lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
-more-itertools==8.5.0     # via -r requirements/test.txt, pytest
 newrelic==5.20.0.149      # via -r requirements/test.txt, edx-django-utils
 packaging==20.4           # via -r requirements/test.txt, pytest
 pathlib2==2.3.5           # via -r requirements/test.txt, pytest
@@ -37,7 +36,7 @@ pylint==2.4.4             # via edx-lint, pylint-celery, pylint-django, pylint-p
 pyparsing==2.4.7          # via -r requirements/test.txt, packaging
 pytest-cov==2.10.1        # via -r requirements/test.txt
 pytest-django==3.10.0     # via -r requirements/test.txt
-pytest==6.0.2             # via -r requirements/test.txt, pytest-cov, pytest-django
+pytest==6.1.0             # via -r requirements/test.txt, pytest-cov, pytest-django
 python-dateutil==2.8.1    # via -r requirements/test.txt, freezegun
 pytz==2020.1              # via -r requirements/test.txt, django
 six==1.15.0               # via -r requirements/test.txt, astroid, edx-lint, packaging, pathlib2, python-dateutil
