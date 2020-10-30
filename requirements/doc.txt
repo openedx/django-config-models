@@ -24,18 +24,18 @@ importlib-metadata==2.0.0  # via -r requirements/test.txt, pluggy, pytest
 iniconfig==1.1.1          # via -r requirements/test.txt, pytest
 jinja2==2.11.2            # via sphinx
 markupsafe==1.1.1         # via jinja2
-newrelic==5.22.0.151      # via -r requirements/test.txt, edx-django-utils
+newrelic==5.22.1.152      # via -r requirements/test.txt, edx-django-utils
 packaging==20.4           # via -r requirements/test.txt, bleach, pytest, sphinx
 pathlib2==2.3.5           # via -r requirements/test.txt, pytest
-pkginfo==1.6.0            # via twine
+pkginfo==1.6.1            # via twine
 pluggy==0.13.1            # via -r requirements/test.txt, pytest
 psutil==1.2.1             # via -r requirements/test.txt, edx-django-utils
 py==1.9.0                 # via -r requirements/test.txt, pytest
-pygments==2.7.1           # via readme-renderer, sphinx
+pygments==2.7.2           # via readme-renderer, sphinx
 pyparsing==2.4.7          # via -r requirements/test.txt, packaging
 pytest-cov==2.10.1        # via -r requirements/test.txt
 pytest-django==4.1.0      # via -r requirements/test.txt
-pytest==6.1.1             # via -r requirements/test.txt, pytest-cov, pytest-django
+pytest==6.1.2             # via -r requirements/test.txt, pytest-cov, pytest-django
 python-dateutil==2.8.1    # via -r requirements/test.txt, freezegun
 pytz==2020.1              # via -r requirements/test.txt, babel, django
 readme-renderer==28.0     # via -r requirements/doc.in, twine
@@ -53,7 +53,7 @@ sphinxcontrib-qthelp==1.0.3  # via sphinx
 sphinxcontrib-serializinghtml==1.1.4  # via sphinx
 sqlparse==0.4.1           # via -r requirements/test.txt, django
 toml==0.10.1              # via -r requirements/test.txt, pytest
-tqdm==4.50.2              # via twine
+tqdm==4.51.0              # via twine
 twine==1.15.0             # via -c requirements/constraints.txt, -r requirements/doc.in
 urllib3==1.25.11          # via requests
 webencodings==0.5.1       # via bleach
