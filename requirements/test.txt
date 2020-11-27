@@ -10,7 +10,7 @@ ddt==1.4.1                # via -r requirements/test.in
 django-waffle==2.0.0      # via -r requirements/base.txt, edx-django-utils
 edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements/base.txt
 freezegun==1.0.0          # via -r requirements/test.in
-importlib-metadata==2.0.0  # via pluggy, pytest
+importlib-metadata==2.1.0  # via pluggy, pytest
 iniconfig==1.1.1          # via pytest
 newrelic==5.22.1.152      # via -r requirements/base.txt, edx-django-utils
 packaging==20.4           # via pytest
