@@ -16,7 +16,7 @@ djangorestframework==3.12.2  # via -r requirements/test.txt
 edx-django-utils==2.0.4   # via -c requirements/constraints.txt, -r requirements/test.txt
 edx-lint==1.5.2           # via -r requirements/quality.in
 freezegun==1.0.0          # via -r requirements/test.txt
-importlib-metadata==2.0.0  # via -r requirements/test.txt, pluggy, pytest
+importlib-metadata==2.1.0  # via -r requirements/test.txt, pluggy, pytest
 iniconfig==1.1.1          # via -r requirements/test.txt, pytest
 isort==4.3.21             # via pylint
 lazy-object-proxy==1.4.3  # via astroid
