@@ -8,7 +8,7 @@ alabaster==0.7.12         # via sphinx
 attrs==20.3.0             # via -r requirements/test.txt, pytest
 babel==2.9.0              # via sphinx
 bleach==3.2.1             # via readme-renderer
-certifi==2020.11.8        # via requests
+certifi==2020.12.5        # via requests
 chardet==3.0.4            # via requests
 coverage==5.3             # via -r requirements/test.txt, pytest-cov
 ddt==1.4.1                # via -r requirements/test.txt
@@ -31,7 +31,7 @@ pkginfo==1.6.1            # via twine
 pluggy==0.13.1            # via -r requirements/test.txt, pytest
 psutil==1.2.1             # via -r requirements/test.txt, edx-django-utils
 py==1.9.0                 # via -r requirements/test.txt, pytest
-pygments==2.7.2           # via readme-renderer, sphinx
+pygments==2.7.3           # via readme-renderer, sphinx
 pyparsing==2.4.7          # via -r requirements/test.txt, packaging
 pytest-cov==2.10.1        # via -r requirements/test.txt
 pytest-django==4.1.0      # via -r requirements/test.txt
@@ -53,7 +53,7 @@ sphinxcontrib-qthelp==1.0.3  # via sphinx
 sphinxcontrib-serializinghtml==1.1.4  # via sphinx
 sqlparse==0.4.1           # via -r requirements/test.txt, django
 toml==0.10.2              # via -r requirements/test.txt, pytest
-tqdm==4.54.0              # via twine
+tqdm==4.54.1              # via twine
 twine==1.15.0             # via -c requirements/constraints.txt, -r requirements/doc.in
 urllib3==1.26.2           # via requests
 webencodings==0.5.1       # via bleach
