@@ -3,6 +3,6 @@
 
 -r pip-tools.txt          # Dependencies for requirements file management
 -r quality.txt            # All dependencies needed to run and test django-config-models
--r travis.txt             # tox and related dependencies
+-r ci.txt             # tox and related dependencies
 
 edx-i18n-tools            # For i18n_tool dummy

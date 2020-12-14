@@ -2,10 +2,10 @@ Part of `edX code`__.
 
 __ http://code.edx.org/
 
-django-config-models  |Travis|_ |Codecov|_
+django-config-models  |CI|_ |Codecov|_
 ===================================================
-.. |Travis| image:: https://travis-ci.org/edx/config_models.svg?branch=master
-.. _Travis: https://travis-ci.org/edx/config_models
+.. |CI| image:: https://github.com/edx/django-config-models/workflows/Python%20CI/badge.svg?branch=master
+.. _CI: https://github.com/edx/django-config-models/actions?query=workflow%3A%22Python+CI%22
 
 .. |Codecov| image:: http://codecov.io/github/edx/config_models/coverage.svg?branch=master
 .. _Codecov: http://codecov.io/github/edx/config_models?branch=master

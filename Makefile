@@ -51,12 +51,13 @@ fake_translations: extract_translations dummy_translations compile_translations 
 upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
 upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
 	pip install -r requirements/pip-tools.txt
+	pip-compile --upgrade --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
 	pip-compile --no-emit-trusted-host --no-index --rebuild --upgrade -o requirements/pip-tools.txt requirements/pip-tools.in
 	pip-compile --no-emit-trusted-host --no-index --rebuild --upgrade -o requirements/base.txt requirements/base.in
 	pip-compile --no-emit-trusted-host --no-index --rebuild --upgrade -o requirements/test.txt requirements/test.in
 	pip-compile --no-emit-trusted-host --no-index --rebuild --upgrade -o requirements/doc.txt requirements/doc.in
 	pip-compile --no-emit-trusted-host --no-index --rebuild --upgrade -o requirements/quality.txt requirements/quality.in
-	pip-compile --no-emit-trusted-host --no-index --rebuild --upgrade -o requirements/travis.txt requirements/travis.in
+	pip-compile --no-emit-trusted-host --no-index --rebuild --upgrade -o requirements/ci.txt requirements/ci.in
 	pip-compile --no-emit-trusted-host --no-index --rebuild --upgrade -o requirements/dev.txt requirements/dev.in
 	# Let tox control the Django and djangorestframework versions for tests
 	sed -i.tmp '/^[d|D]jango==/d' requirements/test.txt
@@ -73,6 +74,7 @@ quality: ## check coding style with pycodestyle and pylint
 	tox -e quality
 
 requirements: ## install development environment requirements
+	pip install -qr requirements/pip.txt
 	pip install -qr requirements/pip-tools.txt
 	pip-sync requirements/dev.txt requirements/private.*
 
