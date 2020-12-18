@@ -9,7 +9,7 @@ attrs==20.3.0             # via -r requirements/test.txt, pytest
 babel==2.9.0              # via sphinx
 bleach==3.2.1             # via readme-renderer
 certifi==2020.12.5        # via requests
-chardet==3.0.4            # via requests
+chardet==4.0.0            # via requests
 coverage==5.3             # via -r requirements/test.txt, pytest-cov
 ddt==1.4.1                # via -r requirements/test.txt
 django-waffle==2.0.0      # via -r requirements/test.txt, edx-django-utils
@@ -25,12 +25,12 @@ iniconfig==1.1.1          # via -r requirements/test.txt, pytest
 jinja2==2.11.2            # via sphinx
 markupsafe==1.1.1         # via jinja2
 newrelic==5.22.1.152      # via -r requirements/test.txt, edx-django-utils
-packaging==20.7           # via -r requirements/test.txt, bleach, pytest, sphinx
+packaging==20.8           # via -r requirements/test.txt, bleach, pytest, sphinx
 pathlib2==2.3.5           # via -r requirements/test.txt, pytest
 pkginfo==1.6.1            # via twine
 pluggy==0.13.1            # via -r requirements/test.txt, pytest
 psutil==1.2.1             # via -r requirements/test.txt, edx-django-utils
-py==1.9.0                 # via -r requirements/test.txt, pytest
+py==1.10.0                # via -r requirements/test.txt, pytest
 pygments==2.7.3           # via readme-renderer, sphinx
 pyparsing==2.4.7          # via -r requirements/test.txt, packaging
 pytest-cov==2.10.1        # via -r requirements/test.txt
@@ -40,7 +40,7 @@ python-dateutil==2.8.1    # via -r requirements/test.txt, freezegun
 pytz==2020.4              # via -r requirements/test.txt, babel, django
 readme-renderer==28.0     # via -r requirements/doc.in, twine
 requests-toolbelt==0.9.1  # via twine
-requests==2.25.0          # via requests-toolbelt, sphinx, twine
+requests==2.25.1          # via requests-toolbelt, sphinx, twine
 six==1.15.0               # via -r requirements/test.txt, bleach, pathlib2, python-dateutil, readme-renderer
 snowballstemmer==2.0.0    # via sphinx
 sphinx-rtd-theme==0.5.0   # via -r requirements/doc.in
