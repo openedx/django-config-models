@@ -128,7 +128,7 @@ class CacheIsolationTestCase(CacheIsolationMixin, TestCase):
         super(CacheIsolationTestCase, cls).tearDownClass()
 
     def setUp(self):
-        super(CacheIsolationTestCase, self).setUp()
+        super().setUp()
 
         self.clear_caches()
         self.addCleanup(self.clear_caches)

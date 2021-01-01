@@ -15,7 +15,7 @@ from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
 
 try:
-    cache = caches['configuration']  # pylint: disable=invalid-name
+    cache = caches['configuration']
 except InvalidCacheBackendError:
     from django.core.cache import cache
 
@@ -66,13 +66,13 @@ class ConfigurationModelAdmin(admin.ModelAdmin):
         get = request.GET.copy()
         get.update(models.model_to_dict(self.model.current()))
         request.GET = get
-        return super(ConfigurationModelAdmin, self).add_view(request, form_url, extra_context)
+        return super().add_view(request, form_url, extra_context)
 
     # Hide the save buttons in the change view
     def change_view(self, request, object_id, form_url='', extra_context=None):
         extra_context = extra_context or {}
         extra_context['readonly'] = True
-        return super(ConfigurationModelAdmin, self).change_view(
+        return super().change_view(
             request,
             object_id,
             form_url,
@@ -81,7 +81,7 @@ class ConfigurationModelAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.changed_by = request.user
-        super(ConfigurationModelAdmin, self).save_model(request, obj, form, change)
+        super().save_model(request, obj, form, change)
         cache.delete(obj.cache_key_name(*(getattr(obj, key_name) for key_name in obj.KEY_FIELDS)))
         cache.delete(obj.key_values_cache_key_name())
 
@@ -118,7 +118,7 @@ class ShowHistoryFilter(ListFilter):
     parameter_name = 'show_history'
 
     def __init__(self, request, params, model, model_admin):
-        super(ShowHistoryFilter, self).__init__(request, params, model, model_admin)
+        super().__init__(request, params, model, model_admin)
         if self.parameter_name in params:
             value = params.pop(self.parameter_name)
             self.used_parameters[self.parameter_name] = value

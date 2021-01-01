@@ -8,7 +8,7 @@ import os.path
 import io
 
 from django.utils import timezone
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.core.management.base import CommandError
 
 from config_models.management.commands import populate_model
@@ -16,13 +16,15 @@ from config_models.utils import deserialize_json
 from example.models import ExampleDeserializeConfig
 from tests.utils import CacheIsolationTestCase
 
+User = get_user_model()
+
 
 class DeserializeJSONTests(CacheIsolationTestCase):
     """
     Tests of deserializing the JSON representation of ConfigurationModels.
     """
     def setUp(self):
-        super(DeserializeJSONTests, self).setUp()
+        super().setUp()
         self.test_username = 'test_worker'
         User.objects.create_user(username=self.test_username)
         self.fixture_path = os.path.join(os.path.dirname(__file__), 'data', 'data.json')
@@ -149,7 +151,7 @@ class PopulateModelTestCase(CacheIsolationTestCase):
     Tests of populate model management command.
     """
     def setUp(self):
-        super(PopulateModelTestCase, self).setUp()
+        super().setUp()
         self.file_path = os.path.join(os.path.dirname(__file__), 'data', 'data.json')
         self.test_username = 'test_management_worker'
         User.objects.create_user(username=self.test_username)

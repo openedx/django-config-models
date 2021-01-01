@@ -4,7 +4,7 @@ Tests of ConfigurationModel
 
 
 import ddt
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from rest_framework.test import APIRequestFactory
 
 from freezegun import freeze_time
@@ -13,13 +13,15 @@ from config_models.views import ConfigurationModelCurrentAPIView
 from example.models import ExampleConfig, ExampleKeyedConfig, ManyToManyExampleConfig
 from .utils import CacheIsolationTestCase
 
+User = get_user_model()
+
 
 class ConfigurationModelTests(CacheIsolationTestCase):
     """
     Tests of ConfigurationModel
     """
     def setUp(self):
-        super(ConfigurationModelTests, self).setUp()
+        super().setUp()
         self.user = User()
         self.user.save()
 
@@ -164,7 +166,7 @@ class KeyedConfigurationModelTests(CacheIsolationTestCase):
     Tests for ``ConfigurationModels`` with keyed configuration.
     """
     def setUp(self):
-        super(KeyedConfigurationModelTests, self).setUp()
+        super().setUp()
         self.user = User()
         self.user.save()
 
@@ -390,7 +392,7 @@ class ConfigurationModelAPITests(CacheIsolationTestCase):
     Tests for the configuration model API.
     """
     def setUp(self):
-        super(ConfigurationModelAPITests, self).setUp()
+        super().setUp()
         self.factory = APIRequestFactory()
         self.user = User.objects.create_user(
             username='test_user',
@@ -412,7 +414,7 @@ class ConfigurationModelAPITests(CacheIsolationTestCase):
         self.assertEqual(self.user, ExampleConfig.current().changed_by)
 
     def test_multiple_inserts(self):
-        for i in range(3):  # pylint: disable=no-member
+        for i in range(3):
             self.assertEqual(i, ExampleConfig.objects.all().count())
 
             request = self.factory.post('/config/ExampleConfig', {"string_field": str(i)})

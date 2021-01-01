@@ -102,7 +102,7 @@ class ConfigurationModel(models.Model):
         """
         # Always create a new entry, instead of updating an existing model
         self.pk = None  # pylint: disable=invalid-name
-        super(ConfigurationModel, self).save(
+        super().save(
             force_insert,
             force_update,
             using,
