@@ -23,7 +23,7 @@ def get_serializer_class(configuration_model):
             if "changed_by_username" in self.context:
                 model = get_user_model()
                 validated_data['changed_by'] = model.objects.get(username=self.context["changed_by_username"])
-            return super(AutoConfigModelSerializer, self).create(validated_data)
+            return super().create(validated_data)
 
     return AutoConfigModelSerializer
 

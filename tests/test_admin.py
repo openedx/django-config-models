@@ -4,7 +4,7 @@ ConfigurationModel Admin Module Test Cases
 from unittest.mock import patch
 
 from django.contrib.admin.sites import AdminSite
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.contrib.messages.storage.fallback import FallbackStorage
 from django.http import HttpRequest
 from django.test import TestCase
@@ -13,6 +13,8 @@ from config_models import admin
 from config_models.models import ConfigurationModel
 
 from example.models import ExampleKeyedConfig
+
+User = get_user_model()
 
 
 class AdminTestCaseMixin:
@@ -33,7 +35,7 @@ class AdminTestCase(TestCase, AdminTestCaseMixin):
     """
 
     def setUp(self):
-        super(AdminTestCase, self).setUp()
+        super().setUp()
         self.conf_admin = admin.ConfigurationModelAdmin(ConfigurationModel, AdminSite())
 
     def test_default_fields(self):
