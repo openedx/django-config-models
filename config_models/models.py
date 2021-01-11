@@ -122,7 +122,7 @@ class ConfigurationModel(models.Model):
                 )
             return 'configuration/{}/current/{}'.format(cls.__name__, ','.join(str(arg) for arg in args))
         else:
-            return 'configuration/{}/current'.format(cls.__name__)
+            return f'configuration/{cls.__name__}/current'
 
     @classmethod
     def current(cls, *args):

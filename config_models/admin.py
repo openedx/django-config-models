@@ -192,7 +192,7 @@ class KeyedConfigurationModelAdmin(ConfigurationModelAdmin):
                 # * user hasn't ticked the "clear" checkbox
                 # * user hasn't uploaded a new file
                 if field_value and isinstance(field_value, File):
-                    clear_checkbox_name = '{0}-clear'.format(field_name)
+                    clear_checkbox_name = f'{field_name}-clear'
                     if request.POST.get(clear_checkbox_name) != 'on':
                         request.FILES.setdefault(field_name, field_value)
                 get[field_name] = field_value
@@ -206,8 +206,8 @@ class KeyedConfigurationModelAdmin(ConfigurationModelAdmin):
     def edit_link(self, inst):
         """ Edit link for the change view """
         if not inst.is_active:
-            return u'--'
-        update_url = reverse('admin:{}_{}_add'.format(self.model._meta.app_label, self.model._meta.model_name))
-        update_url += "?source={}".format(inst.pk)
-        return format_html(u'<a href="{}">{}</a>', update_url, _('Update'))
+            return '--'
+        update_url = reverse(f'admin:{self.model._meta.app_label}_{self.model._meta.model_name}_add')
+        update_url += f"?source={inst.pk}"
+        return format_html('<a href="{}">{}</a>', update_url, _('Update'))
     edit_link.short_description = _('Update')

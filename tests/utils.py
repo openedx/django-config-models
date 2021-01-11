@@ -119,13 +119,13 @@ class CacheIsolationTestCase(CacheIsolationMixin, TestCase):
     """
     @classmethod
     def setUpClass(cls):
-        super(CacheIsolationTestCase, cls).setUpClass()
+        super().setUpClass()
         cls.start_cache_isolation()
 
     @classmethod
     def tearDownClass(cls):
         cls.end_cache_isolation()
-        super(CacheIsolationTestCase, cls).tearDownClass()
+        super().tearDownClass()
 
     def setUp(self):
         super().setUp()

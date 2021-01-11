@@ -29,7 +29,7 @@ class ManyToManyExampleConfig(ConfigurationModel):
     many_user_field = models.ManyToManyField(User, related_name='topic_many_user_field')
 
     def __str__(self):
-        return "ManyToManyExampleConfig(enabled={}, string_field={})".format(self.enabled, self.string_field)
+        return f"ManyToManyExampleConfig(enabled={self.enabled}, string_field={self.string_field})"
 
 class ExampleKeyedConfig(ConfigurationModel):
     """
@@ -59,7 +59,7 @@ class ExampleDecoratorConfig(ConfigurationModel):
     Test model for testing the require_config decorator
     """
     def __str__(self):
-        return "ExampleDecoratorConfig(enabled={})".format(self.enabled)
+        return f"ExampleDecoratorConfig(enabled={self.enabled})"
 
 
 class ExampleDeserializeConfig(ConfigurationModel):

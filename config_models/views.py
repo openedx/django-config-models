@@ -35,7 +35,7 @@ class AtomicMixin:
     @classmethod
     def as_view(cls, **initkwargs):
         """Overrides as_view to add atomic transaction."""
-        view = super(AtomicMixin, cls).as_view(**initkwargs)
+        view = super().as_view(**initkwargs)
         return cls.create_atomic_wrapper(view)
 
 
