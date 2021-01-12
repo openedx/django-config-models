@@ -3,17 +3,17 @@ Tests of the populate_model management command and its helper utils.deserialize_
 """
 
 
-import textwrap
-import os.path
 import io
+import os.path
+import textwrap
 
-from django.utils import timezone
 from django.contrib.auth import get_user_model
 from django.core.management.base import CommandError
+from django.utils import timezone
+from example.models import ExampleDeserializeConfig
 
 from config_models.management.commands import populate_model
 from config_models.utils import deserialize_json
-from example.models import ExampleDeserializeConfig
 from tests.utils import CacheIsolationTestCase
 
 User = get_user_model()

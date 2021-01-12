@@ -3,14 +3,14 @@ Admin site models for managing :class:`.ConfigurationModel` subclasses.
 """
 
 
-from django.forms import models
 from django.contrib import admin
 from django.contrib.admin import ListFilter
-from django.core.cache import caches, InvalidCacheBackendError
+from django.core.cache import InvalidCacheBackendError, caches
 from django.core.files.base import File
-from django.urls import reverse
+from django.forms import models
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
+from django.urls import reverse
 from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
 

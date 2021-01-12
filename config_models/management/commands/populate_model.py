@@ -1,10 +1,7 @@
 """
 Populates a ConfigurationModel by deserializing JSON data contained in a file.
 """
-
-
 import os
-import io
 
 from django.core.management.base import BaseCommand, CommandError
 from django.utils.translation import ugettext_lazy as _

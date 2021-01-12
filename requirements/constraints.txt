@@ -13,10 +13,5 @@
 # happen in v3 of that library.
 edx-django-utils<3
 
-# The following packages are pinned because more recent versions require
-# Python 3.6+
-twine<2.0
-zipp<2.0
-
 # stay on an lts release
 django<2.3

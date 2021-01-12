@@ -4,6 +4,7 @@ Decorators for model-based configuration.
 
 
 from functools import wraps
+
 from django.http import HttpResponseNotFound
 
 

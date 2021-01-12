@@ -7,7 +7,7 @@ Django applications, so these settings will not be used.
 
 
 
-from os.path import join, abspath, dirname
+from os.path import abspath, dirname, join
 
 
 def root(*args):

@@ -11,9 +11,9 @@ Utility classes for testing django applications.
 
 import copy
 
+from django.conf import settings
 from django.core.cache import caches
 from django.test import TestCase, override_settings
-from django.conf import settings
 from edx_django_utils.cache.utils import TieredCache
 
 

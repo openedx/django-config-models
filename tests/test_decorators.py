@@ -1,8 +1,9 @@
 """
 Tests for config models decorators
 """
-from config_models import decorators
 from example.models import ExampleDecoratorConfig
+
+from config_models import decorators
 from tests.utils import CacheIsolationTestCase
 
 

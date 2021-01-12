@@ -2,8 +2,6 @@
 Override the submit_row template tag to remove all save buttons from the
 admin dashboard change view if the context has readonly marked in it.
 """
-
-
 from django.contrib.admin.templatetags.admin_modify import register
 from django.contrib.admin.templatetags.admin_modify import submit_row as original_submit_row
 
