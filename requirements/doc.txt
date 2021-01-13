@@ -18,6 +18,8 @@ certifi==2020.12.5
     # via requests
 chardet==4.0.0
     # via requests
+colorama==0.4.4
+    # via twine
 coverage==5.3.1
     # via
     #   -r requirements/test.txt
@@ -50,17 +52,14 @@ idna==2.10
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==2.1.1
-    # via
-    #   -r requirements/test.txt
-    #   pluggy
-    #   pytest
 iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
 jinja2==2.11.2
     # via sphinx
+keyring==21.8.0
+    # via twine
 markupsafe==1.1.1
     # via jinja2
 newrelic==5.24.0.153
@@ -73,10 +72,6 @@ packaging==20.8
     #   bleach
     #   pytest
     #   sphinx
-pathlib2==2.3.5
-    # via
-    #   -r requirements/test.txt
-    #   pytest
 pkginfo==1.6.1
     # via twine
 pluggy==0.13.1
@@ -91,7 +86,7 @@ py==1.10.0
     # via
     #   -r requirements/test.txt
     #   pytest
-pygments==2.7.3
+pygments==2.7.4
     # via
     #   readme-renderer
     #   sphinx
@@ -103,7 +98,7 @@ pytest-cov==2.10.1
     # via -r requirements/test.txt
 pytest-django==4.1.0
     # via -r requirements/test.txt
-pytest==6.1.2
+pytest==6.2.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -128,11 +123,12 @@ requests==2.25.1
     #   requests-toolbelt
     #   sphinx
     #   twine
+rfc3986==1.4.0
+    # via twine
 six==1.15.0
     # via
     #   -r requirements/test.txt
     #   bleach
-    #   pathlib2
     #   python-dateutil
     #   readme-renderer
 snowballstemmer==2.0.0
@@ -163,21 +159,14 @@ toml==0.10.2
     # via
     #   -r requirements/test.txt
     #   pytest
-tqdm==4.55.1
+tqdm==4.56.0
     # via twine
-twine==1.15.0
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/doc.in
+twine==3.3.0
+    # via -r requirements/doc.in
 urllib3==1.26.2
     # via requests
 webencodings==0.5.1
     # via bleach
-zipp==1.2.0
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/test.txt
-    #   importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

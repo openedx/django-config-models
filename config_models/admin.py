@@ -3,14 +3,14 @@ Admin site models for managing :class:`.ConfigurationModel` subclasses.
 """
 
 
-from django.forms import models
 from django.contrib import admin
 from django.contrib.admin import ListFilter
-from django.core.cache import caches, InvalidCacheBackendError
+from django.core.cache import InvalidCacheBackendError, caches
 from django.core.files.base import File
-from django.urls import reverse
+from django.forms import models
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
+from django.urls import reverse
 from django.utils.html import format_html
 from django.utils.translation import ugettext_lazy as _
 
@@ -192,7 +192,7 @@ class KeyedConfigurationModelAdmin(ConfigurationModelAdmin):
                 # * user hasn't ticked the "clear" checkbox
                 # * user hasn't uploaded a new file
                 if field_value and isinstance(field_value, File):
-                    clear_checkbox_name = '{0}-clear'.format(field_name)
+                    clear_checkbox_name = f'{field_name}-clear'
                     if request.POST.get(clear_checkbox_name) != 'on':
                         request.FILES.setdefault(field_name, field_value)
                 get[field_name] = field_value
@@ -206,8 +206,8 @@ class KeyedConfigurationModelAdmin(ConfigurationModelAdmin):
     def edit_link(self, inst):
         """ Edit link for the change view """
         if not inst.is_active:
-            return u'--'
-        update_url = reverse('admin:{}_{}_add'.format(self.model._meta.app_label, self.model._meta.model_name))
-        update_url += "?source={}".format(inst.pk)
-        return format_html(u'<a href="{}">{}</a>', update_url, _('Update'))
+            return '--'
+        update_url = reverse(f'admin:{self.model._meta.app_label}_{self.model._meta.model_name}_add')
+        update_url += f"?source={inst.pk}"
+        return format_html('<a href="{}">{}</a>', update_url, _('Update'))
     edit_link.short_description = _('Update')

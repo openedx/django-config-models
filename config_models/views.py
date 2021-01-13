@@ -3,10 +3,10 @@ API view to allow manipulation of configuration models.
 """
 
 
+from django.db import transaction
+from rest_framework.authentication import SessionAuthentication
 from rest_framework.generics import CreateAPIView, RetrieveAPIView
 from rest_framework.permissions import DjangoModelPermissions
-from rest_framework.authentication import SessionAuthentication
-from django.db import transaction
 
 from config_models.utils import get_serializer_class
 
@@ -35,7 +35,7 @@ class AtomicMixin:
     @classmethod
     def as_view(cls, **initkwargs):
         """Overrides as_view to add atomic transaction."""
-        view = super(AtomicMixin, cls).as_view(**initkwargs)
+        view = super().as_view(**initkwargs)
         return cls.create_atomic_wrapper(view)
 
 

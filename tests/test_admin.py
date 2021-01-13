@@ -8,11 +8,10 @@ from django.contrib.auth import get_user_model
 from django.contrib.messages.storage.fallback import FallbackStorage
 from django.http import HttpRequest
 from django.test import TestCase
+from example.models import ExampleKeyedConfig
 
 from config_models import admin
 from config_models.models import ConfigurationModel
-
-from example.models import ExampleKeyedConfig
 
 User = get_user_model()
 

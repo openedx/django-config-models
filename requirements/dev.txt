@@ -82,24 +82,11 @@ idna==2.10
     # via
     #   -r requirements/ci.txt
     #   requests
-importlib-metadata==2.1.1
-    # via
-    #   -r requirements/ci.txt
-    #   -r requirements/quality.txt
-    #   path
-    #   pluggy
-    #   pytest
-    #   tox
-    #   virtualenv
-importlib-resources==3.2.1
-    # via
-    #   -r requirements/ci.txt
-    #   virtualenv
 iniconfig==1.1.1
     # via
     #   -r requirements/quality.txt
     #   pytest
-isort==4.3.21
+isort==5.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -123,12 +110,8 @@ packaging==20.8
     #   tox
 path.py==12.5.0
     # via edx-i18n-tools
-path==13.1.0
+path==15.0.1
     # via path.py
-pathlib2==2.3.5
-    # via
-    #   -r requirements/quality.txt
-    #   pytest
 pip-tools==5.5.0
     # via -r requirements/pip-tools.txt
 pluggy==0.13.1
@@ -182,7 +165,7 @@ pytest-cov==2.10.1
     # via -r requirements/quality.txt
 pytest-django==4.1.0
     # via -r requirements/quality.txt
-pytest==6.1.2
+pytest==6.2.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -208,7 +191,6 @@ six==1.15.0
     #   astroid
     #   edx-i18n-tools
     #   edx-lint
-    #   pathlib2
     #   python-dateutil
     #   tox
     #   virtualenv
@@ -231,20 +213,16 @@ tox-battery==0.6.1
     # via -r requirements/ci.txt
 tox-travis==0.12
     # via -r requirements/ci.txt
-tox==3.20.1
+tox==3.21.0
     # via
     #   -r requirements/ci.txt
     #   tox-battery
     #   tox-travis
-typed-ast==1.4.2
-    # via
-    #   -r requirements/quality.txt
-    #   astroid
 urllib3==1.26.2
     # via
     #   -r requirements/ci.txt
     #   requests
-virtualenv==20.2.2
+virtualenv==20.3.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -252,13 +230,6 @@ wrapt==1.12.1
     # via
     #   -r requirements/quality.txt
     #   astroid
-zipp==1.2.0
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/ci.txt
-    #   -r requirements/quality.txt
-    #   importlib-metadata
-    #   importlib-resources
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip

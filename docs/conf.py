@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # pylint: disable=invalid-name
 """
 django_config_models documentation build configuration file.
@@ -19,6 +18,7 @@ import os
 
 # Configure Django for autodoc usage
 import django
+
 django.setup()
 
 # on_rtd is whether we are on readthedocs.org

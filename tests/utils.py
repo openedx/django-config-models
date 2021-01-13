@@ -11,9 +11,9 @@ Utility classes for testing django applications.
 
 import copy
 
+from django.conf import settings
 from django.core.cache import caches
 from django.test import TestCase, override_settings
-from django.conf import settings
 from edx_django_utils.cache.utils import TieredCache
 
 
@@ -119,13 +119,13 @@ class CacheIsolationTestCase(CacheIsolationMixin, TestCase):
     """
     @classmethod
     def setUpClass(cls):
-        super(CacheIsolationTestCase, cls).setUpClass()
+        super().setUpClass()
         cls.start_cache_isolation()
 
     @classmethod
     def tearDownClass(cls):
         cls.end_cache_isolation()
-        super(CacheIsolationTestCase, cls).tearDownClass()
+        super().tearDownClass()
 
     def setUp(self):
         super().setUp()

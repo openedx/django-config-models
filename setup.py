@@ -1,7 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # pylint: disable=C0111,W6005,W6100
-from __future__ import absolute_import, print_function
 
 import os
 import re
@@ -87,7 +85,6 @@ setup(
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.8',
     ],
 )

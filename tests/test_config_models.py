@@ -5,12 +5,13 @@ Tests of ConfigurationModel
 
 import ddt
 from django.contrib.auth import get_user_model
+from example.models import (ExampleConfig, ExampleKeyedConfig,
+                            ManyToManyExampleConfig)
+from freezegun import freeze_time
 from rest_framework.test import APIRequestFactory
 
-from freezegun import freeze_time
-
 from config_models.views import ConfigurationModelCurrentAPIView
-from example.models import ExampleConfig, ExampleKeyedConfig, ManyToManyExampleConfig
+
 from .utils import CacheIsolationTestCase
 
 User = get_user_model()
@@ -175,7 +176,7 @@ class KeyedConfigurationModelTests(CacheIsolationTestCase):
     def test_cache_key_name(self, left, right):
         self.assertEqual(
             ExampleKeyedConfig.cache_key_name(left, right, self.user),
-            'configuration/ExampleKeyedConfig/current/{},{},{}'.format(left, right, self.user)
+            f'configuration/ExampleKeyedConfig/current/{left},{right},{self.user}'
         )
 
     @ddt.data(
@@ -187,7 +188,7 @@ class KeyedConfigurationModelTests(CacheIsolationTestCase):
     def test_key_values_cache_key_name(self, args, expected_key):
         self.assertEqual(
             ExampleKeyedConfig.key_values_cache_key_name(*args),
-            'configuration/ExampleKeyedConfig/key_values/{}'.format(expected_key))
+            f'configuration/ExampleKeyedConfig/key_values/{expected_key}')
 
     @ddt.data(('a', 'b'), ('c', 'd'))
     @ddt.unpack
@@ -270,27 +271,27 @@ class KeyedConfigurationModelTests(CacheIsolationTestCase):
         self.assertEqual(len(unique_key_pairs), 2)
         self.assertEqual(
             set(unique_key_pairs),
-            set([('left_a', 'right_a', self.user.id), ('left_b', 'right_b', self.user.id)])
+            {('left_a', 'right_a', self.user.id), ('left_b', 'right_b', self.user.id)}
         )
         unique_left_keys = ExampleKeyedConfig.key_values('left', flat=True)
         self.assertEqual(len(unique_left_keys), 2)
-        self.assertEqual(set(unique_left_keys), set(['left_a', 'left_b']))
+        self.assertEqual(set(unique_left_keys), {'left_a', 'left_b'})
 
     def test_key_string_values(self):
         """ Ensure str() vs unicode() doesn't cause duplicate cache entries """
         ExampleKeyedConfig(
             left='left',
-            right=u'\N{RIGHT ANGLE BRACKET}\N{SNOWMAN}',
+            right='\N{RIGHT ANGLE BRACKET}\N{SNOWMAN}',
             enabled=True,
             int_field=10,
             user=self.user,
             changed_by=self.user
         ).save()
 
-        entry = ExampleKeyedConfig.current('left', u'\N{RIGHT ANGLE BRACKET}\N{SNOWMAN}', self.user)
+        entry = ExampleKeyedConfig.current('left', '\N{RIGHT ANGLE BRACKET}\N{SNOWMAN}', self.user)
         self.assertEqual(entry.int_field, 10)
 
-        entry = ExampleKeyedConfig.current(u'left', u'\N{RIGHT ANGLE BRACKET}\N{SNOWMAN}', self.user)
+        entry = ExampleKeyedConfig.current('left', '\N{RIGHT ANGLE BRACKET}\N{SNOWMAN}', self.user)
         self.assertEqual(entry.int_field, 10)
 
     def test_current_set(self):
@@ -305,7 +306,7 @@ class KeyedConfigurationModelTests(CacheIsolationTestCase):
         self.assertEqual(len(queryset.all()), 2)
         self.assertEqual(
             set(queryset.order_by('int_field').values_list('int_field', flat=True)),
-            set([1, 2])
+            {1, 2}
         )
 
     def test_active_annotation(self):

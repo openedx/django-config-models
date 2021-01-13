@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 config_models Django application initialization.
 """

@@ -22,13 +22,6 @@ filelock==3.0.12
     #   virtualenv
 idna==2.10
     # via requests
-importlib-metadata==2.1.1
-    # via
-    #   pluggy
-    #   tox
-    #   virtualenv
-importlib-resources==3.2.1
-    # via virtualenv
 packaging==20.8
     # via tox
 pluggy==0.13.1
@@ -49,17 +42,12 @@ tox-battery==0.6.1
     # via -r requirements/ci.in
 tox-travis==0.12
     # via -r requirements/ci.in
-tox==3.20.1
+tox==3.21.0
     # via
     #   -r requirements/ci.in
     #   tox-battery
     #   tox-travis
 urllib3==1.26.2
     # via requests
-virtualenv==20.2.2
+virtualenv==20.3.0
     # via tox
-zipp==1.2.0
-    # via
-    #   -c requirements/constraints.txt
-    #   importlib-metadata
-    #   importlib-resources

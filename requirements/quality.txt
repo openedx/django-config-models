@@ -44,16 +44,11 @@ edx-lint==1.6
     # via -r requirements/quality.in
 freezegun==1.0.0
     # via -r requirements/test.txt
-importlib-metadata==2.1.1
-    # via
-    #   -r requirements/test.txt
-    #   pluggy
-    #   pytest
 iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==4.3.21
+isort==5.7.0
     # via pylint
 lazy-object-proxy==1.4.3
     # via astroid
@@ -64,10 +59,6 @@ newrelic==5.24.0.153
     #   -r requirements/test.txt
     #   edx-django-utils
 packaging==20.8
-    # via
-    #   -r requirements/test.txt
-    #   pytest
-pathlib2==2.3.5
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -109,7 +100,7 @@ pytest-cov==2.10.1
     # via -r requirements/test.txt
 pytest-django==4.1.0
     # via -r requirements/test.txt
-pytest==6.1.2
+pytest==6.2.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -127,7 +118,6 @@ six==1.15.0
     #   -r requirements/test.txt
     #   astroid
     #   edx-lint
-    #   pathlib2
     #   python-dateutil
 snowballstemmer==2.0.0
     # via pydocstyle
@@ -140,12 +130,5 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   pylint
     #   pytest
-typed-ast==1.4.2
-    # via astroid
 wrapt==1.12.1
     # via astroid
-zipp==1.2.0
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/test.txt
-    #   importlib-metadata

@@ -3,17 +3,17 @@ Tests of the populate_model management command and its helper utils.deserialize_
 """
 
 
-import textwrap
-import os.path
 import io
+import os.path
+import textwrap
 
-from django.utils import timezone
 from django.contrib.auth import get_user_model
 from django.core.management.base import CommandError
+from django.utils import timezone
+from example.models import ExampleDeserializeConfig
 
 from config_models.management.commands import populate_model
 from config_models.utils import deserialize_json
-from example.models import ExampleDeserializeConfig
 from tests.utils import CacheIsolationTestCase
 
 User = get_user_model()
@@ -35,7 +35,7 @@ class DeserializeJSONTests(CacheIsolationTestCase):
         A valid username is supplied for the operation.
         """
         start_date = timezone.now()
-        with io.open(self.fixture_path, "rb") as data:
+        with open(self.fixture_path, "rb") as data:
             entries_created = deserialize_json(data, self.test_username)
             self.assertEqual(2, entries_created)
 
@@ -61,7 +61,7 @@ class DeserializeJSONTests(CacheIsolationTestCase):
         ExampleDeserializeConfig(name="fred", enabled=True).save()
         ExampleDeserializeConfig(name="barney", int_field=200).save()
 
-        with io.open(self.fixture_path, "rb") as data:
+        with open(self.fixture_path, "rb") as data:
             entries_created = deserialize_json(data, self.test_username)
             self.assertEqual(2, entries_created)
 
@@ -80,11 +80,11 @@ class DeserializeJSONTests(CacheIsolationTestCase):
         If there is no change in an entry (besides changed_by and change_date),
         a new entry is not made.
         """
-        with io.open(self.fixture_path, "rb") as data:
+        with open(self.fixture_path, "rb") as data:
             entries_created = deserialize_json(data, self.test_username)
             self.assertEqual(2, entries_created)
 
-        with io.open(self.fixture_path, "rb") as data:
+        with open(self.fixture_path, "rb") as data:
             entries_created = deserialize_json(data, self.test_username)
             self.assertEqual(0, entries_created)
 
@@ -100,7 +100,7 @@ class DeserializeJSONTests(CacheIsolationTestCase):
         self.assertEqual(-8, ExampleDeserializeConfig.current('betty').int_field)
 
         # Now importing will add a new entry for Betty.
-        with io.open(self.fixture_path, "rb") as data:
+        with open(self.fixture_path, "rb") as data:
             entries_created = deserialize_json(data, self.test_username)
             self.assertEqual(1, entries_created)
 

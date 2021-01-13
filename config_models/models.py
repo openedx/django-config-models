@@ -3,19 +3,17 @@ Django Model baseclass for database-backed configuration.
 """
 
 
-from django.db import models
 from django.conf import settings
-from django.utils.translation import ugettext_lazy as _
-
-from edx_django_utils.cache.utils import TieredCache
-from rest_framework.utils import model_meta
-
 # The following import exists for backwards compatibility (because a number of
 # library users assume config_models.models.cache is importable), but
 # ConfigModels will now ignore the custom 'configuration' cache setting and just
 # use TieredCache, which will make use of a local request cache + the default
 # Django cache.
 from django.core.cache import cache  # pylint: disable=unused-import
+from django.db import models
+from django.utils.translation import ugettext_lazy as _
+from edx_django_utils.cache.utils import TieredCache
+from rest_framework.utils import model_meta
 
 
 class ConfigurationModelManager(models.Manager):
@@ -122,7 +120,7 @@ class ConfigurationModel(models.Model):
                 )
             return 'configuration/{}/current/{}'.format(cls.__name__, ','.join(str(arg) for arg in args))
         else:
-            return 'configuration/{}/current'.format(cls.__name__)
+            return f'configuration/{cls.__name__}/current'
 
     @classmethod
     def current(cls, *args):
