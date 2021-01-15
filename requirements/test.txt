@@ -26,6 +26,10 @@ edx-django-utils==2.0.4
     #   -r requirements/base.txt
 freezegun==1.0.0
     # via -r requirements/test.in
+importlib-metadata==2.1.1
+    # via
+    #   pluggy
+    #   pytest
 iniconfig==1.1.1
     # via pytest
 newrelic==5.24.0.153
@@ -33,6 +37,8 @@ newrelic==5.24.0.153
     #   -r requirements/base.txt
     #   edx-django-utils
 packaging==20.8
+    # via pytest
+pathlib2==2.3.5
     # via pytest
 pluggy==0.13.1
     # via pytest
@@ -48,7 +54,7 @@ pytest-cov==2.10.1
     # via -r requirements/test.in
 pytest-django==4.1.0
     # via -r requirements/test.in
-pytest==6.2.1
+pytest==6.1.2
     # via
     #   pytest-cov
     #   pytest-django
@@ -59,10 +65,14 @@ pytz==2020.5
     #   -r requirements/base.txt
     #   django
 six==1.15.0
-    # via python-dateutil
+    # via
+    #   pathlib2
+    #   python-dateutil
 sqlparse==0.4.1
     # via
     #   -r requirements/base.txt
     #   django
 toml==0.10.2
     # via pytest
+zipp==1.2.0
+    # via importlib-metadata
