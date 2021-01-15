@@ -5,10 +5,10 @@ Tests of ConfigurationModel
 
 import ddt
 from django.contrib.auth import get_user_model
-from example.models import (ExampleConfig, ExampleKeyedConfig,
-                            ManyToManyExampleConfig)
 from freezegun import freeze_time
 from rest_framework.test import APIRequestFactory
+from example.models import (ExampleConfig, ExampleKeyedConfig,
+                            ManyToManyExampleConfig)
 
 from config_models.views import ConfigurationModelCurrentAPIView
 
