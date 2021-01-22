@@ -42,7 +42,7 @@ edx-django-utils==2.0.4
     #   -r requirements/test.txt
 edx-lint==1.6
     # via -r requirements/quality.in
-freezegun==1.0.0
+freezegun==1.1.0
     # via -r requirements/test.txt
 iniconfig==1.1.1
     # via
@@ -54,7 +54,7 @@ lazy-object-proxy==1.4.3
     # via astroid
 mccabe==0.6.1
     # via pylint
-newrelic==5.24.0.153
+newrelic==6.0.1.155
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -96,7 +96,7 @@ pyparsing==2.4.7
     # via
     #   -r requirements/test.txt
     #   packaging
-pytest-cov==2.10.1
+pytest-cov==2.11.1
     # via -r requirements/test.txt
 pytest-django==4.1.0
     # via -r requirements/test.txt
@@ -119,7 +119,7 @@ six==1.15.0
     #   astroid
     #   edx-lint
     #   python-dateutil
-snowballstemmer==2.0.0
+snowballstemmer==2.1.0
     # via pydocstyle
 sqlparse==0.4.1
     # via
