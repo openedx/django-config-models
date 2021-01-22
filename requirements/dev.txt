@@ -76,7 +76,7 @@ filelock==3.0.12
     #   -r requirements/ci.txt
     #   tox
     #   virtualenv
-freezegun==1.0.0
+freezegun==1.1.0
     # via -r requirements/quality.txt
 idna==2.10
     # via
@@ -98,7 +98,7 @@ mccabe==0.6.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==5.24.0.153
+newrelic==6.0.1.155
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -161,7 +161,7 @@ pyparsing==2.4.7
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   packaging
-pytest-cov==2.10.1
+pytest-cov==2.11.1
     # via -r requirements/quality.txt
 pytest-django==4.1.0
     # via -r requirements/quality.txt
@@ -178,7 +178,7 @@ pytz==2020.5
     # via
     #   -r requirements/quality.txt
     #   django
-pyyaml==5.3.1
+pyyaml==5.4.1
     # via edx-i18n-tools
 requests==2.25.1
     # via
@@ -194,7 +194,7 @@ six==1.15.0
     #   python-dateutil
     #   tox
     #   virtualenv
-snowballstemmer==2.0.0
+snowballstemmer==2.1.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
@@ -213,7 +213,7 @@ tox-battery==0.6.1
     # via -r requirements/ci.txt
 tox-travis==0.12
     # via -r requirements/ci.txt
-tox==3.21.0
+tox==3.21.2
     # via
     #   -r requirements/ci.txt
     #   tox-battery
@@ -222,7 +222,7 @@ urllib3==1.26.2
     # via
     #   -r requirements/ci.txt
     #   requests
-virtualenv==20.3.0
+virtualenv==20.4.0
     # via
     #   -r requirements/ci.txt
     #   tox

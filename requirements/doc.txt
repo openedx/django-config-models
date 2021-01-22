@@ -12,10 +12,12 @@ attrs==20.3.0
     #   pytest
 babel==2.9.0
     # via sphinx
-bleach==3.2.1
+bleach==3.2.2
     # via readme-renderer
 certifi==2020.12.5
     # via requests
+cffi==1.14.4
+    # via cryptography
 chardet==4.0.0
     # via requests
 colorama==0.4.4
@@ -24,6 +26,8 @@ coverage==5.3.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
+cryptography==3.3.1
+    # via secretstorage
 ddt==1.4.1
     # via -r requirements/test.txt
 django-waffle==2.0.0
@@ -46,7 +50,7 @@ edx-django-utils==2.0.4
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
-freezegun==1.0.0
+freezegun==1.1.0
     # via -r requirements/test.txt
 idna==2.10
     # via requests
@@ -56,13 +60,17 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
+jeepney==0.6.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==2.11.2
     # via sphinx
 keyring==21.8.0
     # via twine
 markupsafe==1.1.1
     # via jinja2
-newrelic==5.24.0.153
+newrelic==6.0.1.155
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -72,7 +80,7 @@ packaging==20.8
     #   bleach
     #   pytest
     #   sphinx
-pkginfo==1.6.1
+pkginfo==1.7.0
     # via twine
 pluggy==0.13.1
     # via
@@ -86,6 +94,8 @@ py==1.10.0
     # via
     #   -r requirements/test.txt
     #   pytest
+pycparser==2.20
+    # via cffi
 pygments==2.7.4
     # via
     #   readme-renderer
@@ -94,7 +104,7 @@ pyparsing==2.4.7
     # via
     #   -r requirements/test.txt
     #   packaging
-pytest-cov==2.10.1
+pytest-cov==2.11.1
     # via -r requirements/test.txt
 pytest-django==4.1.0
     # via -r requirements/test.txt
@@ -125,13 +135,16 @@ requests==2.25.1
     #   twine
 rfc3986==1.4.0
     # via twine
+secretstorage==3.3.0
+    # via keyring
 six==1.15.0
     # via
     #   -r requirements/test.txt
     #   bleach
+    #   cryptography
     #   python-dateutil
     #   readme-renderer
-snowballstemmer==2.0.0
+snowballstemmer==2.1.0
     # via sphinx
 sphinx-rtd-theme==0.5.1
     # via -r requirements/doc.in
