@@ -14,6 +14,11 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+
+[2.1.1] - 2021-01-28
+~~~~~~~~~~~~~~~~~~~~
+* Fix deprecated reference of ``util.memcache.safe_key``
+
 [2.1.0] - 2021-01-12
 ~~~~~~~~~~~~~~~~~~~~
 * Dropped Python 3.5 Support
