@@ -6,11 +6,11 @@
 #
 attrs==20.3.0
     # via pytest
-coverage==5.3.1
+coverage==5.4
     # via pytest-cov
 ddt==1.4.1
     # via -r requirements/test.in
-django-waffle==2.0.0
+django-waffle==2.1.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -48,7 +48,7 @@ pytest-cov==2.11.1
     # via -r requirements/test.in
 pytest-django==4.1.0
     # via -r requirements/test.in
-pytest==6.2.1
+pytest==6.2.2
     # via
     #   pytest-cov
     #   pytest-django
