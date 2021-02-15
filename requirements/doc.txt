@@ -26,7 +26,7 @@ coverage==5.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==3.4.4
+cryptography==3.4.5
     # via secretstorage
 ddt==1.4.1
     # via -r requirements/test.txt
@@ -96,7 +96,7 @@ py==1.10.0
     #   pytest
 pycparser==2.20
     # via cffi
-pygments==2.7.4
+pygments==2.8.0
     # via
     #   readme-renderer
     #   sphinx
@@ -147,7 +147,7 @@ snowballstemmer==2.1.0
     # via sphinx
 sphinx-rtd-theme==0.5.1
     # via -r requirements/doc.in
-sphinx==3.4.3
+sphinx==3.5.0
     # via
     #   -r requirements/doc.in
     #   sphinx-rtd-theme
