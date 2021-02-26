@@ -28,7 +28,7 @@ freezegun==1.1.0
     # via -r requirements/test.in
 iniconfig==1.1.1
     # via pytest
-newrelic==6.0.1.155
+newrelic==6.2.0.156
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
