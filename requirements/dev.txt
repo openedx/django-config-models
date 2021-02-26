@@ -76,7 +76,7 @@ edx-django-utils==2.0.4
     #   -r requirements/quality.txt
 edx-i18n-tools==0.5.3
     # via -r requirements/dev.in
-edx-lint==4.0.1
+edx-lint==4.1.0
     # via -r requirements/quality.txt
 filelock==3.0.12
     # via
@@ -113,7 +113,7 @@ mccabe==0.6.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==6.0.1.155
+newrelic==6.2.0.156
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -168,7 +168,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pylint==2.7.0
+pylint==2.7.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint

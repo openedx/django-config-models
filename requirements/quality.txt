@@ -45,7 +45,7 @@ edx-django-utils==2.0.4
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
-edx-lint==4.0.1
+edx-lint==4.1.0
     # via -r requirements/quality.in
 freezegun==1.1.0
     # via -r requirements/test.txt
@@ -63,7 +63,7 @@ markupsafe==1.1.1
     # via jinja2
 mccabe==0.6.1
     # via pylint
-newrelic==6.0.1.155
+newrelic==6.2.0.156
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -97,7 +97,7 @@ pylint-plugin-utils==0.6
     # via
     #   pylint-celery
     #   pylint-django
-pylint==2.7.0
+pylint==2.7.1
     # via
     #   edx-lint
     #   pylint-celery
