@@ -28,7 +28,7 @@ coverage==5.5
     #   pytest-cov
 cryptography==3.4.6
     # via secretstorage
-ddt==1.4.1
+ddt==1.4.2
     # via -r requirements/test.txt
 django-waffle==2.1.0
     # via
@@ -56,7 +56,7 @@ idna==2.10
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==3.7.2
+importlib-metadata==3.7.3
     # via keyring
 iniconfig==1.1.1
     # via

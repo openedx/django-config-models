@@ -8,7 +8,7 @@ attrs==20.3.0
     # via pytest
 coverage==5.5
     # via pytest-cov
-ddt==1.4.1
+ddt==1.4.2
     # via -r requirements/test.in
 django-waffle==2.1.0
     # via
