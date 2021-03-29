@@ -8,7 +8,7 @@ appdirs==1.4.4
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-astroid==2.5.1
+astroid==2.5.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -143,7 +143,7 @@ pluggy==0.13.1
     #   -r requirements/quality.txt
     #   pytest
     #   tox
-polib==1.1.0
+polib==1.1.1
     # via edx-i18n-tools
 psutil==1.2.1
     # via
