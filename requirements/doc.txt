@@ -16,6 +16,8 @@ bleach==3.3.0
     # via readme-renderer
 certifi==2020.12.5
     # via requests
+cffi==1.14.5
+    # via cryptography
 chardet==4.0.0
     # via requests
 colorama==0.4.4
@@ -24,6 +26,8 @@ coverage==5.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
+cryptography==3.4.7
+    # via secretstorage
 ddt==1.4.2
     # via -r requirements/test.txt
 django-waffle==2.1.0
@@ -52,7 +56,7 @@ idna==2.10
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==3.7.3
+importlib-metadata==3.9.0
     # via
     #   keyring
     #   twine
@@ -60,6 +64,10 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
+jeepney==0.6.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==2.11.3
     # via sphinx
 keyring==23.0.1
@@ -90,6 +98,8 @@ py==1.10.0
     # via
     #   -r requirements/test.txt
     #   pytest
+pycparser==2.20
+    # via cffi
 pygments==2.8.1
     # via
     #   readme-renderer
@@ -129,6 +139,8 @@ requests==2.25.1
     #   twine
 rfc3986==1.4.0
     # via twine
+secretstorage==3.3.1
+    # via keyring
 six==1.15.0
     # via
     #   -r requirements/test.txt
