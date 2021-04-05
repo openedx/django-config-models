@@ -188,7 +188,7 @@ pytest-cov==2.11.1
     # via -r requirements/quality.txt
 pytest-django==4.1.0
     # via -r requirements/quality.txt
-pytest==6.2.2
+pytest==6.2.3
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
