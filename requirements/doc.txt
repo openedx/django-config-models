@@ -42,7 +42,7 @@ django==2.2.19
     #   edx-django-utils
 djangorestframework==3.12.4
     # via -r requirements/test.txt
-docutils==0.16
+docutils==0.17
     # via
     #   readme-renderer
     #   sphinx
@@ -112,7 +112,7 @@ pytest-cov==2.11.1
     # via -r requirements/test.txt
 pytest-django==4.1.0
     # via -r requirements/test.txt
-pytest==6.2.2
+pytest==6.2.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
