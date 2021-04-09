@@ -34,7 +34,7 @@ django-waffle==2.1.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-django==2.2.19
+django==2.2.20
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -42,10 +42,12 @@ django==2.2.19
     #   edx-django-utils
 djangorestframework==3.12.4
     # via -r requirements/test.txt
-docutils==0.17
+docutils==0.16
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   readme-renderer
     #   sphinx
+    #   sphinx-rtd-theme
 edx-django-utils==2.0.4
     # via
     #   -c requirements/constraints.txt
@@ -149,7 +151,7 @@ six==1.15.0
     #   readme-renderer
 snowballstemmer==2.1.0
     # via sphinx
-sphinx-rtd-theme==0.5.1
+sphinx-rtd-theme==0.5.2
     # via -r requirements/doc.in
 sphinx==3.5.3
     # via
@@ -175,7 +177,7 @@ toml==0.10.2
     # via
     #   -r requirements/test.txt
     #   pytest
-tqdm==4.59.0
+tqdm==4.60.0
     # via twine
 twine==3.4.1
     # via -r requirements/doc.in
