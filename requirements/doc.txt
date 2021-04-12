@@ -112,7 +112,7 @@ pyparsing==2.4.7
     #   packaging
 pytest-cov==2.11.1
     # via -r requirements/test.txt
-pytest-django==4.1.0
+pytest-django==4.2.0
     # via -r requirements/test.txt
 pytest==6.2.3
     # via
@@ -153,7 +153,7 @@ snowballstemmer==2.1.0
     # via sphinx
 sphinx-rtd-theme==0.5.2
     # via -r requirements/doc.in
-sphinx==3.5.3
+sphinx==3.5.4
     # via
     #   -r requirements/doc.in
     #   sphinx-rtd-theme

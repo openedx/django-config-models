@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.5.2
+astroid==2.5.3
     # via
     #   pylint
     #   pylint-celery
@@ -91,7 +91,7 @@ pydocstyle==6.0.0
     # via -r requirements/quality.in
 pylint-celery==0.3
     # via edx-lint
-pylint-django==2.4.2
+pylint-django==2.4.3
     # via edx-lint
 pylint-plugin-utils==0.6
     # via
@@ -109,7 +109,7 @@ pyparsing==2.4.7
     #   packaging
 pytest-cov==2.11.1
     # via -r requirements/test.txt
-pytest-django==4.1.0
+pytest-django==4.2.0
     # via -r requirements/test.txt
 pytest==6.2.3
     # via
