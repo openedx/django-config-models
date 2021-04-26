@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.5.3
+astroid==2.5.6
     # via
     #   pylint
     #   pylint-celery
@@ -99,6 +99,7 @@ pylint-plugin-utils==0.6
     #   pylint-django
 pylint==2.7.4
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   edx-lint
     #   pylint-celery
     #   pylint-django
