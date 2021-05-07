@@ -8,7 +8,7 @@ astroid==2.5.6
     # via
     #   pylint
     #   pylint-celery
-attrs==20.3.0
+attrs==21.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -31,7 +31,7 @@ django-waffle==2.1.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-django==2.2.20
+django==2.2.22
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -111,7 +111,7 @@ pytest-cov==2.11.1
     # via -r requirements/test.txt
 pytest-django==4.2.0
     # via -r requirements/test.txt
-pytest==6.2.3
+pytest==6.2.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -120,7 +120,7 @@ python-dateutil==2.8.1
     # via
     #   -r requirements/test.txt
     #   freezegun
-python-slugify==5.0.0
+python-slugify==5.0.2
     # via code-annotations
 pytz==2021.1
     # via
@@ -128,7 +128,7 @@ pytz==2021.1
     #   django
 pyyaml==5.4.1
     # via code-annotations
-six==1.15.0
+six==1.16.0
     # via
     #   -r requirements/test.txt
     #   edx-lint

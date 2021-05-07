@@ -6,7 +6,7 @@
 #
 alabaster==0.7.12
     # via sphinx
-attrs==20.3.0
+attrs==21.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -34,7 +34,7 @@ django-waffle==2.1.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-django==2.2.20
+django==2.2.22
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -102,7 +102,7 @@ py==1.10.0
     #   pytest
 pycparser==2.20
     # via cffi
-pygments==2.8.1
+pygments==2.9.0
     # via
     #   readme-renderer
     #   sphinx
@@ -114,7 +114,7 @@ pytest-cov==2.11.1
     # via -r requirements/test.txt
 pytest-django==4.2.0
     # via -r requirements/test.txt
-pytest==6.2.3
+pytest==6.2.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -143,7 +143,7 @@ rfc3986==1.4.0
     # via twine
 secretstorage==3.3.1
     # via keyring
-six==1.15.0
+six==1.16.0
     # via
     #   -r requirements/test.txt
     #   bleach
