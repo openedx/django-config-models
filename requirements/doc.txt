@@ -6,7 +6,7 @@
 #
 alabaster==0.7.12
     # via sphinx
-attrs==21.1.0
+attrs==21.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -75,7 +75,9 @@ jinja2==2.11.3
 keyring==23.0.1
     # via twine
 markupsafe==1.1.1
-    # via jinja2
+    # via
+    #   jinja2
+    #   sphinx
 newrelic==6.2.0.156
     # via
     #   -r requirements/test.txt
@@ -139,7 +141,7 @@ requests==2.25.1
     #   requests-toolbelt
     #   sphinx
     #   twine
-rfc3986==1.4.0
+rfc3986==1.5.0
     # via twine
 secretstorage==3.3.1
     # via keyring
@@ -153,7 +155,7 @@ snowballstemmer==2.1.0
     # via sphinx
 sphinx-rtd-theme==0.5.2
     # via -r requirements/doc.in
-sphinx==3.5.4
+sphinx==4.0.0
     # via
     #   -r requirements/doc.in
     #   sphinx-rtd-theme
