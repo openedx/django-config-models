@@ -460,4 +460,4 @@ intersphinx_mapping = {
 
 def setup(app):
     """Sphinx extension for applying some CSS overrides to the output theme."""
-    app.add_stylesheet('theme_overrides.css')
+    app.add_css_file('theme_overrides.css')
