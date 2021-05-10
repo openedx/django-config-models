@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-attrs==21.1.0
+attrs==21.2.0
     # via pytest
 coverage==5.5
     # via pytest-cov
