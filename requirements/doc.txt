@@ -30,7 +30,7 @@ cryptography==3.4.7
     # via secretstorage
 ddt==1.4.2
     # via -r requirements/test.txt
-django-waffle==2.1.0
+django-waffle==2.2.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -70,14 +70,12 @@ jeepney==0.6.0
     # via
     #   keyring
     #   secretstorage
-jinja2==2.11.3
+jinja2==3.0.1
     # via sphinx
 keyring==23.0.1
     # via twine
-markupsafe==1.1.1
-    # via
-    #   jinja2
-    #   sphinx
+markupsafe==2.0.1
+    # via jinja2
 newrelic==6.2.0.156
     # via
     #   -r requirements/test.txt
@@ -155,7 +153,7 @@ snowballstemmer==2.1.0
     # via sphinx
 sphinx-rtd-theme==0.5.2
     # via -r requirements/doc.in
-sphinx==4.0.1
+sphinx==4.0.2
     # via
     #   -r requirements/doc.in
     #   sphinx-rtd-theme
@@ -163,13 +161,13 @@ sphinxcontrib-applehelp==1.0.2
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
     # via sphinx
-sphinxcontrib-htmlhelp==1.0.3
+sphinxcontrib-htmlhelp==2.0.0
     # via sphinx
 sphinxcontrib-jsmath==1.0.1
     # via sphinx
 sphinxcontrib-qthelp==1.0.3
     # via sphinx
-sphinxcontrib-serializinghtml==1.1.4
+sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
 sqlparse==0.4.1
     # via
