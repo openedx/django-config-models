@@ -10,7 +10,7 @@ coverage[toml]==5.5
     # via pytest-cov
 ddt==1.4.2
     # via -r requirements/test.in
-django-waffle==2.1.0
+django-waffle==2.2.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
