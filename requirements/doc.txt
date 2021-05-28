@@ -58,7 +58,7 @@ idna==2.10
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==4.0.1
+importlib-metadata==4.3.0
     # via
     #   keyring
     #   twine
@@ -76,7 +76,7 @@ keyring==23.0.1
     # via twine
 markupsafe==2.0.1
     # via jinja2
-newrelic==6.2.0.156
+newrelic==6.4.0.157
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -178,11 +178,11 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   coverage
     #   pytest
-tqdm==4.60.0
+tqdm==4.61.0
     # via twine
 twine==3.4.1
     # via -r requirements/doc.in
-urllib3==1.26.4
+urllib3==1.26.5
     # via requests
 webencodings==0.5.1
     # via bleach
