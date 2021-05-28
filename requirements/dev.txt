@@ -112,7 +112,7 @@ mccabe==0.6.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==6.2.0.156
+newrelic==6.4.0.157
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -257,11 +257,11 @@ tox==3.23.1
     #   -r requirements/ci.txt
     #   tox-battery
     #   tox-travis
-urllib3==1.26.4
+urllib3==1.26.5
     # via
     #   -r requirements/ci.txt
     #   requests
-virtualenv==20.4.6
+virtualenv==20.4.7
     # via
     #   -r requirements/ci.txt
     #   tox
