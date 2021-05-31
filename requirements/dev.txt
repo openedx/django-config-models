@@ -8,7 +8,7 @@ appdirs==1.4.4
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-astroid==2.5.6
+astroid==2.5.7
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -17,7 +17,7 @@ attrs==21.2.0
     # via
     #   -r requirements/quality.txt
     #   pytest
-certifi==2020.12.5
+certifi==2021.5.30
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -51,7 +51,7 @@ coverage[toml]==5.5
     #   pytest-cov
 ddt==1.4.2
     # via -r requirements/quality.txt
-distlib==0.3.1
+distlib==0.3.2
     # via
     #   -r requirements/ci.txt
     #   virtualenv
