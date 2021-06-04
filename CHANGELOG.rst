@@ -14,6 +14,9 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[2.1.2] - 2021-06-24
+~~~~~~~~~~~~~~~~~~~~
+* Move out django pin from base.in. Now it is coming from global constraint. Ran make upgrade.
 
 [2.1.1] - 2021-01-28
 ~~~~~~~~~~~~~~~~~~~~

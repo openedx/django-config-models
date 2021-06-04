@@ -1,6 +1,6 @@
 # Core requirements for using this application
 -c constraints.txt
 
-Django>=1.8,<3                       # Web application framework
+Django                      # Web application framework
 djangorestframework>=3.6
 edx-django-utils
