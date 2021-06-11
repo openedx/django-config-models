@@ -112,7 +112,7 @@ mccabe==0.6.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==6.4.0.157
+newrelic==6.4.1.158
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
