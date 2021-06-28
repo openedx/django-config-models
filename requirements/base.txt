@@ -4,6 +4,8 @@
 #
 #    make upgrade
 #
+django-waffle==2.2.0
+    # via edx-django-utils
 django==2.2.24
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt

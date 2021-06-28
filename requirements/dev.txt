@@ -55,6 +55,10 @@ distlib==0.3.2
     # via
     #   -r requirements/ci.txt
     #   virtualenv
+django-waffle==2.2.0
+    # via
+    #   -r requirements/quality.txt
+    #   edx-django-utils
 django==2.2.24
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -126,6 +130,8 @@ path==16.0.0
     # via path.py
 path.py==12.5.0
     # via edx-i18n-tools
+path==16.0.0
+    # via path.py
 pbr==5.6.0
     # via
     #   -r requirements/quality.txt
@@ -178,11 +184,22 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
+pylint==2.8.3
+    # via
+    #   -r requirements/quality.txt
+    #   edx-lint
+    #   pylint-celery
+    #   pylint-django
+    #   pylint-plugin-utils
 pyparsing==2.4.7
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   packaging
+pytest-cov==2.12.1
+    # via -r requirements/quality.txt
+pytest-django==4.4.0
+    # via -r requirements/quality.txt
 pytest==6.2.4
     # via
     #   -r requirements/quality.txt

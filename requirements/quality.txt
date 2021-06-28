@@ -27,6 +27,10 @@ coverage==5.5
     #   pytest-cov
 ddt==1.4.2
     # via -r requirements/test.txt
+django-waffle==2.2.0
+    # via
+    #   -r requirements/test.txt
+    #   edx-django-utils
 django==2.2.24
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
@@ -102,10 +106,20 @@ pylint-plugin-utils==0.6
     # via
     #   pylint-celery
     #   pylint-django
+pylint==2.8.3
+    # via
+    #   edx-lint
+    #   pylint-celery
+    #   pylint-django
+    #   pylint-plugin-utils
 pyparsing==2.4.7
     # via
     #   -r requirements/test.txt
     #   packaging
+pytest-cov==2.12.1
+    # via -r requirements/test.txt
+pytest-django==4.4.0
+    # via -r requirements/test.txt
 pytest==6.2.4
     # via
     #   -r requirements/test.txt
