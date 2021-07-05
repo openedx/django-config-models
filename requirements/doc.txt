@@ -16,6 +16,8 @@ bleach==3.3.0
     # via readme-renderer
 certifi==2021.5.30
     # via requests
+cffi==1.14.5
+    # via cryptography
 chardet==4.0.0
     # via requests
 colorama==0.4.4
@@ -24,6 +26,8 @@ coverage==5.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
+cryptography==3.4.7
+    # via secretstorage
 ddt==1.4.2
     # via -r requirements/test.txt
 django==2.2.24
@@ -40,7 +44,6 @@ djangorestframework==3.12.4
     # via -r requirements/test.txt
 docutils==0.16
     # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   readme-renderer
     #   sphinx
     #   sphinx-rtd-theme
@@ -54,7 +57,7 @@ idna==2.10
     # via requests
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==4.6.0
+importlib-metadata==4.6.1
     # via
     #   keyring
     #   twine
@@ -62,6 +65,10 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
+jeepney==0.6.0
+    # via
+    #   keyring
+    #   secretstorage
 jinja2==3.0.1
     # via sphinx
 keyring==23.0.1
@@ -72,7 +79,7 @@ newrelic==6.4.3.160
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-packaging==20.9
+packaging==21.0
     # via
     #   -r requirements/test.txt
     #   bleach
@@ -92,6 +99,8 @@ py==1.10.0
     # via
     #   -r requirements/test.txt
     #   pytest
+pycparser==2.20
+    # via cffi
 pygments==2.9.0
     # via
     #   readme-renderer
@@ -131,6 +140,8 @@ requests-toolbelt==0.9.1
     # via twine
 rfc3986==1.5.0
     # via twine
+secretstorage==3.3.1
+    # via keyring
 six==1.16.0
     # via
     #   -r requirements/test.txt
@@ -174,7 +185,7 @@ urllib3==1.26.6
     # via requests
 webencodings==0.5.1
     # via bleach
-zipp==3.4.1
+zipp==3.5.0
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
