@@ -92,7 +92,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/quality.txt
     #   pytest
-isort==5.9.1
+isort==5.9.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -112,7 +112,7 @@ mccabe==0.6.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==6.4.3.160
+newrelic==6.4.4.161
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils

@@ -52,7 +52,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.9.1
+isort==5.9.2
     # via pylint
 jinja2==3.0.1
     # via code-annotations
@@ -62,7 +62,7 @@ markupsafe==2.0.1
     # via jinja2
 mccabe==0.6.1
     # via pylint
-newrelic==6.4.3.160
+newrelic==6.4.4.161
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
