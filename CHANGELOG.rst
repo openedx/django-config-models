@@ -14,6 +14,10 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[2.2.0] - 2021-07-14
+~~~~~~~~~~~~~~~~~~~~
+* Added support for django3.2
+
 [2.1.2] - 2021-06-24
 ~~~~~~~~~~~~~~~~~~~~
 * Move out django pin from base.in. Now it is coming from global constraint. Ran make upgrade.
