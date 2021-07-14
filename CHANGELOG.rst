@@ -14,7 +14,7 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
-[2.2.0] - 2021-07-07
+[2.2.0] - 2021-07-14
 ~~~~~~~~~~~~~~~~~~~~
 * Added support for django3.2
 
