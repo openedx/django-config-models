@@ -15,7 +15,7 @@ ddt==1.4.2
     #   -r requirements/base.txt
     #   djangorestframework
     #   edx-django-utils
-django-waffle==2.2.0
+django-waffle==2.2.1
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -52,7 +52,7 @@ pytest-cov==2.12.1
     # via -r requirements/test.in
 pytest-django==4.4.0
     # via -r requirements/test.in
-python-dateutil==2.8.1
+python-dateutil==2.8.2
     # via freezegun
 pytz==2021.1
     # via
