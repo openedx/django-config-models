@@ -10,7 +10,7 @@ django==2.2.24
     #   -r requirements/base.in
     #   djangorestframework
     #   edx-django-utils
-django-waffle==2.2.0
+django-waffle==2.2.1
     # via edx-django-utils
 djangorestframework==3.12.4
     # via -r requirements/base.in
