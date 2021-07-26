@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.6.2
+astroid==2.6.5
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -73,7 +73,7 @@ edx-django-utils==2.0.4
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/quality.txt
-edx-i18n-tools==0.5.3
+edx-i18n-tools==0.7.0
     # via -r requirements/dev.in
 edx-lint==5.0.0
     # via -r requirements/quality.txt
@@ -122,9 +122,7 @@ packaging==21.0
     #   -r requirements/quality.txt
     #   pytest
     #   tox
-path==16.0.0
-    # via path.py
-path.py==12.5.0
+path==16.1.0
     # via edx-i18n-tools
 pbr==5.6.0
     # via
@@ -136,7 +134,7 @@ pep517==0.11.0
     #   pip-tools
 pip-tools==6.2.0
     # via -r requirements/pip-tools.txt
-platformdirs==2.0.2
+platformdirs==2.1.0
     # via
     #   -r requirements/ci.txt
     #   virtualenv
@@ -162,7 +160,7 @@ pycodestyle==2.7.0
     # via -r requirements/quality.txt
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pylint==2.9.3
+pylint==2.9.5
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -250,7 +248,7 @@ toml==0.10.2
     #   pytest
     #   pytest-cov
     #   tox
-tomli==1.0.4
+tomli==1.1.0
     # via
     #   -r requirements/pip-tools.txt
     #   pep517
