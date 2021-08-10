@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.6.5
+astroid==2.6.6
     # via
     #   pylint
     #   pylint-celery
@@ -62,7 +62,7 @@ markupsafe==2.0.1
     # via jinja2
 mccabe==0.6.1
     # via pylint
-newrelic==6.6.0.162
+newrelic==6.8.0.163
     # via
     #   -r requirements/test.txt
     #   edx-django-utils

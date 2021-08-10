@@ -10,7 +10,7 @@ certifi==2021.5.30
     # via requests
 charset-normalizer==2.0.4
     # via requests
-codecov==2.1.11
+codecov==2.1.12
     # via -r requirements/ci.in
 coverage==5.5
     # via codecov
@@ -51,5 +51,5 @@ tox-travis==0.12
     # via -r requirements/ci.in
 urllib3==1.26.6
     # via requests
-virtualenv==20.7.0
+virtualenv==20.7.1
     # via tox
