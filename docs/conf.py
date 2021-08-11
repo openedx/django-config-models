@@ -47,6 +47,7 @@ def get_version(*file_paths):
 # sys.path.insert(0, os.path.abspath('.'))
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(REPO_ROOT)
+sys.path.append(os.path.join(REPO_ROOT, 'mock_apps'))
 
 VERSION = get_version('../config_models', '__init__.py')
 
@@ -487,8 +488,7 @@ def on_init(app):  # pylint: disable=unused-argument
         # If we are, assemble the path manually
         bin_path = os.path.abspath(os.path.join(sys.prefix, 'bin'))
         apidoc_path = os.path.join(bin_path, apidoc_path)
-    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, 'config_models'),
-                os.path.join(root_path, 'config_models/migrations')])
+    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, 'config_models')])
 
 
 def setup(app):
