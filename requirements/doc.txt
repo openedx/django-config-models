@@ -42,15 +42,16 @@ django-waffle==2.2.1
     #   edx-django-utils
 djangorestframework==3.12.4
     # via -r requirements/test.txt
-docutils==0.16
+docutils==0.17.1
     # via
     #   readme-renderer
     #   sphinx
-    #   sphinx-rtd-theme
 edx-django-utils==2.0.4
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
+edx-sphinx-theme==3.0.0
+    # via -r requirements/doc.in
 freezegun==1.1.0
     # via -r requirements/test.txt
 idna==3.2
@@ -146,6 +147,7 @@ six==1.16.0
     # via
     #   -r requirements/test.txt
     #   bleach
+    #   edx-sphinx-theme
     #   python-dateutil
     #   readme-renderer
 snowballstemmer==2.1.0
@@ -153,9 +155,7 @@ snowballstemmer==2.1.0
 sphinx==4.1.2
     # via
     #   -r requirements/doc.in
-    #   sphinx-rtd-theme
-sphinx-rtd-theme==0.5.2
-    # via -r requirements/doc.in
+    #   edx-sphinx-theme
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
