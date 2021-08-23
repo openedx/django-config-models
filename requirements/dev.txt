@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.6.6
+astroid==2.7.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -137,6 +137,8 @@ pip-tools==6.2.0
 platformdirs==2.2.0
     # via
     #   -r requirements/ci.txt
+    #   -r requirements/quality.txt
+    #   pylint
     #   virtualenv
 pluggy==0.13.1
     # via
@@ -160,7 +162,7 @@ pycodestyle==2.7.0
     # via -r requirements/quality.txt
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pylint==2.9.6
+pylint==2.10.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -232,7 +234,7 @@ sqlparse==0.4.1
     # via
     #   -r requirements/quality.txt
     #   django
-stevedore==3.3.0
+stevedore==3.4.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -252,7 +254,7 @@ tomli==1.2.1
     # via
     #   -r requirements/pip-tools.txt
     #   pep517
-tox==3.24.1
+tox==3.24.3
     # via
     #   -r requirements/ci.txt
     #   tox-battery
