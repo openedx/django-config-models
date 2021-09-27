@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-astroid==2.6.6
+astroid==2.8.0
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -21,7 +21,7 @@ certifi==2021.5.30
     # via
     #   -r requirements/ci.txt
     #   requests
-charset-normalizer==2.0.4
+charset-normalizer==2.0.6
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -51,7 +51,7 @@ coverage==5.5
     #   pytest-cov
 ddt==1.4.2
     # via -r requirements/quality.txt
-distlib==0.3.2
+distlib==0.3.3
     # via
     #   -r requirements/ci.txt
     #   virtualenv
@@ -62,7 +62,6 @@ django==2.2.24
     #   djangorestframework
     #   edx-django-utils
     #   edx-i18n-tools
-    #   edx-lint
 django-waffle==2.2.1
     # via
     #   -r requirements/quality.txt
@@ -75,7 +74,7 @@ edx-django-utils==2.0.4
     #   -r requirements/quality.txt
 edx-i18n-tools==0.7.0
     # via -r requirements/dev.in
-edx-lint==5.0.0
+edx-lint==5.2.0
     # via -r requirements/quality.txt
 filelock==3.0.12
     # via
@@ -112,7 +111,7 @@ mccabe==0.6.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==6.8.0.163
+newrelic==7.0.0.166
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -132,13 +131,15 @@ pep517==0.11.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-pip-tools==6.2.0
+pip-tools==6.3.0
     # via -r requirements/pip-tools.txt
-platformdirs==2.2.0
+platformdirs==2.4.0
     # via
     #   -r requirements/ci.txt
+    #   -r requirements/quality.txt
+    #   pylint
     #   virtualenv
-pluggy==0.13.1
+pluggy==1.0.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -160,7 +161,7 @@ pycodestyle==2.7.0
     # via -r requirements/quality.txt
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pylint==2.9.6
+pylint==2.11.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -185,7 +186,7 @@ pyparsing==2.4.7
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   packaging
-pytest==6.2.4
+pytest==6.2.5
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -228,11 +229,11 @@ snowballstemmer==2.1.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
-sqlparse==0.4.1
+sqlparse==0.4.2
     # via
     #   -r requirements/quality.txt
     #   django
-stevedore==3.3.0
+stevedore==3.4.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -252,7 +253,7 @@ tomli==1.2.1
     # via
     #   -r requirements/pip-tools.txt
     #   pep517
-tox==3.24.1
+tox==3.24.4
     # via
     #   -r requirements/ci.txt
     #   tox-battery
@@ -261,11 +262,16 @@ tox-battery==0.6.1
     # via -r requirements/ci.txt
 tox-travis==0.12
     # via -r requirements/ci.txt
-urllib3==1.26.6
+typing-extensions==3.10.0.2
+    # via
+    #   -r requirements/quality.txt
+    #   astroid
+    #   pylint
+urllib3==1.26.7
     # via
     #   -r requirements/ci.txt
     #   requests
-virtualenv==20.7.2
+virtualenv==20.8.1
     # via
     #   -r requirements/ci.txt
     #   tox
