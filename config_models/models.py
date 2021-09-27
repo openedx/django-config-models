@@ -116,9 +116,9 @@ class ConfigurationModel(models.Model):
         if cls.KEY_FIELDS != ():
             if len(args) != len(cls.KEY_FIELDS):
                 raise TypeError(
-                    "cache_key_name() takes exactly {} arguments ({} given)".format(len(cls.KEY_FIELDS), len(args))
+                    f"cache_key_name() takes exactly {len(cls.KEY_FIELDS)} arguments ({len(args)} given)"
                 )
-            return 'configuration/{}/current/{}'.format(cls.__name__, ','.join(str(arg) for arg in args))
+            return f"configuration/{cls.__name__}/current/{','.join(str(arg) for arg in args)}"
         else:
             return f'configuration/{cls.__name__}/current'
 
@@ -158,7 +158,7 @@ class ConfigurationModel(models.Model):
     def key_values_cache_key_name(cls, *key_fields):
         """ Key for fetching unique key values from the cache """
         key_fields = key_fields or cls.KEY_FIELDS
-        return 'configuration/{}/key_values/{}'.format(cls.__name__, ','.join(key_fields))
+        return f"configuration/{cls.__name__}/key_values/{','.join(key_fields)}"
 
     @classmethod
     def key_values(cls, *key_fields, **kwargs):
