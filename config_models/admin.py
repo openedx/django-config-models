@@ -100,10 +100,7 @@ class ConfigurationModelAdmin(admin.ModelAdmin):
 
         return HttpResponseRedirect(
             reverse(
-                'admin:{}_{}_change'.format(
-                    self.model._meta.app_label,
-                    self.model._meta.model_name,
-                ),
+                f"admin:{self.model._meta.app_label}_{self.model._meta.model_name}_change",
                 args=(target.id,),
             )
         )
