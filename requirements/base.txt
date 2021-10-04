@@ -22,7 +22,7 @@ newrelic==7.0.0.166
     # via edx-django-utils
 psutil==1.2.1
     # via edx-django-utils
-pytz==2021.1
+pytz==2021.3
     # via django
 sqlparse==0.4.2
     # via django
