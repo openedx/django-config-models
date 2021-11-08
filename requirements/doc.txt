@@ -76,7 +76,7 @@ keyring==23.2.1
     # via twine
 markupsafe==2.0.1
     # via jinja2
-newrelic==7.2.2.169
+newrelic==7.2.3.170
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -96,11 +96,11 @@ psutil==1.2.1
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-py==1.10.0
+py==1.11.0
     # via
     #   -r requirements/test.txt
     #   pytest
-pycparser==2.20
+pycparser==2.21
     # via cffi
 pygments==2.10.0
     # via
@@ -181,7 +181,7 @@ tomli==1.2.2
     #   coverage
 tqdm==4.62.3
     # via twine
-twine==3.4.2
+twine==3.5.0
     # via -r requirements/doc.in
 urllib3==1.26.7
     # via requests
