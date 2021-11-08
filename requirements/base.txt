@@ -18,7 +18,7 @@ edx-django-utils==2.0.4
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.in
-newrelic==7.2.2.169
+newrelic==7.2.3.170
     # via edx-django-utils
 psutil==1.2.1
     # via edx-django-utils
