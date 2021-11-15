@@ -6,7 +6,7 @@
 #
 attrs==21.2.0
     # via pytest
-coverage[toml]==6.1.1
+coverage[toml]==6.1.2
     # via pytest-cov
 ddt==1.4.4
     # via -r requirements/test.in
@@ -28,7 +28,7 @@ freezegun==1.1.0
     # via -r requirements/test.in
 iniconfig==1.1.1
     # via pytest
-newrelic==7.2.3.170
+newrelic==7.2.4.171
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
