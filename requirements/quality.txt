@@ -4,7 +4,11 @@
 #
 #    make upgrade
 #
-astroid==2.8.5
+asgiref==3.4.1
+    # via
+    #   -r requirements/test.txt
+    #   django
+astroid==2.8.6
     # via
     #   pylint
     #   pylint-celery
@@ -27,7 +31,7 @@ coverage[toml]==6.1.2
     #   pytest-cov
 ddt==1.4.4
     # via -r requirements/test.txt
-django==2.2.24
+django==3.2.9
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -65,11 +69,11 @@ newrelic==7.2.4.171
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-packaging==21.2
+packaging==21.3
     # via
     #   -r requirements/test.txt
     #   pytest
-pbr==5.7.0
+pbr==5.8.0
     # via stevedore
 platformdirs==2.4.0
     # via pylint
@@ -103,7 +107,7 @@ pylint-plugin-utils==0.6
     # via
     #   pylint-celery
     #   pylint-django
-pyparsing==2.4.7
+pyparsing==3.0.6
     # via
     #   -r requirements/test.txt
     #   packaging
@@ -133,7 +137,7 @@ six==1.16.0
     #   -r requirements/test.txt
     #   edx-lint
     #   python-dateutil
-snowballstemmer==2.1.0
+snowballstemmer==2.2.0
     # via pydocstyle
 sqlparse==0.4.2
     # via

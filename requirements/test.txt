@@ -4,6 +4,10 @@
 #
 #    make upgrade
 #
+asgiref==3.4.1
+    # via
+    #   -r requirements/base.txt
+    #   django
 attrs==21.2.0
     # via pytest
 coverage[toml]==6.1.2
@@ -32,7 +36,7 @@ newrelic==7.2.4.171
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-packaging==21.2
+packaging==21.3
     # via pytest
 pluggy==1.0.0
     # via pytest
@@ -42,7 +46,7 @@ psutil==1.2.1
     #   edx-django-utils
 py==1.11.0
     # via pytest
-pyparsing==2.4.7
+pyparsing==3.0.6
     # via packaging
 pytest==6.2.5
     # via
