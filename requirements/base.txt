@@ -4,7 +4,9 @@
 #
 #    make upgrade
 #
-django==2.2.24
+asgiref==3.4.1
+    # via django
+django==3.2.9
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
