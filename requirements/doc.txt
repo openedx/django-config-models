@@ -22,7 +22,7 @@ certifi==2021.10.8
     # via requests
 cffi==1.15.0
     # via cryptography
-charset-normalizer==2.0.8
+charset-normalizer==2.0.9
     # via requests
 colorama==0.4.4
     # via twine
@@ -90,7 +90,7 @@ packaging==21.3
     #   bleach
     #   pytest
     #   sphinx
-pkginfo==1.8.1
+pkginfo==1.8.2
     # via twine
 pluggy==1.0.0
     # via
@@ -121,7 +121,7 @@ pytest==6.2.5
     #   pytest-django
 pytest-cov==3.0.0
     # via -r requirements/test.txt
-pytest-django==4.4.0
+pytest-django==4.5.1
     # via -r requirements/test.txt
 python-dateutil==2.8.2
     # via
@@ -185,7 +185,7 @@ tomli==1.2.2
     #   coverage
 tqdm==4.62.3
     # via twine
-twine==3.6.0
+twine==3.7.0
     # via -r requirements/doc.in
 urllib3==1.26.7
     # via requests
