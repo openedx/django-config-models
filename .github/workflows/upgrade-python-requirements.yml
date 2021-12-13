@@ -16,7 +16,7 @@ jobs:
 
     with:
       branch: ${{ github.event.inputs.branch }}
-      team_reviewers: "arbi_bom"
+      team_reviewers: "arbi-bom"
       email_address: "arbi-bom@edx.org"
       send_success_notification: false
     secrets:
