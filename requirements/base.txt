@@ -14,7 +14,7 @@ django==3.2.10
     #   edx-django-utils
 django-waffle==2.2.1
     # via edx-django-utils
-djangorestframework==3.12.4
+djangorestframework==3.13.1
     # via -r requirements/base.in
 edx-django-utils==2.0.4
     # via
@@ -25,6 +25,8 @@ newrelic==7.2.4.171
 psutil==1.2.1
     # via edx-django-utils
 pytz==2021.3
-    # via django
+    # via
+    #   django
+    #   djangorestframework
 sqlparse==0.4.2
     # via django

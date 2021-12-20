@@ -62,6 +62,7 @@ pytz==2021.3
     # via
     #   -r requirements/base.txt
     #   django
+    #   djangorestframework
 six==1.16.0
     # via python-dateutil
 sqlparse==0.4.2
@@ -70,5 +71,5 @@ sqlparse==0.4.2
     #   django
 toml==0.10.2
     # via pytest
-tomli==1.2.2
+tomli==2.0.0
     # via coverage
