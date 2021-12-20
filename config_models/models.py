@@ -11,7 +11,7 @@ from django.conf import settings
 # Django cache.
 from django.core.cache import cache  # pylint: disable=unused-import
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from edx_django_utils.cache.utils import TieredCache
 from rest_framework.utils import model_meta
 
