@@ -14,6 +14,10 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[2.2.1] - 2021-20-12
+~~~~~~~~~~~~~~~~~~~~
+* Replaced deprecated 'django.utils.translation.ugettext' with 'django.utils.translation.gettext'
+
 [2.2.0] - 2021-07-14
 ~~~~~~~~~~~~~~~~~~~~
 * Added support for django3.2
