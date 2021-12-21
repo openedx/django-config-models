@@ -10,8 +10,3 @@
 
 # Common constraints for edx repos
 -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
- 
-# We now use TieredCache from edx-django-utils. Putting this constaint just
-# so that we don't get bitten by any backwards-incompatible changes that may
-# happen in v3 of that library.
-edx-django-utils<3

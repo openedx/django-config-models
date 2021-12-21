@@ -14,6 +14,10 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[2.2.2] - 2021-20-12
+~~~~~~~~~~~~~~~~~~~~
+* Updated dependencies after removing unnecessary constraint on edx-django-utils, so the constraint will no longer be advertised.
+
 [2.2.1] - 2021-20-12
 ~~~~~~~~~~~~~~~~~~~~
 * Replaced deprecated 'django.utils.translation.ugettext' with 'django.utils.translation.gettext'
