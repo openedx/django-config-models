@@ -77,7 +77,7 @@ so that rollbacks to old versions of configuration work correctly.
 Documentation
 -------------
 
-The full documentation is at https://config_models.readthedocs.org.
+The full documentation is at https://django-config-models.readthedocs.org.
 
 License
 -------
