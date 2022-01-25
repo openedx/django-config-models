@@ -1,5 +1,6 @@
 .PHONY: clean compile_translations coverage docs dummy_translations extract_translations \
-	fake_translations help pull_translations push_translations quality requirements test test-all validate
+	fake_translations help pull_translations push_translations quality requirements test \
+	test-all validate check_keywords
 
 .DEFAULT_GOAL := help
 
@@ -86,3 +87,6 @@ test-all: ## run tests on every supported Python/Django combination
 	tox
 
 validate: quality test ## run tests and quality checks
+
+check_keywords: ## Scan the Django models in all installed apps in this project for restricted field names
+	python manage.py check_reserved_keywords --override_file db_keyword_overrides.yml
