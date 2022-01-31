@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-asgiref==3.4.1
+asgiref==3.5.0
     # via
     #   -r requirements/quality.txt
     #   django
@@ -21,7 +21,7 @@ certifi==2021.10.8
     # via
     #   -r requirements/ci.txt
     #   requests
-charset-normalizer==2.0.10
+charset-normalizer==2.0.11
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -43,7 +43,7 @@ code-annotations==1.2.0
     #   edx-lint
 codecov==2.1.12
     # via -r requirements/ci.txt
-coverage[toml]==6.2
+coverage[toml]==6.3
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -73,7 +73,7 @@ django-waffle==2.3.0
     #   edx-django-utils
 djangorestframework==3.13.1
     # via -r requirements/quality.txt
-edx-django-utils==4.4.1
+edx-django-utils==4.4.2
     # via -r requirements/quality.txt
 edx-i18n-tools==0.8.1
     # via -r requirements/dev.in
@@ -114,7 +114,7 @@ mccabe==0.6.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==7.2.4.171
+newrelic==7.4.0.172
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -184,7 +184,7 @@ pylint-plugin-utils==0.7
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.6
+pyparsing==3.0.7
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
