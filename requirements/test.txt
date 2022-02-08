@@ -10,7 +10,7 @@ asgiref==3.5.0
     #   django
 attrs==21.4.0
     # via pytest
-coverage[toml]==6.3
+coverage[toml]==6.3.1
     # via pytest-cov
 ddt==1.4.4
     # via -r requirements/test.in
@@ -29,7 +29,7 @@ django-waffle==2.3.0
     #   -r requirements/base.txt
     #   edx-django-utils
     # via -r requirements/base.txt
-edx-django-utils==4.4.2
+edx-django-utils==4.5.0
     # via -r requirements/base.txt
 freezegun==1.1.0
     # via -r requirements/test.in
@@ -41,7 +41,7 @@ newrelic==7.4.0.172
     #   edx-django-utils
 packaging==21.3
     # via pytest
-pbr==5.8.0
+pbr==5.8.1
     # via
     #   -r requirements/base.txt
     #   stevedore
@@ -55,7 +55,7 @@ py==1.11.0
     # via pytest
 pyparsing==3.0.7
     # via packaging
-pytest==6.2.5
+pytest==7.0.0
     # via
     #   pytest-cov
     #   pytest-django
@@ -80,7 +80,7 @@ stevedore==3.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-toml==0.10.2
-    # via pytest
 tomli==2.0.0
-    # via coverage
+    # via
+    #   coverage
+    #   pytest
