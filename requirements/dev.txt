@@ -84,7 +84,7 @@ filelock==3.6.0
     #   -r requirements/ci.txt
     #   tox
     #   virtualenv
-freezegun==1.1.0
+freezegun==1.2.0
     # via -r requirements/quality.txt
 idna==3.3
     # via

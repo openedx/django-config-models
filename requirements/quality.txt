@@ -52,7 +52,7 @@ edx-django-utils==4.5.0
     # via -r requirements/test.txt
 edx-lint==5.2.1
     # via -r requirements/quality.in
-freezegun==1.1.0
+freezegun==1.2.0
     # via -r requirements/test.txt
 iniconfig==1.1.1
     # via
