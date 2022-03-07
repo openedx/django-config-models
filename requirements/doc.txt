@@ -59,7 +59,7 @@ edx-django-utils==4.5.0
     # via -r requirements/test.txt
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
-freezegun==1.1.0
+freezegun==1.2.0
     # via -r requirements/test.txt
 idna==3.3
     # via requests
@@ -141,7 +141,7 @@ pytz==2021.3
     #   babel
     #   django
     #   djangorestframework
-readme-renderer==32.0
+readme-renderer==33.0
     # via
     #   -r requirements/doc.in
     #   twine
@@ -193,7 +193,7 @@ tomli==2.0.1
     #   -r requirements/test.txt
     #   coverage
     #   pytest
-tqdm==4.62.3
+tqdm==4.63.0
     # via twine
 twine==3.8.0
     # via -r requirements/doc.in
