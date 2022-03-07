@@ -4,9 +4,9 @@
 #
 #    make upgrade
 #
-asgiref==3.4.1
+asgiref==3.5.0
     # via django
-django==3.2.11
+django==3.2.12
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -15,15 +15,15 @@ django==3.2.11
     #   edx-django-utils
 django-crum==0.7.9
     # via edx-django-utils
-django-waffle==2.2.1
+django-waffle==2.3.0
     # via edx-django-utils
 djangorestframework==3.13.1
     # via -r requirements/base.in
-edx-django-utils==4.4.1
+edx-django-utils==4.5.0
     # via -r requirements/base.in
-newrelic==7.2.4.171
+newrelic==7.6.0.173
     # via edx-django-utils
-pbr==5.8.0
+pbr==5.8.1
     # via stevedore
 psutil==5.9.0
     # via edx-django-utils

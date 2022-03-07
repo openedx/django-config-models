@@ -14,6 +14,11 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[2.3.0] - 2022-01-19
+~~~~~~~~~~~~~~~~~~~~
+* Added Support for Django40 in CI
+* Dropped Support for Django22, 30, 31
+
 [2.2.2] - 2021-20-12
 ~~~~~~~~~~~~~~~~~~~~
 * Updated dependencies after removing unnecessary constraint on edx-django-utils, so the constraint will no longer be advertised.
