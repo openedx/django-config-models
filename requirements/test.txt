@@ -29,9 +29,9 @@ django-waffle==2.3.0
     #   -r requirements/base.txt
     #   edx-django-utils
     # via -r requirements/base.txt
-edx-django-utils==4.5.0
+edx-django-utils==4.6.0
     # via -r requirements/base.txt
-freezegun==1.2.0
+freezegun==1.2.1
     # via -r requirements/test.in
 iniconfig==1.1.1
     # via pytest
@@ -55,7 +55,7 @@ py==1.11.0
     # via pytest
 pyparsing==3.0.7
     # via packaging
-pytest==7.1.0
+pytest==7.1.1
     # via
     #   pytest-cov
     #   pytest-django
@@ -65,7 +65,7 @@ pytest-django==4.5.2
     # via -r requirements/test.in
 python-dateutil==2.8.2
     # via freezegun
-pytz==2021.3
+pytz==2022.1
     # via
     #   -r requirements/base.txt
     #   django
