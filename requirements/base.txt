@@ -19,7 +19,7 @@ django-waffle==2.3.0
     # via edx-django-utils
 djangorestframework==3.13.1
     # via -r requirements/base.in
-edx-django-utils==4.5.0
+edx-django-utils==4.6.0
     # via -r requirements/base.in
 newrelic==7.6.0.173
     # via edx-django-utils
@@ -27,7 +27,7 @@ pbr==5.8.1
     # via stevedore
 psutil==5.9.0
     # via edx-django-utils
-pytz==2021.3
+pytz==2022.1
     # via
     #   django
     #   djangorestframework
