@@ -16,7 +16,7 @@ attrs==21.4.0
     # via
     #   -r requirements/test.txt
     #   pytest
-click==8.0.4
+click==8.1.2
     # via
     #   click-log
     #   code-annotations
@@ -44,7 +44,7 @@ django-crum==0.7.9
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-django-waffle==2.3.0
+django-waffle==2.4.1
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -70,7 +70,7 @@ markupsafe==2.1.1
     # via jinja2
 mccabe==0.7.0
     # via pylint
-newrelic==7.6.0.173
+newrelic==7.8.0.174
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -100,7 +100,7 @@ pycodestyle==2.8.0
     # via -r requirements/quality.in
 pydocstyle==6.1.1
     # via -r requirements/quality.in
-pylint==2.13.2
+pylint==2.13.4
     # via
     #   edx-lint
     #   pylint-celery
