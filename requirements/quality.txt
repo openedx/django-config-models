@@ -58,7 +58,7 @@ djangorestframework==3.13.1
     # via -r requirements/test.txt
 edx-django-utils==5.0.0
     # via -r requirements/test.txt
-edx-lint==5.2.2
+edx-lint==5.2.3
     # via -r requirements/quality.in
 freezegun==1.2.1
     # via -r requirements/test.txt
@@ -110,7 +110,7 @@ pycparser==2.21
     #   cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.in
-pylint==2.14.0
+pylint==2.14.1
     # via
     #   edx-lint
     #   pylint-celery
