@@ -116,7 +116,7 @@ class ConfigurationModel(models.Model):
         if cls.KEY_FIELDS != ():
             if len(args) != len(cls.KEY_FIELDS):
                 raise TypeError(
-                    f"cache_key_name() takes exactly {len(cls.KEY_FIELDS)} arguments ({len(args)} given)"
+                    f"cache_key_name() takes exactly {len(cls.KEY_FIELDS)} arguments ({len(args)} given)" # pylint: disable=use-implicit-booleaness-not-comparison
                 )
             return f"configuration/{cls.__name__}/current/{','.join(str(arg) for arg in args)}"
         else:
