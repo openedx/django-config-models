@@ -21,7 +21,7 @@ class AdminTestCaseMixin:
     Provide a request factory method.
     """
 
-    def get_request(self):  # pylint: disable=no-self-use
+    def get_request(self):
         request = HttpRequest()
         request.session = "session"
         request._messages = FallbackStorage(request)  # pylint: disable=protected-access
