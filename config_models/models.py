@@ -113,7 +113,7 @@ class ConfigurationModel(models.Model):
     @classmethod
     def cache_key_name(cls, *args):
         """Return the name of the key to use to cache the current configuration"""
-        if cls.KEY_FIELDS != ():    # pylint: disable=use-implicit-booleaness-not-comparison
+        if cls.KEY_FIELDS != ():
             if len(args) != len(cls.KEY_FIELDS):
                 raise TypeError(
                     f"cache_key_name() takes exactly {len(cls.KEY_FIELDS)} arguments ({len(args)} given)"
