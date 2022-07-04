@@ -17,15 +17,19 @@ attrs==21.4.0
     # via
     #   -r requirements/quality.txt
     #   pytest
+build==0.8.0
+    # via
+    #   -r requirements/pip-tools.txt
+    #   pip-tools
 certifi==2022.6.15
     # via
     #   -r requirements/ci.txt
     #   requests
-cffi==1.15.0
+cffi==1.15.1
     # via
     #   -r requirements/quality.txt
     #   pynacl
-charset-normalizer==2.0.12
+charset-normalizer==2.1.0
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -123,14 +127,16 @@ mccabe==0.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==7.12.0.176
+newrelic==7.14.0.177
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
 packaging==21.3
     # via
     #   -r requirements/ci.txt
+    #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
+    #   build
     #   pytest
     #   tox
 path==16.4.0
@@ -142,8 +148,8 @@ pbr==5.9.0
 pep517==0.12.0
     # via
     #   -r requirements/pip-tools.txt
-    #   pip-tools
-pip-tools==6.6.2
+    #   build
+pip-tools==6.8.0
     # via -r requirements/pip-tools.txt
 platformdirs==2.5.2
     # via
@@ -177,7 +183,7 @@ pycparser==2.21
     #   cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pylint==2.14.3
+pylint==2.14.4
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -204,6 +210,7 @@ pynacl==1.5.0
 pyparsing==3.0.9
     # via
     #   -r requirements/ci.txt
+    #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   packaging
 pytest==7.1.2
@@ -233,7 +240,7 @@ pyyaml==6.0
     #   -r requirements/quality.txt
     #   code-annotations
     #   edx-i18n-tools
-requests==2.28.0
+requests==2.28.1
     # via
     #   -r requirements/ci.txt
     #   codecov
@@ -270,6 +277,7 @@ tomli==2.0.1
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
+    #   build
     #   coverage
     #   pep517
     #   pylint
@@ -278,7 +286,7 @@ tomlkit==0.11.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==3.25.0
+tox==3.25.1
     # via
     #   -r requirements/ci.txt
     #   tox-battery
@@ -287,7 +295,7 @@ tox-battery==0.6.1
     # via -r requirements/ci.txt
 tox-travis==0.12
     # via -r requirements/ci.txt
-typing-extensions==4.2.0
+typing-extensions==4.3.0
     # via
     #   -r requirements/quality.txt
     #   astroid
@@ -296,7 +304,7 @@ urllib3==1.26.9
     # via
     #   -r requirements/ci.txt
     #   requests
-virtualenv==20.15.0
+virtualenv==20.15.1
     # via
     #   -r requirements/ci.txt
     #   tox
