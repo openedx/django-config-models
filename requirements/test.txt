@@ -18,7 +18,7 @@ click==8.1.3
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==6.4.1
+coverage[toml]==6.4.2
     # via pytest-cov
 ddt==1.5.0
     # via -r requirements/test.in
@@ -92,7 +92,7 @@ sqlparse==0.4.2
     # via
     #   -r requirements/base.txt
     #   django
-stevedore==3.5.0
+stevedore==4.0.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
