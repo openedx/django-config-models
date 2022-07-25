@@ -52,13 +52,13 @@ django-crum==0.7.9
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-django-waffle==2.5.0
+django-waffle==2.6.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
 djangorestframework==3.13.1
     # via -r requirements/test.txt
-docutils==0.18.1
+docutils==0.19
     # via
     #   readme-renderer
     #   sphinx
@@ -91,7 +91,7 @@ keyring==23.7.0
     # via twine
 markupsafe==2.1.1
     # via jinja2
-newrelic==7.14.0.177
+newrelic==7.16.0.178
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -179,7 +179,7 @@ six==1.16.0
     #   python-dateutil
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.0.2
+sphinx==5.1.0
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
