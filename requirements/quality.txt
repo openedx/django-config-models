@@ -35,7 +35,7 @@ coverage[toml]==6.4.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-ddt==1.5.0
+ddt==1.6.0
     # via -r requirements/test.txt
 dill==0.3.5.1
     # via pylint
@@ -60,7 +60,7 @@ edx-django-utils==5.0.0
     # via -r requirements/test.txt
 edx-lint==5.2.4
     # via -r requirements/quality.in
-freezegun==1.2.1
+freezegun==1.2.2
     # via -r requirements/test.txt
 iniconfig==1.1.1
     # via
@@ -84,7 +84,7 @@ packaging==21.3
     # via
     #   -r requirements/test.txt
     #   pytest
-pbr==5.9.0
+pbr==5.10.0
     # via
     #   -r requirements/test.txt
     #   stevedore
@@ -147,7 +147,7 @@ python-dateutil==2.8.2
     #   freezegun
 python-slugify==6.1.2
     # via code-annotations
-pytz==2022.1
+pytz==2022.2.1
     # via
     #   -r requirements/test.txt
     #   django
@@ -178,7 +178,7 @@ tomli==2.0.1
     #   coverage
     #   pylint
     #   pytest
-tomlkit==0.11.2
+tomlkit==0.11.4
     # via pylint
 typing-extensions==4.3.0
     # via
