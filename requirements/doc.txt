@@ -39,7 +39,7 @@ coverage[toml]==6.4.3
     #   pytest-cov
 cryptography==37.0.4
     # via secretstorage
-ddt==1.5.0
+ddt==1.6.0
     # via -r requirements/test.txt
 django==3.2.15
     # via
@@ -66,7 +66,7 @@ edx-django-utils==5.0.0
     # via -r requirements/test.txt
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
-freezegun==1.2.1
+freezegun==1.2.2
     # via -r requirements/test.txt
 idna==3.3
     # via requests
@@ -87,7 +87,7 @@ jeepney==0.8.0
     #   secretstorage
 jinja2==3.1.2
     # via sphinx
-keyring==23.8.1
+keyring==23.8.2
     # via twine
 markupsafe==2.1.1
     # via jinja2
@@ -100,7 +100,7 @@ packaging==21.3
     #   -r requirements/test.txt
     #   pytest
     #   sphinx
-pbr==5.9.0
+pbr==5.10.0
     # via
     #   -r requirements/test.txt
     #   stevedore
@@ -148,7 +148,7 @@ python-dateutil==2.8.2
     # via
     #   -r requirements/test.txt
     #   freezegun
-pytz==2022.1
+pytz==2022.2.1
     # via
     #   -r requirements/test.txt
     #   babel
@@ -169,7 +169,7 @@ rfc3986==2.0.0
     # via twine
 rich==12.5.1
     # via twine
-secretstorage==3.3.2
+secretstorage==3.3.3
     # via keyring
 six==1.16.0
     # via
