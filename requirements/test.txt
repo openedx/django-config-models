@@ -18,7 +18,7 @@ click==8.1.3
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==6.4.3
+coverage[toml]==6.4.4
     # via pytest-cov
 ddt==1.6.0
     # via -r requirements/test.in
@@ -43,7 +43,7 @@ freezegun==1.2.2
     # via -r requirements/test.in
 iniconfig==1.1.1
     # via pytest
-newrelic==7.16.0.178
+newrelic==8.0.0.179
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
