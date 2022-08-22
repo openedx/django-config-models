@@ -31,7 +31,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==1.3.0
     # via edx-lint
-coverage[toml]==6.4.3
+coverage[toml]==6.4.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -76,7 +76,7 @@ markupsafe==2.1.1
     # via jinja2
 mccabe==0.7.0
     # via pylint
-newrelic==7.16.0.178
+newrelic==8.0.0.179
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
