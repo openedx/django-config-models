@@ -31,7 +31,7 @@ DATABASES = {
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'example.apps.ExampleConfig',
+    'mock_apps',
     'config_models',
     'tests'
 )
