@@ -1,0 +1,1 @@
+default_app_config = 'mock_apps.example.apps.ExampleConfig'  # pylint: disable=invalid-name
