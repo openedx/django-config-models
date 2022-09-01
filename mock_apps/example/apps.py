@@ -12,4 +12,4 @@ class ExampleConfig(AppConfig):
     Configuration for the config_models Django application.
     """
 
-    name = 'example'
+    name = 'example_app'
