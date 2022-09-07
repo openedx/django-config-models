@@ -197,7 +197,6 @@ class KeyedConfigurationModelAdmin(ConfigurationModelAdmin):
         # Call our grandparent's add_view, skipping the parent code
         # because the parent code has a different way to prepopulate new configuration entries
         # with the value of the latest config, which doesn't make sense for keyed models.
-        # pylint: disable=bad-super-call
         return super(ConfigurationModelAdmin, self).add_view(request, form_url, extra_context)
 
     def edit_link(self, inst):
