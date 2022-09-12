@@ -18,7 +18,7 @@ babel==2.10.3
     # via sphinx
 bleach==5.0.1
     # via readme-renderer
-certifi==2022.6.15
+certifi==2022.6.15.1
     # via requests
 cffi==1.15.1
     # via
@@ -37,7 +37,7 @@ coverage[toml]==6.4.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==37.0.4
+cryptography==38.0.1
     # via secretstorage
 ddt==1.6.0
     # via -r requirements/test.txt
@@ -62,7 +62,7 @@ docutils==0.19
     # via
     #   readme-renderer
     #   sphinx
-edx-django-utils==5.0.0
+edx-django-utils==5.0.1
     # via -r requirements/test.txt
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
