@@ -37,13 +37,13 @@ django-waffle==3.0.0
     #   -r requirements/base.txt
     #   edx-django-utils
     # via -r requirements/base.txt
-edx-django-utils==5.0.0
+edx-django-utils==5.0.1
     # via -r requirements/base.txt
 freezegun==1.2.2
     # via -r requirements/test.in
 iniconfig==1.1.1
     # via pytest
-newrelic==8.0.0.179
+newrelic==8.1.0.180
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
