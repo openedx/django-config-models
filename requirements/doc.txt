@@ -18,7 +18,7 @@ babel==2.10.3
     # via sphinx
 bleach==5.0.1
     # via readme-renderer
-certifi==2022.9.14
+certifi==2022.9.24
     # via requests
 cffi==1.15.1
     # via
@@ -56,13 +56,13 @@ django-waffle==3.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via -r requirements/test.txt
 docutils==0.19
     # via
     #   readme-renderer
     #   sphinx
-edx-django-utils==5.0.1
+edx-django-utils==5.1.0
     # via -r requirements/test.txt
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
@@ -158,7 +158,7 @@ pytz==2022.2.1
     #   babel
     #   django
     #   djangorestframework
-readme-renderer==37.1
+readme-renderer==37.2
     # via
     #   -r requirements/doc.in
     #   twine
@@ -183,7 +183,7 @@ six==1.16.0
     #   python-dateutil
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.1.1
+sphinx==5.2.1
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -199,7 +199,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via
     #   -r requirements/test.txt
     #   django

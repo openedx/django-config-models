@@ -54,9 +54,9 @@ django-waffle==3.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via -r requirements/test.txt
-edx-django-utils==5.0.1
+edx-django-utils==5.1.0
     # via -r requirements/test.txt
 edx-lint==5.3.0
     # via -r requirements/quality.in
@@ -110,7 +110,7 @@ pycparser==2.21
     #   cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.in
-pylint==2.15.2
+pylint==2.15.3
     # via
     #   edx-lint
     #   pylint-celery
@@ -161,7 +161,7 @@ six==1.16.0
     #   python-dateutil
 snowballstemmer==2.2.0
     # via pydocstyle
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via
     #   -r requirements/test.txt
     #   django
