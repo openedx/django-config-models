@@ -18,7 +18,7 @@ babel==2.10.3
     # via sphinx
 bleach==5.0.1
     # via readme-renderer
-certifi==2022.9.14
+certifi==2022.9.24
     # via requests
 cffi==1.15.1
     # via
@@ -33,7 +33,7 @@ click==8.1.3
     #   edx-django-utils
 commonmark==0.9.1
     # via rich
-coverage[toml]==6.4.4
+coverage[toml]==6.5.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -56,13 +56,13 @@ django-waffle==3.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via -r requirements/test.txt
 docutils==0.19
     # via
     #   readme-renderer
     #   sphinx
-edx-django-utils==5.0.1
+edx-django-utils==5.1.0
     # via -r requirements/test.txt
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
@@ -72,7 +72,7 @@ idna==3.4
     # via requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==4.12.0
+importlib-metadata==5.0.0
     # via
     #   keyring
     #   sphinx
@@ -81,7 +81,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-jaraco-classes==3.2.2
+jaraco-classes==3.2.3
     # via keyring
 jeepney==0.8.0
     # via
@@ -95,7 +95,7 @@ markupsafe==2.1.1
     # via jinja2
 more-itertools==8.14.0
     # via jaraco-classes
-newrelic==8.1.0.180
+newrelic==8.2.0.181
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -144,7 +144,7 @@ pytest==7.1.3
     #   -r requirements/test.txt
     #   pytest-cov
     #   pytest-django
-pytest-cov==3.0.0
+pytest-cov==4.0.0
     # via -r requirements/test.txt
 pytest-django==4.5.2
     # via -r requirements/test.txt
@@ -152,13 +152,13 @@ python-dateutil==2.8.2
     # via
     #   -r requirements/test.txt
     #   freezegun
-pytz==2022.2.1
+pytz==2022.4
     # via
     #   -r requirements/test.txt
     #   babel
     #   django
     #   djangorestframework
-readme-renderer==37.1
+readme-renderer==37.2
     # via
     #   -r requirements/doc.in
     #   twine
@@ -171,7 +171,7 @@ requests-toolbelt==0.9.1
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==12.5.1
+rich==12.6.0
     # via twine
 secretstorage==3.3.3
     # via keyring
@@ -183,7 +183,7 @@ six==1.16.0
     #   python-dateutil
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.1.1
+sphinx==5.2.3
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -199,7 +199,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via
     #   -r requirements/test.txt
     #   django
