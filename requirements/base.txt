@@ -21,11 +21,11 @@ django-crum==0.7.9
     # via edx-django-utils
 django-waffle==3.0.0
     # via edx-django-utils
-djangorestframework==3.13.1
+djangorestframework==3.14.0
     # via -r requirements/base.in
-edx-django-utils==5.0.1
+edx-django-utils==5.1.0
     # via -r requirements/base.in
-newrelic==8.1.0.180
+newrelic==8.2.0.181
     # via edx-django-utils
 pbr==5.10.0
     # via stevedore
@@ -35,11 +35,11 @@ pycparser==2.21
     # via cffi
 pynacl==1.5.0
     # via edx-django-utils
-pytz==2022.2.1
+pytz==2022.4
     # via
     #   django
     #   djangorestframework
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via django
 stevedore==4.0.0
     # via edx-django-utils

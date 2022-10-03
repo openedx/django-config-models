@@ -18,7 +18,7 @@ click==8.1.3
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==6.4.4
+coverage[toml]==6.5.0
     # via pytest-cov
 ddt==1.6.0
     # via -r requirements/test.in
@@ -37,13 +37,13 @@ django-waffle==3.0.0
     #   -r requirements/base.txt
     #   edx-django-utils
     # via -r requirements/base.txt
-edx-django-utils==5.0.1
+edx-django-utils==5.1.0
     # via -r requirements/base.txt
 freezegun==1.2.2
     # via -r requirements/test.in
 iniconfig==1.1.1
     # via pytest
-newrelic==8.1.0.180
+newrelic==8.2.0.181
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -75,20 +75,20 @@ pytest==7.1.3
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==3.0.0
+pytest-cov==4.0.0
     # via -r requirements/test.in
 pytest-django==4.5.2
     # via -r requirements/test.in
 python-dateutil==2.8.2
     # via freezegun
-pytz==2022.2.1
+pytz==2022.4
     # via
     #   -r requirements/base.txt
     #   django
     #   djangorestframework
 six==1.16.0
     # via python-dateutil
-sqlparse==0.4.2
+sqlparse==0.4.3
     # via
     #   -r requirements/base.txt
     #   django
