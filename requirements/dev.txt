@@ -8,7 +8,7 @@ asgiref==3.5.2
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.12.10
+astroid==2.12.11
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -127,7 +127,7 @@ mccabe==0.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==8.2.0.181
+newrelic==8.2.1
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -183,7 +183,7 @@ pycparser==2.21
     #   cffi
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pylint==2.15.3
+pylint==2.15.4
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -259,7 +259,7 @@ sqlparse==0.4.3
     # via
     #   -r requirements/quality.txt
     #   django
-stevedore==4.0.0
+stevedore==4.0.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations

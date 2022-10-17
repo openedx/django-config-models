@@ -25,7 +25,7 @@ djangorestframework==3.14.0
     # via -r requirements/base.in
 edx-django-utils==5.2.0
     # via -r requirements/base.in
-newrelic==8.2.0.181
+newrelic==8.2.1
     # via edx-django-utils
 pbr==5.10.0
     # via stevedore
@@ -41,5 +41,5 @@ pytz==2022.4
     #   djangorestframework
 sqlparse==0.4.3
     # via django
-stevedore==4.0.0
+stevedore==4.0.1
     # via edx-django-utils
