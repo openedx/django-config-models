@@ -14,7 +14,7 @@ attrs==22.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
-babel==2.10.3
+babel==2.11.0
     # via sphinx
 bleach==5.0.1
     # via readme-renderer
@@ -37,7 +37,7 @@ coverage[toml]==6.5.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==38.0.1
+cryptography==38.0.3
     # via secretstorage
 ddt==1.6.0
     # via -r requirements/test.txt
@@ -66,7 +66,7 @@ edx-django-utils==5.2.0
     # via -r requirements/test.txt
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
-exceptiongroup==1.0.0
+exceptiongroup==1.0.1
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -93,7 +93,7 @@ jeepney==0.8.0
     #   secretstorage
 jinja2==3.1.2
     # via sphinx
-keyring==23.9.3
+keyring==23.11.0
     # via twine
 markupsafe==2.1.1
     # via jinja2
@@ -118,7 +118,7 @@ pluggy==1.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
-psutil==5.9.3
+psutil==5.9.4
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -152,13 +152,13 @@ python-dateutil==2.8.2
     # via
     #   -r requirements/test.txt
     #   freezegun
-pytz==2022.5
+pytz==2022.6
     # via
     #   -r requirements/test.txt
     #   babel
     #   django
     #   djangorestframework
-readme-renderer==37.2
+readme-renderer==37.3
     # via
     #   -r requirements/doc.in
     #   twine

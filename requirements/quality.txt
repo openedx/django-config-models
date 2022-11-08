@@ -60,7 +60,7 @@ edx-django-utils==5.2.0
     # via -r requirements/test.txt
 edx-lint==5.3.0
     # via -r requirements/quality.in
-exceptiongroup==1.0.0
+exceptiongroup==1.0.1
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -92,13 +92,13 @@ pbr==5.11.0
     # via
     #   -r requirements/test.txt
     #   stevedore
-platformdirs==2.5.2
+platformdirs==2.5.3
     # via pylint
 pluggy==1.0.0
     # via
     #   -r requirements/test.txt
     #   pytest
-psutil==5.9.3
+psutil==5.9.4
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -147,7 +147,7 @@ python-dateutil==2.8.2
     #   freezegun
 python-slugify==6.1.2
     # via code-annotations
-pytz==2022.5
+pytz==2022.6
     # via
     #   -r requirements/test.txt
     #   django
