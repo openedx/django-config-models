@@ -37,7 +37,7 @@ coverage[toml]==6.5.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==38.0.3
+cryptography==38.0.4
     # via secretstorage
 ddt==1.6.0
     # via -r requirements/test.txt
@@ -66,7 +66,7 @@ edx-django-utils==5.2.0
     # via -r requirements/test.txt
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
-exceptiongroup==1.0.1
+exceptiongroup==1.0.4
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -76,7 +76,7 @@ idna==3.4
     # via requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==5.0.0
+importlib-metadata==5.1.0
     # via
     #   keyring
     #   sphinx
@@ -203,7 +203,7 @@ sqlparse==0.4.3
     # via
     #   -r requirements/test.txt
     #   django
-stevedore==4.1.0
+stevedore==4.1.1
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -216,11 +216,11 @@ twine==4.0.1
     # via -r requirements/doc.in
 typing-extensions==4.4.0
     # via rich
-urllib3==1.26.12
+urllib3==1.26.13
     # via
     #   requests
     #   twine
 webencodings==0.5.1
     # via bleach
-zipp==3.10.0
+zipp==3.11.0
     # via importlib-metadata
