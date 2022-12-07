@@ -1,8 +1,8 @@
 django-config-models
 ********************
 
-django-config-models  |CI|_ |Codecov|_ |pypi-badge| |doc-badge| |pyversions-badge| |license-badge| |status-badge|
-=================================================================================================================
+|CI|_ |Codecov|_ |pypi-badge| |doc-badge| |pyversions-badge| |license-badge| |status-badge|
+===========================================================================================
 
 .. |CI| image:: https://github.com/openedx/django-config-models/workflows/Python%20CI/badge.svg?branch=master
 .. _CI: https://github.com/openedx/django-config-models/actions?query=workflow%3A%22Python+CI%22
