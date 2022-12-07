@@ -15,7 +15,7 @@ jobs:
   upgrade_requirements:
 
     with:
-      branch: ${{ github.event.inputs.branch }}
+      branch: ${{ github.event.inputs.branch || 'master' }}
       team_reviewers: "arbi-bom"
       email_address: "arbi-bom@edx.org"
       send_success_notification: false
