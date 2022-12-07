@@ -7,23 +7,23 @@ django-config-models  |CI|_ |Codecov|_ |pypi-badge| |doc-badge| |pyversions-badg
 .. |CI| image:: https://github.com/openedx/django-config-models/workflows/Python%20CI/badge.svg?branch=master
 .. _CI: https://github.com/openedx/django-config-models/actions?query=workflow%3A%22Python+CI%22
 
-.. |Codecov| image:: http://codecov.io/github/edx/config_models/coverage.svg?branch=master
-.. _Codecov: http://codecov.io/github/edx/config_models?branch=master
+.. |Codecov| image:: http://codecov.io/github/openedx/django-config-models/coverage.svg?branch=master
+.. _Codecov: http://codecov.io/github/openedx/django-config-models?branch=master
 
-.. |pypi-badge| image:: https://img.shields.io/pypi/v/edx-django-utils.svg
-    :target: https://pypi.python.org/pypi/edx-django-utils/
+.. |pypi-badge| image:: https://img.shields.io/pypi/v/django-config-models.svg
+    :target: https://pypi.python.org/pypi/django-config-models/
     :alt: PyPI
 
-.. |doc-badge| image:: https://readthedocs.org/projects/edx-django-utils/badge/?version=latest
-    :target: http://edx-django-utils.readthedocs.io/en/latest/
+.. |doc-badge| image:: https://readthedocs.org/projects/django-config-models/badge/?version=latest
+    :target: http://django-config-models.readthedocs.io/en/latest/
     :alt: Documentation
 
-.. |pyversions-badge| image:: https://img.shields.io/pypi/pyversions/edx-django-utils.svg
-    :target: https://pypi.python.org/pypi/edx-django-utils/
+.. |pyversions-badge| image:: https://img.shields.io/pypi/pyversions/django-config-models.svg
+    :target: https://pypi.python.org/pypi/django-config-models/
     :alt: Supported Python versions
 
-.. |license-badge| image:: https://img.shields.io/github/license/edx/edx-django-utils.svg
-    :target: https://github.com/openedx/edx-django-utils/blob/master/LICENSE.txt
+.. |license-badge| image:: https://img.shields.io/github/license/edx/django-config-models.svg
+    :target: https://github.com/openedx/django-config-models/blob/master/LICENSE.txt
     :alt: License
 
 .. |status-badge| image:: https://img.shields.io/badge/Status-Maintained-brightgreen
