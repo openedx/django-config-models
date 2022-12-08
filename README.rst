@@ -153,7 +153,7 @@ The assigned maintainers for this component and other project details may be
 found in `Backstage`_. Backstage pulls this data from the ``catalog-info.yaml``
 file in this repo.
 
-.. _Backstage: https://open-edx-backstage.herokuapp.com/catalog/default/component/django-config-models
+.. _Backstage: https://backstage.openedx.org/catalog/default/component/django-config-models
 
 Reporting Security Issues
 -------------------------
