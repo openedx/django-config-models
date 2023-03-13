@@ -14,7 +14,7 @@ attrs==22.2.0
     # via
     #   -r requirements/test.txt
     #   pytest
-babel==2.11.0
+babel==2.12.1
     # via sphinx
 bleach==6.0.0
     # via readme-renderer
@@ -25,7 +25,7 @@ cffi==1.15.1
     #   -r requirements/test.txt
     #   cryptography
     #   pynacl
-charset-normalizer==3.0.1
+charset-normalizer==3.1.0
     # via requests
 click==8.1.3
     # via
@@ -35,7 +35,7 @@ coverage[toml]==7.2.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==39.0.1
+cryptography==39.0.2
     # via secretstorage
 ddt==1.6.0
     # via -r requirements/test.txt
@@ -64,7 +64,7 @@ edx-django-utils==5.2.0
     # via -r requirements/test.txt
 edx-sphinx-theme==3.1.0
     # via -r requirements/doc.in
-exceptiongroup==1.1.0
+exceptiongroup==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -101,7 +101,7 @@ markupsafe==2.1.2
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
-more-itertools==9.0.0
+more-itertools==9.1.0
     # via jaraco-classes
 newrelic==8.7.0
     # via
@@ -139,7 +139,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pytest==7.2.1
+pytest==7.2.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -171,7 +171,7 @@ requests-toolbelt==0.10.1
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.3.1
+rich==13.3.2
     # via twine
 secretstorage==3.3.3
     # via keyring
@@ -217,7 +217,7 @@ twine==4.0.2
     # via -r requirements/doc.in
 typing-extensions==4.5.0
     # via rich
-urllib3==1.26.14
+urllib3==1.26.15
     # via
     #   requests
     #   twine
