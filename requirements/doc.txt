@@ -12,15 +12,11 @@ asgiref==3.6.0
     # via
     #   -r requirements/test.txt
     #   django
-attrs==22.2.0
-    # via
-    #   -r requirements/test.txt
-    #   pytest
 babel==2.12.1
     # via
     #   pydata-sphinx-theme
     #   sphinx
-beautifulsoup4==4.12.0
+beautifulsoup4==4.12.2
     # via pydata-sphinx-theme
 bleach==6.0.0
     # via readme-renderer
@@ -37,11 +33,11 @@ click==8.1.3
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-coverage[toml]==7.2.2
+coverage[toml]==7.2.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==39.0.2
+cryptography==40.0.1
     # via secretstorage
 ddt==1.6.0
     # via -r requirements/test.txt
@@ -79,7 +75,7 @@ idna==3.4
     # via requests
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==6.1.0
+importlib-metadata==6.3.0
     # via
     #   keyring
     #   sphinx
@@ -108,7 +104,7 @@ mdurl==0.1.2
     # via markdown-it-py
 more-itertools==9.1.0
     # via jaraco-classes
-newrelic==8.7.0
+newrelic==8.8.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -136,7 +132,7 @@ pycparser==2.21
     # via
     #   -r requirements/test.txt
     #   cffi
-pydata-sphinx-theme==0.13.1
+pydata-sphinx-theme==0.13.3
     # via sphinx-book-theme
 pygments==2.14.0
     # via
@@ -149,7 +145,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pytest==7.2.2
+pytest==7.3.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -162,7 +158,7 @@ python-dateutil==2.8.2
     # via
     #   -r requirements/test.txt
     #   freezegun
-pytz==2022.7.1
+pytz==2023.3
     # via
     #   -r requirements/test.txt
     #   babel
@@ -181,7 +177,7 @@ requests-toolbelt==0.10.1
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.3.2
+rich==13.3.3
     # via twine
 secretstorage==3.3.3
     # via keyring
@@ -200,7 +196,7 @@ sphinx==5.3.0
     #   -r requirements/doc.in
     #   pydata-sphinx-theme
     #   sphinx-book-theme
-sphinx-book-theme==1.0.0
+sphinx-book-theme==1.0.1
     # via -r requirements/doc.in
 sphinxcontrib-applehelp==1.0.4
     # via sphinx
@@ -230,7 +226,9 @@ tomli==2.0.1
 twine==4.0.2
     # via -r requirements/doc.in
 typing-extensions==4.5.0
-    # via rich
+    # via
+    #   pydata-sphinx-theme
+    #   rich
 urllib3==1.26.15
     # via
     #   requests
