@@ -23,7 +23,7 @@ django-waffle==3.0.0
     # via edx-django-utils
 djangorestframework==3.14.0
     # via -r requirements/base.in
-edx-django-utils==5.4.0
+edx-django-utils==5.5.0
     # via -r requirements/base.in
 newrelic==8.8.0
     # via edx-django-utils
@@ -43,5 +43,5 @@ sqlparse==0.4.4
     # via django
 stevedore==5.1.0
     # via edx-django-utils
-typing-extensions==4.6.2
+typing-extensions==4.6.3
     # via asgiref
