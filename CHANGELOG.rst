@@ -16,6 +16,7 @@ Unreleased
 
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
+* Add support for Django 4.2
 
 [2.3.0] - 2022-01-19
 ~~~~~~~~~~~~~~~~~~~~
