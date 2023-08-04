@@ -16,6 +16,7 @@ Unreleased
 
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
+* Fixed ConfigurationModel.current: it will make sure that it does not return None for current configuration.
 
 [2.3.0] - 2022-01-19
 ~~~~~~~~~~~~~~~~~~~~
