@@ -1,10 +1,11 @@
 """
 Tests of ConfigurationModel
 """
-
+from unittest import mock
 
 import ddt
 from django.contrib.auth import get_user_model
+from edx_django_utils.cache.utils import CachedResponse
 from example.models import (ExampleConfig, ExampleKeyedConfig,
                             ManyToManyExampleConfig)
 from freezegun import freeze_time
@@ -41,6 +42,21 @@ class ConfigurationModelTests(CacheIsolationTestCase):
 
         # Follow-on request reads from cache with no database request.
         with self.assertNumQueries(0):
+            cached_current = ExampleConfig.current()
+            self.assertEqual(cached_current.int_field, 10)
+            self.assertEqual(cached_current.string_field, '')
+
+    @mock.patch('config_models.models.TieredCache.get_cached_response')
+    def test_config_with_cached_response_value_none(self, mock_cached_response):
+        mock_cached_response.return_value = CachedResponse(is_found=True, key='test-key', value=None)
+        # First time reads from the database
+        with self.assertNumQueries(1):
+            current = ExampleConfig.current()
+            self.assertEqual(current.int_field, 10)
+            self.assertEqual(current.string_field, '')
+
+        # Follow-on request reads from database instead of cache as cache value will be None.
+        with self.assertNumQueries(1):
             cached_current = ExampleConfig.current()
             self.assertEqual(cached_current.int_field, 10)
             self.assertEqual(cached_current.string_field, '')

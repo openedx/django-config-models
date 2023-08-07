@@ -131,7 +131,7 @@ class ConfigurationModel(models.Model):
         """
         cache_key = cls.cache_key_name(*args)
         cached_response = TieredCache.get_cached_response(cache_key)
-        if cached_response.is_found:
+        if cached_response.is_found and cached_response.value is not None:
             return cached_response.value
 
         key_dict = dict(zip(cls.KEY_FIELDS, args))
