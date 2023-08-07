@@ -11,12 +11,17 @@ Change Log
 
 .. There should always be an "Unreleased" section for changes pending release.
 
-Unreleased
-~~~~~~~~~~
+[2.5.0] - 2023-08-07
+~~~~~~~~~~~~~~~~~~~~
 
+* Fixed ``ConfigurationModel.current``: it will make sure that it does not return None for current configuration.
+
+[2.4.0] - 2023-07-19
+~~~~~~~~~~~~~~~~~~~~
+
+* Added support for Django42 in CI
 * Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
   deprecated
-* Fixed ConfigurationModel.current: it will make sure that it does not return None for current configuration.
 
 [2.3.0] - 2022-01-19
 ~~~~~~~~~~~~~~~~~~~~
