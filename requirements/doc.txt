@@ -33,11 +33,11 @@ click==8.1.6
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-coverage[toml]==7.2.7
+coverage[toml]==7.3.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==41.0.2
+cryptography==41.0.3
     # via secretstorage
 ddt==1.6.0
     # via -r requirements/test.txt
@@ -46,13 +46,14 @@ django==3.2.20
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
     #   django-crum
+    #   django-waffle
     #   djangorestframework
     #   edx-django-utils
 django-crum==0.7.9
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-django-waffle==3.0.0
+django-waffle==4.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -63,7 +64,7 @@ docutils==0.19
     #   pydata-sphinx-theme
     #   readme-renderer
     #   sphinx
-edx-django-utils==5.5.0
+edx-django-utils==5.7.0
     # via -r requirements/test.txt
 exceptiongroup==1.1.2
     # via
@@ -80,7 +81,7 @@ importlib-metadata==6.8.0
     #   keyring
     #   sphinx
     #   twine
-importlib-resources==6.0.0
+importlib-resources==6.0.1
     # via keyring
 iniconfig==2.0.0
     # via
@@ -102,9 +103,9 @@ markupsafe==2.1.3
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
-more-itertools==9.1.0
+more-itertools==10.1.0
     # via jaraco-classes
-newrelic==8.8.1
+newrelic==8.10.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -134,7 +135,7 @@ pycparser==2.21
     #   cffi
 pydata-sphinx-theme==0.13.3
     # via sphinx-book-theme
-pygments==2.15.1
+pygments==2.16.1
     # via
     #   accessible-pygments
     #   pydata-sphinx-theme
@@ -177,7 +178,7 @@ requests-toolbelt==1.0.0
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==13.4.2
+rich==13.5.2
     # via twine
 secretstorage==3.3.3
     # via keyring

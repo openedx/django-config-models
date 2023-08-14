@@ -16,7 +16,7 @@ click==8.1.6
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.2.7
+coverage[toml]==7.3.0
     # via pytest-cov
 ddt==1.6.0
     # via -r requirements/test.in
@@ -24,18 +24,19 @@ ddt==1.6.0
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.txt
     #   django-crum
+    #   django-waffle
     #   djangorestframework
     #   edx-django-utils
 django-crum==0.7.9
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-django-waffle==3.0.0
+django-waffle==4.0.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
     # via -r requirements/base.txt
-edx-django-utils==5.5.0
+edx-django-utils==5.7.0
     # via -r requirements/base.txt
 exceptiongroup==1.1.2
     # via pytest
@@ -43,7 +44,7 @@ freezegun==1.2.2
     # via -r requirements/test.in
 iniconfig==2.0.0
     # via pytest
-newrelic==8.8.1
+newrelic==8.10.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
