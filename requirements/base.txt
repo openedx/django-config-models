@@ -8,24 +8,25 @@ asgiref==3.7.2
     # via django
 cffi==1.15.1
     # via pynacl
-click==8.1.6
+click==8.1.7
     # via edx-django-utils
 django==3.2.20
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
     #   django-crum
+    #   django-waffle
     #   djangorestframework
     #   edx-django-utils
 django-crum==0.7.9
     # via edx-django-utils
-django-waffle==3.0.0
+django-waffle==4.0.0
     # via edx-django-utils
 djangorestframework==3.14.0
     # via -r requirements/base.in
-edx-django-utils==5.5.0
+edx-django-utils==5.7.0
     # via -r requirements/base.in
-newrelic==8.8.1
+newrelic==9.0.0
     # via edx-django-utils
 pbr==5.11.1
     # via stevedore
