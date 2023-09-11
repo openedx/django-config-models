@@ -16,7 +16,7 @@ click==8.1.7
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.3.0
+coverage[toml]==7.3.1
     # via pytest-cov
 ddt==1.6.0
     # via -r requirements/test.in
@@ -68,7 +68,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==7.4.1
+pytest==7.4.2
     # via
     #   pytest-cov
     #   pytest-django
@@ -78,7 +78,7 @@ pytest-django==4.5.2
     # via -r requirements/test.in
 python-dateutil==2.8.2
     # via freezegun
-pytz==2023.3
+pytz==2023.3.post1
     # via
     #   -r requirements/base.txt
     #   django
