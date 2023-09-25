@@ -6,7 +6,7 @@
 #
 distlib==0.3.7
     # via virtualenv
-filelock==3.12.3
+filelock==3.12.4
     # via
     #   tox
     #   virtualenv
@@ -32,7 +32,5 @@ tox-battery==0.6.2
     # via -r requirements/ci.in
 tox-travis==0.13
     # via -r requirements/ci.in
-typing-extensions==4.7.1
-    # via filelock
 virtualenv==20.24.5
     # via tox
