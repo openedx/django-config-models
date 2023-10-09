@@ -8,7 +8,7 @@ asgiref==3.7.2
     # via
     #   -r requirements/base.txt
     #   django
-cffi==1.15.1
+cffi==1.16.0
     # via
     #   -r requirements/base.txt
     #   pynacl
@@ -16,7 +16,7 @@ click==8.1.7
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.3.1
+coverage[toml]==7.3.2
     # via pytest-cov
 ddt==1.6.0
     # via -r requirements/test.in
@@ -44,11 +44,11 @@ freezegun==1.2.2
     # via -r requirements/test.in
 iniconfig==2.0.0
     # via pytest
-newrelic==9.0.0
+newrelic==9.1.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-packaging==23.1
+packaging==23.2
     # via pytest
 pbr==5.11.1
     # via
@@ -97,7 +97,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.7.1
+typing-extensions==4.8.0
     # via
     #   -r requirements/base.txt
     #   asgiref
