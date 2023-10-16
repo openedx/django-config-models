@@ -30,7 +30,7 @@ newrelic==9.1.0
     # via edx-django-utils
 pbr==5.11.1
     # via stevedore
-psutil==5.9.5
+psutil==5.9.6
     # via edx-django-utils
 pycparser==2.21
     # via cffi
