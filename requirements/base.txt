@@ -26,11 +26,11 @@ djangorestframework==3.14.0
     # via -r requirements/base.in
 edx-django-utils==5.7.0
     # via -r requirements/base.in
-newrelic==9.1.0
+newrelic==9.1.1
     # via edx-django-utils
 pbr==5.11.1
     # via stevedore
-psutil==5.9.5
+psutil==5.9.6
     # via edx-django-utils
 pycparser==2.21
     # via cffi
