@@ -24,7 +24,7 @@ django-waffle==4.0.0
     # via edx-django-utils
 djangorestframework==3.14.0
     # via -r requirements/base.in
-edx-django-utils==5.8.0
+edx-django-utils==5.9.0
     # via -r requirements/base.in
 newrelic==9.2.0
     # via edx-django-utils

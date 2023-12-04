@@ -38,11 +38,11 @@ django-waffle==4.0.0
     #   -r requirements/base.txt
     #   edx-django-utils
     # via -r requirements/base.txt
-edx-django-utils==5.8.0
+edx-django-utils==5.9.0
     # via -r requirements/base.txt
 exceptiongroup==1.2.0
     # via pytest
-freezegun==1.2.2
+freezegun==1.3.0
     # via -r requirements/test.in
 iniconfig==2.0.0
     # via pytest
