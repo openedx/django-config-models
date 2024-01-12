@@ -54,6 +54,8 @@ upgrade: ## update the requirements/*.txt files with the latest packages satisfy
 	pip install -r requirements/pip-tools.txt
 	pip-compile --upgrade --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
 	pip-compile --no-emit-trusted-host --no-emit-index-url --rebuild --upgrade -o requirements/pip-tools.txt requirements/pip-tools.in
+	pip install -qr requirements/pip.txt
+	pip install -qr requirements/pip-tools.txt
 	pip-compile --no-emit-trusted-host --no-emit-index-url --rebuild --upgrade -o requirements/base.txt requirements/base.in
 	pip-compile --no-emit-trusted-host --no-emit-index-url --rebuild --upgrade -o requirements/test.txt requirements/test.in
 	pip-compile --no-emit-trusted-host --no-emit-index-url --rebuild --upgrade -o requirements/doc.txt requirements/doc.in
@@ -66,7 +68,7 @@ upgrade: ## update the requirements/*.txt files with the latest packages satisfy
 	rm requirements/test.txt.tmp
 
 pull_translations: ## pull translations from Transifex
-	tx pull -a
+	tx pull -t -a
 
 push_translations: ## push source translation files (.po) from Transifex
 	tx push -s

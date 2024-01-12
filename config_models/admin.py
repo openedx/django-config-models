@@ -197,9 +197,11 @@ class KeyedConfigurationModelAdmin(ConfigurationModelAdmin):
         # Call our grandparent's add_view, skipping the parent code
         # because the parent code has a different way to prepopulate new configuration entries
         # with the value of the latest config, which doesn't make sense for keyed models.
-        # pylint: disable=bad-super-call
         return super(ConfigurationModelAdmin, self).add_view(request, form_url, extra_context)
 
+    @admin.display(
+        description=_('Update')
+    )
     def edit_link(self, inst):
         """ Edit link for the change view """
         if not inst.is_active:
@@ -207,4 +209,3 @@ class KeyedConfigurationModelAdmin(ConfigurationModelAdmin):
         update_url = reverse(f'admin:{self.model._meta.app_label}_{self.model._meta.model_name}_add')
         update_url += f"?source={inst.pk}"
         return format_html('<a href="{}">{}</a>', update_url, _('Update'))
-    edit_link.short_description = _('Update')

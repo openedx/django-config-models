@@ -113,7 +113,7 @@ class ConfigurationModel(models.Model):
     @classmethod
     def cache_key_name(cls, *args):
         """Return the name of the key to use to cache the current configuration"""
-        if cls.KEY_FIELDS != ():    # pylint: disable=use-implicit-booleaness-not-comparison
+        if cls.KEY_FIELDS != ():  # pylint: disable=use-implicit-booleaness-not-comparison
             if len(args) != len(cls.KEY_FIELDS):
                 raise TypeError(
                     f"cache_key_name() takes exactly {len(cls.KEY_FIELDS)} arguments ({len(args)} given)"
@@ -131,7 +131,7 @@ class ConfigurationModel(models.Model):
         """
         cache_key = cls.cache_key_name(*args)
         cached_response = TieredCache.get_cached_response(cache_key)
-        if cached_response.is_found:
+        if cached_response.is_found and cached_response.value is not None:
             return cached_response.value
 
         key_dict = dict(zip(cls.KEY_FIELDS, args))

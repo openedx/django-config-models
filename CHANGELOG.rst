@@ -11,8 +11,22 @@ Change Log
 
 .. There should always be an "Unreleased" section for changes pending release.
 
-Unreleased
-~~~~~~~~~~
+[2.5.1] - 2023-09-22
+~~~~~~~~~~~~~~~~~~~~
+
+* Fixed issues with Django 4.2
+
+[2.5.0] - 2023-08-07
+~~~~~~~~~~~~~~~~~~~~
+
+* Fixed ``ConfigurationModel.current``: it will make sure that it does not return None for current configuration.
+
+[2.4.0] - 2023-07-19
+~~~~~~~~~~~~~~~~~~~~
+
+* Added support for Django42 in CI
+* Switch from ``edx-sphinx-theme`` to ``sphinx-book-theme`` since the former is
+  deprecated
 
 [2.3.0] - 2022-01-19
 ~~~~~~~~~~~~~~~~~~~~
@@ -61,7 +75,7 @@ Unreleased
   memcached roundtrips. This was a major performance issue that accounted for
   10-20% of transaction time for certain courseware views in edx-platform.
 * It is now REQUIRED to add `RequestCacheMiddleware` `to middleware
-  <https://github.com/edx/edx-django-utils/tree/master/edx_django_utils/cache#tieredcachemiddleware>`_
+  <https://github.com/openedx/edx-django-utils/tree/master/edx_django_utils/cache#tieredcachemiddleware>`_
   to use ConfigModels.
 * Remove usage of the "configuration" cache setting. ConfigModels now always use
   the default Django cache.
