@@ -6,5 +6,9 @@
 #   - ModelName.field_name
 ---
 MYSQL:
+  - ExampleKeyedConfig.left
+  - ExampleKeyedConfig.right
 SNOWFLAKE:
+  - ExampleKeyedConfig.left
+  - ExampleKeyedConfig.right
 STITCH:
