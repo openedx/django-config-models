@@ -16,7 +16,7 @@ jobs:
       matrix:
         os: [ubuntu-20.04]
         python-version: ['3.8']
-        toxenv: [quality, docs, django32-drflatest, django42-drflatest]
+        toxenv: [quality, docs, django32-drflatest, django42-drflatest, check_keywords]
     steps:
     - uses: actions/checkout@v4
     - name: setup python

@@ -43,6 +43,7 @@ django==3.2.23
     #   django-crum
     #   django-waffle
     #   djangorestframework
+    #   edx-django-release-util
     #   edx-django-utils
 django-crum==0.7.9
     # via
@@ -53,6 +54,8 @@ django-waffle==4.1.0
     #   -r requirements/test.txt
     #   edx-django-utils
 djangorestframework==3.14.0
+    # via -r requirements/test.txt
+edx-django-release-util==1.3.0
     # via -r requirements/test.txt
 edx-django-utils==5.9.0
     # via -r requirements/test.txt
@@ -145,10 +148,14 @@ pytz==2023.3.post1
     #   django
     #   djangorestframework
 pyyaml==6.0.1
-    # via code-annotations
+    # via
+    #   -r requirements/test.txt
+    #   code-annotations
+    #   edx-django-release-util
 six==1.16.0
     # via
     #   -r requirements/test.txt
+    #   edx-django-release-util
     #   edx-lint
     #   python-dateutil
 snowballstemmer==2.2.0
