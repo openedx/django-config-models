@@ -33,7 +33,8 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'example.apps.ExampleConfig',
     'config_models',
-    'tests'
+    'tests',
+    'release_util'
 )
 
 LOCALE_PATHS = [

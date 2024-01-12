@@ -47,6 +47,7 @@ django==3.2.23
     #   django-crum
     #   django-waffle
     #   djangorestframework
+    #   edx-django-release-util
     #   edx-django-utils
 django-crum==0.7.9
     # via
@@ -63,6 +64,8 @@ docutils==0.19
     #   pydata-sphinx-theme
     #   readme-renderer
     #   sphinx
+edx-django-release-util==1.3.0
+    # via -r requirements/test.txt
 edx-django-utils==5.9.0
     # via -r requirements/test.txt
 exceptiongroup==1.2.0
@@ -163,9 +166,12 @@ python-dateutil==2.8.2
 pytz==2023.3.post1
     # via
     #   -r requirements/test.txt
-    #   babel
     #   django
     #   djangorestframework
+pyyaml==6.0.1
+    # via
+    #   -r requirements/test.txt
+    #   edx-django-release-util
 readme-renderer==42.0
     # via
     #   -r requirements/doc.in
@@ -186,6 +192,7 @@ secretstorage==3.3.3
 six==1.16.0
     # via
     #   -r requirements/test.txt
+    #   edx-django-release-util
     #   python-dateutil
 snowballstemmer==2.2.0
     # via sphinx

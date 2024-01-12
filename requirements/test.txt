@@ -28,6 +28,7 @@ ddt==1.7.0
     #   django-crum
     #   django-waffle
     #   djangorestframework
+    #   edx-django-release-util
     #   edx-django-utils
 django-crum==0.7.9
     # via
@@ -38,6 +39,8 @@ django-waffle==4.1.0
     #   -r requirements/base.txt
     #   edx-django-utils
     # via -r requirements/base.txt
+edx-django-release-util==1.3.0
+    # via -r requirements/test.in
 edx-django-utils==5.9.0
     # via -r requirements/base.txt
 exceptiongroup==1.2.0
@@ -85,8 +88,12 @@ pytz==2023.3.post1
     #   -r requirements/base.txt
     #   django
     #   djangorestframework
+pyyaml==6.0.1
+    # via edx-django-release-util
 six==1.16.0
-    # via python-dateutil
+    # via
+    #   edx-django-release-util
+    #   python-dateutil
 sqlparse==0.4.4
     # via
     #   -r requirements/base.txt
