@@ -38,12 +38,12 @@ code-annotations==1.5.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-coverage[toml]==7.3.3
+coverage[toml]==7.4.0
     # via
     #   -r requirements/quality.txt
     #   coverage
     #   pytest-cov
-ddt==1.7.0
+ddt==1.7.1
     # via -r requirements/quality.txt
 dill==0.3.7
     # via
@@ -90,9 +90,9 @@ filelock==3.13.1
     #   -r requirements/ci.txt
     #   tox
     #   virtualenv
-freezegun==1.3.1
+freezegun==1.4.0
     # via -r requirements/quality.txt
-importlib-metadata==7.0.0
+importlib-metadata==7.0.1
     # via
     #   -r requirements/pip-tools.txt
     #   build
@@ -104,11 +104,11 @@ isort==5.13.2
     # via
     #   -r requirements/quality.txt
     #   pylint
-jinja2==3.1.2
+jinja2==3.1.3
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-lxml==4.9.3
+lxml==5.1.0
     # via edx-i18n-tools
 markupsafe==2.1.3
     # via
@@ -118,7 +118,7 @@ mccabe==0.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==9.3.0
+newrelic==9.5.0
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
@@ -196,7 +196,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.4.3
+pytest==7.4.4
     # via
     #   -r requirements/quality.txt
     #   pytest-cov

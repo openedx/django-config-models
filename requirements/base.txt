@@ -26,7 +26,7 @@ djangorestframework==3.14.0
     # via -r requirements/base.in
 edx-django-utils==5.9.0
     # via -r requirements/base.in
-newrelic==9.3.0
+newrelic==9.5.0
     # via edx-django-utils
 pbr==6.0.0
     # via stevedore
