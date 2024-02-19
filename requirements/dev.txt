@@ -41,7 +41,6 @@ code-annotations==1.6.0
 coverage[toml]==7.4.1
     # via
     #   -r requirements/quality.txt
-    #   coverage
     #   pytest-cov
 ddt==1.7.1
     # via -r requirements/quality.txt
@@ -136,7 +135,7 @@ pbr==6.0.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==7.3.0
+pip-tools==7.4.0
     # via -r requirements/pip-tools.txt
 platformdirs==4.2.0
     # via
@@ -196,7 +195,8 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==8.0.0
+    #   pip-tools
+pytest==8.0.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
