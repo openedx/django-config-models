@@ -4,3 +4,5 @@
 Django                      # Web application framework
 djangorestframework>=3.6
 edx-django-utils
+setuptools
+wheel
