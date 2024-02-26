@@ -8,7 +8,7 @@ asgiref==3.7.2
     # via
     #   -r requirements/test.txt
     #   django
-astroid==3.0.3
+astroid==3.1.0
     # via
     #   pylint
     #   pylint-celery
@@ -27,11 +27,11 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==1.6.0
     # via edx-lint
-coverage[toml]==7.4.1
+coverage[toml]==7.4.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-ddt==1.7.1
+ddt==1.7.2
     # via -r requirements/test.txt
 dill==0.3.8
     # via pylint
@@ -78,7 +78,7 @@ markupsafe==2.1.5
     # via jinja2
 mccabe==0.7.0
     # via pylint
-newrelic==9.6.0
+newrelic==9.7.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -108,7 +108,7 @@ pycparser==2.21
     #   cffi
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pylint==3.0.3
+pylint==3.1.0
     # via
     #   edx-lint
     #   pylint-celery
@@ -126,7 +126,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pytest==8.0.1
+pytest==8.0.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -163,7 +163,7 @@ sqlparse==0.4.4
     # via
     #   -r requirements/test.txt
     #   django
-stevedore==5.1.0
+stevedore==5.2.0
     # via
     #   -r requirements/test.txt
     #   code-annotations
@@ -178,7 +178,7 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.12.3
     # via pylint
-typing-extensions==4.9.0
+typing-extensions==4.10.0
     # via
     #   -r requirements/test.txt
     #   asgiref
