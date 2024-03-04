@@ -12,6 +12,10 @@ astroid==3.1.0
     # via
     #   pylint
     #   pylint-celery
+backports-zoneinfo==0.2.1
+    # via
+    #   -r requirements/test.txt
+    #   django
 cffi==1.16.0
     # via
     #   -r requirements/test.txt
@@ -35,7 +39,7 @@ ddt==1.7.2
     # via -r requirements/test.txt
 dill==0.3.8
     # via pylint
-django==3.2.24
+django==4.2.10
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -126,7 +130,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pytest==8.0.2
+pytest==8.1.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -135,7 +139,7 @@ pytest-cov==4.1.0
     # via -r requirements/test.txt
 pytest-django==4.8.0
     # via -r requirements/test.txt
-python-dateutil==2.8.2
+python-dateutil==2.9.0.post0
     # via
     #   -r requirements/test.txt
     #   freezegun
@@ -144,7 +148,6 @@ python-slugify==8.0.4
 pytz==2024.1
     # via
     #   -r requirements/test.txt
-    #   django
     #   djangorestframework
 pyyaml==6.0.1
     # via
@@ -176,7 +179,7 @@ tomli==2.0.1
     #   coverage
     #   pylint
     #   pytest
-tomlkit==0.12.3
+tomlkit==0.12.4
     # via pylint
 typing-extensions==4.10.0
     # via
