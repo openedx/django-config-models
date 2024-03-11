@@ -56,7 +56,7 @@ distlib==0.3.8
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==4.2.10
+django==4.2.11
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/quality.txt
@@ -78,7 +78,7 @@ djangorestframework==3.14.0
     # via -r requirements/quality.txt
 edx-django-release-util==1.3.0
     # via -r requirements/quality.txt
-edx-django-utils==5.10.1
+edx-django-utils==5.11.0
     # via -r requirements/quality.txt
 edx-i18n-tools==1.3.0
     # via -r requirements/dev.in
@@ -95,7 +95,7 @@ filelock==3.13.1
     #   virtualenv
 freezegun==1.4.0
     # via -r requirements/quality.txt
-importlib-metadata==7.0.1
+importlib-metadata==7.0.2
     # via
     #   -r requirements/pip-tools.txt
     #   build
@@ -125,7 +125,7 @@ newrelic==9.7.0
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-packaging==23.2
+packaging==24.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/pip-tools.txt
@@ -139,7 +139,7 @@ pbr==6.0.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pip-tools==7.4.0
+pip-tools==7.4.1
     # via -r requirements/pip-tools.txt
 platformdirs==4.2.0
     # via
@@ -200,7 +200,7 @@ pyproject-hooks==1.0.0
     #   -r requirements/pip-tools.txt
     #   build
     #   pip-tools
-pytest==8.1.0
+pytest==8.1.1
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
