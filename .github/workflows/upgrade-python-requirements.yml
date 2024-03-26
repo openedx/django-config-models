@@ -16,8 +16,6 @@ jobs:
 
     with:
       branch: ${{ github.event.inputs.branch || 'master' }}
-      team_reviewers: "arbi-bom"
-      email_address: "arbi-bom@edx.org"
       send_success_notification: false
     secrets:
       requirements_bot_github_token: ${{ secrets.REQUIREMENTS_BOT_GITHUB_TOKEN }}
