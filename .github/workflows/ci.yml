@@ -17,9 +17,9 @@ jobs:
         os: [ubuntu-20.04]
         python-version:
         - '3.8'
+        - '3.11'
         - '3.12'
-        toxenv: [quality, docs, django32-drflatest, django42-drflatest, check_keywords,
-          django42]
+        toxenv: [quality, docs, django42-drflatest, check_keywords, django42]
     steps:
     - uses: actions/checkout@v4
     - name: setup python
