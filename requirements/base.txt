@@ -11,11 +11,13 @@ backports-zoneinfo==0.2.1 ; python_version < "3.9"
     #   -c requirements/constraints.txt
     #   django
     #   djangorestframework
+cffi==1.16.0
     # via pynacl
 click==8.1.7
     # via edx-django-utils
 django==4.2.11
     # via
+    #   -c requirements/common_constraints.txt
     #   -r requirements/base.in
     #   django-crum
     #   django-waffle
@@ -39,11 +41,14 @@ pycparser==2.22
     # via cffi
 pynacl==1.5.0
     # via edx-django-utils
-pytz==2024.1
-    # via djangorestframework
 sqlparse==0.4.4
     # via django
 stevedore==5.2.0
     # via edx-django-utils
 typing-extensions==4.10.0
     # via asgiref
+wheel==0.43.0
+    # via -r requirements/base.in
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools

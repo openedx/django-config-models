@@ -27,6 +27,7 @@ coverage[toml]==7.4.4
 ddt==1.7.2
     # via -r requirements/test.in
     # via
+    #   -c requirements/common_constraints.txt
     #   -r requirements/base.txt
     #   django-crum
     #   django-waffle
@@ -108,3 +109,5 @@ typing-extensions==4.10.0
     # via
     #   -r requirements/base.txt
     #   asgiref
+wheel==0.43.0
+    # via -r requirements/base.txt

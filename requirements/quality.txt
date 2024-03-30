@@ -43,6 +43,7 @@ dill==0.3.8
     # via pylint
 django==4.2.11
     # via
+    #   -c requirements/common_constraints.txt
     #   -r requirements/test.txt
     #   django-crum
     #   django-waffle
@@ -184,3 +185,5 @@ typing-extensions==4.10.0
     #   asgiref
     #   astroid
     #   pylint
+wheel==0.43.0
+    # via -r requirements/test.txt
