@@ -11,6 +11,12 @@ Change Log
 
 .. There should always be an "Unreleased" section for changes pending release.
 
+[2.6.0] - 2024-03-30
+~~~~~~~~~~~~~~~~~~~~
+
+* Adding python3.11 and 3.12 support.
+
+
 [2.5.1] - 2023-09-22
 ~~~~~~~~~~~~~~~~~~~~
 
