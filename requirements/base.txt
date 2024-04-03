@@ -47,8 +47,3 @@ stevedore==5.2.0
     # via edx-django-utils
 typing-extensions==4.10.0
     # via asgiref
-wheel==0.43.0
-    # via -r requirements/base.in
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
