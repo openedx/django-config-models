@@ -45,5 +45,5 @@ sqlparse==0.4.4
     # via django
 stevedore==5.2.0
     # via edx-django-utils
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via asgiref

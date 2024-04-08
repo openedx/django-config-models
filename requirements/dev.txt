@@ -40,7 +40,7 @@ click-log==0.4.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-code-annotations==1.7.0
+code-annotations==1.8.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -136,7 +136,7 @@ packaging==24.0
     #   build
     #   pytest
     #   tox
-path==16.10.0
+path==16.12.1
     # via edx-i18n-tools
 pbr==6.0.0
     # via
@@ -273,7 +273,7 @@ tox==3.28.0
     #   tox-travis
 tox-travis==0.13
     # via -r requirements/ci.txt
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via
     #   -r requirements/quality.txt
     #   asgiref
