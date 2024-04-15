@@ -6,29 +6,30 @@
 #
 asgiref==3.8.1
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
 backports-zoneinfo==0.2.1 ; python_version < "3.9"
     # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/base.txt
+    #   -c constraints.txt
+    #   -r base.txt
     #   django
     #   djangorestframework
 cffi==1.16.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   pynacl
 click==8.1.7
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 coverage[toml]==7.4.4
     # via pytest-cov
 ddt==1.7.2
-    # via -r requirements/test.in
+    # via -r test.in
+django==4.2.11
     # via
-    #   -c requirements/common_constraints.txt
-    #   -r requirements/base.txt
+    #   -c common_constraints.txt
+    #   -r base.txt
     #   django-crum
     #   django-waffle
     #   djangorestframework
@@ -36,55 +37,56 @@ ddt==1.7.2
     #   edx-django-utils
 django-crum==0.7.9
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 django-waffle==4.1.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
-    # via -r requirements/base.txt
+djangorestframework==3.15.1
+    # via -r base.txt
 edx-django-release-util==1.4.0
-    # via -r requirements/test.in
+    # via -r test.in
 edx-django-utils==5.12.0
-    # via -r requirements/base.txt
+    # via -r base.txt
 exceptiongroup==1.2.0
     # via pytest
 freezegun==1.4.0
-    # via -r requirements/test.in
+    # via -r test.in
 iniconfig==2.0.0
     # via pytest
 newrelic==9.8.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 packaging==24.0
     # via pytest
 pbr==6.0.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   stevedore
 pluggy==1.4.0
     # via pytest
 psutil==5.9.8
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 pycparser==2.22
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   cffi
 pynacl==1.5.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 pytest==8.1.1
     # via
     #   pytest-cov
     #   pytest-django
 pytest-cov==5.0.0
-    # via -r requirements/test.in
+    # via -r test.in
 pytest-django==4.8.0
-    # via -r requirements/test.in
+    # via -r test.in
 python-dateutil==2.9.0.post0
     # via freezegun
 pyyaml==6.0.1
@@ -93,13 +95,13 @@ six==1.16.0
     # via
     #   edx-django-release-util
     #   python-dateutil
-sqlparse==0.4.4
+sqlparse==0.5.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   django
 stevedore==5.2.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   edx-django-utils
 tomli==2.0.1
     # via
@@ -107,5 +109,5 @@ tomli==2.0.1
     #   pytest
 typing-extensions==4.10.0
     # via
-    #   -r requirements/base.txt
+    #   -r base.txt
     #   asgiref
