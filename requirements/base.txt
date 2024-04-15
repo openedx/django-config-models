@@ -41,9 +41,9 @@ pycparser==2.22
     # via cffi
 pynacl==1.5.0
     # via edx-django-utils
-sqlparse==0.4.4
+sqlparse==0.5.0
     # via django
 stevedore==5.2.0
     # via edx-django-utils
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via asgiref
