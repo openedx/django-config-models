@@ -22,7 +22,7 @@ click==8.1.7
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.4.4
+coverage[toml]==7.5.0
     # via pytest-cov
 ddt==1.7.2
     # via -r requirements/test.in
@@ -47,13 +47,13 @@ edx-django-release-util==1.4.0
     # via -r requirements/test.in
 edx-django-utils==5.12.0
     # via -r requirements/base.txt
-exceptiongroup==1.2.0
+exceptiongroup==1.2.1
     # via pytest
-freezegun==1.4.0
+freezegun==1.5.0
     # via -r requirements/test.in
 iniconfig==2.0.0
     # via pytest
-newrelic==9.8.0
+newrelic==9.9.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -63,7 +63,7 @@ pbr==6.0.0
     # via
     #   -r requirements/base.txt
     #   stevedore
-pluggy==1.4.0
+pluggy==1.5.0
     # via pytest
 psutil==5.9.8
     # via
@@ -77,7 +77,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-pytest==8.1.1
+pytest==8.2.0
     # via
     #   pytest-cov
     #   pytest-django
@@ -93,7 +93,7 @@ six==1.16.0
     # via
     #   edx-django-release-util
     #   python-dateutil
-sqlparse==0.4.4
+sqlparse==0.5.0
     # via
     #   -r requirements/base.txt
     #   django
@@ -105,7 +105,7 @@ tomli==2.0.1
     # via
     #   coverage
     #   pytest
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via
     #   -r requirements/base.txt
     #   asgiref
