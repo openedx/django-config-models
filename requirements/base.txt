@@ -15,7 +15,7 @@ cffi==1.16.0
     # via pynacl
 click==8.1.7
     # via edx-django-utils
-django==4.2.11
+django==4.2.13
     # via
     #   -c requirements/common_constraints.txt
     #   -r requirements/base.in
@@ -29,9 +29,9 @@ django-waffle==4.1.0
     # via edx-django-utils
 djangorestframework==3.15.1
     # via -r requirements/base.in
-edx-django-utils==5.12.0
+edx-django-utils==5.14.2
     # via -r requirements/base.in
-newrelic==9.8.0
+newrelic==9.10.0
     # via edx-django-utils
 pbr==6.0.0
     # via stevedore
@@ -41,9 +41,9 @@ pycparser==2.22
     # via cffi
 pynacl==1.5.0
     # via edx-django-utils
-sqlparse==0.4.4
+sqlparse==0.5.0
     # via django
 stevedore==5.2.0
     # via edx-django-utils
-typing-extensions==4.10.0
+typing-extensions==4.12.1
     # via asgiref
