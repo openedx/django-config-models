@@ -135,9 +135,8 @@ class ConfigurationModel(models.Model):
             return cached_response.value
 
         key_dict = dict(zip(cls.KEY_FIELDS, args))
-        try:
-            current = cls.objects.filter(**key_dict).order_by('-change_date')[0]
-        except IndexError:
+        current = cls.objects.filter(**key_dict).order_by('-change_date').first()
+        if not current or not current.enabled:
             current = cls(**key_dict)
 
         TieredCache.set_all_tiers(cache_key, current, cls.cache_timeout)
