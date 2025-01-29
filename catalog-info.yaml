@@ -13,6 +13,6 @@ metadata:
   annotations:
     openedx.org/arch-interest-groups: ""
 spec:
-  owner: "group:openedx-unmaintained"
+  owner: "user:usamasadiq"
   type: 'library'
   lifecycle: 'production'
