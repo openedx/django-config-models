@@ -11,6 +11,11 @@ Change Log
 
 .. There should always be an "Unreleased" section for changes pending release.
 
+Unreleased
+~~~~~~~~~~
+
+* Drop support for Python 3.8.
+
 [2.6.0] - 2024-03-30
 ~~~~~~~~~~~~~~~~~~~~
 
