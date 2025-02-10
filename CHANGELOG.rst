@@ -11,10 +11,15 @@ Change Log
 
 .. There should always be an "Unreleased" section for changes pending release.
 
-Unreleased
-~~~~~~~~~~
+[2.8.0] - 2025-02-10
+~~~~~~~~~~~~~~~~~~~~
 
 * Drop support for Python 3.8.
+
+[2.7.0] - 2024-04-03
+~~~~~~~~~~~~~~~~~~~~
+
+* Move build requirements out of base.in.
 
 [2.6.0] - 2024-03-30
 ~~~~~~~~~~~~~~~~~~~~
