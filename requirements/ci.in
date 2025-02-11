@@ -2,4 +2,3 @@
 -c constraints.txt
 
 tox                       # Virtualenv management for tests
-tox-travis		  # Make tox understand travis environment vars.

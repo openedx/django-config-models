@@ -17,10 +17,18 @@ build==1.2.2.post1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
+cachetools==5.5.1
+    # via
+    #   -r requirements/ci.txt
+    #   tox
 cffi==1.17.1
     # via
     #   -r requirements/quality.txt
     #   pynacl
+chardet==5.2.0
+    # via
+    #   -r requirements/ci.txt
+    #   tox
 click==8.1.8
     # via
     #   -r requirements/pip-tools.txt
@@ -38,6 +46,10 @@ code-annotations==2.2.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
+colorama==0.4.6
+    # via
+    #   -r requirements/ci.txt
+    #   tox
 coverage[toml]==7.6.11
     # via
     #   -r requirements/quality.txt
@@ -123,6 +135,7 @@ packaging==24.2
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   build
+    #   pyproject-api
     #   pytest
     #   tox
 path==16.16.0
@@ -138,6 +151,7 @@ platformdirs==4.3.6
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   pylint
+    #   tox
     #   virtualenv
 pluggy==1.5.0
     # via
@@ -151,10 +165,6 @@ psutil==6.1.1
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-py==1.11.0
-    # via
-    #   -r requirements/ci.txt
-    #   tox
 pycodestyle==2.12.1
     # via -r requirements/quality.txt
 pycparser==2.22
@@ -187,6 +197,10 @@ pynacl==1.5.0
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
+pyproject-api==1.9.0
+    # via
+    #   -r requirements/ci.txt
+    #   tox
 pyproject-hooks==1.2.0
     # via
     #   -r requirements/pip-tools.txt
@@ -199,7 +213,7 @@ pytest==8.3.4
     #   pytest-django
 pytest-cov==6.0.0
     # via -r requirements/quality.txt
-pytest-django==4.9.0
+pytest-django==4.10.0
     # via -r requirements/quality.txt
 python-dateutil==2.9.0.post0
     # via
@@ -217,12 +231,10 @@ pyyaml==6.0.2
     #   edx-i18n-tools
 six==1.17.0
     # via
-    #   -r requirements/ci.txt
     #   -r requirements/quality.txt
     #   edx-django-release-util
     #   edx-lint
     #   python-dateutil
-    #   tox
 snowballstemmer==2.2.0
     # via
     #   -r requirements/quality.txt
@@ -244,13 +256,9 @@ tomlkit==0.13.2
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==3.28.0
-    # via
-    #   -r requirements/ci.txt
-    #   tox-travis
-tox-travis==0.13
+tox==4.24.1
     # via -r requirements/ci.txt
-virtualenv==20.29.1
+virtualenv==20.29.2
     # via
     #   -r requirements/ci.txt
     #   tox
