@@ -50,7 +50,7 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.6.11
+coverage[toml]==7.6.12
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -161,7 +161,7 @@ pluggy==1.5.0
     #   tox
 polib==1.2.0
     # via edx-i18n-tools
-psutil==6.1.1
+psutil==7.0.0
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
