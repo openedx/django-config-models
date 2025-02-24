@@ -30,7 +30,7 @@ newrelic==10.6.0
     # via edx-django-utils
 pbr==6.1.1
     # via stevedore
-psutil==6.1.1
+psutil==7.0.0
     # via edx-django-utils
 pycparser==2.22
     # via cffi
@@ -38,7 +38,7 @@ pynacl==1.5.0
     # via edx-django-utils
 sqlparse==0.5.3
     # via django
-stevedore==5.4.0
+stevedore==5.4.1
     # via edx-django-utils
 
 # The following packages are considered to be unsafe in a requirements file:
