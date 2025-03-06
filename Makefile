@@ -50,22 +50,28 @@ extract_translations: ## extract strings to be translated, outputting .mo files
 fake_translations: extract_translations dummy_translations compile_translations ## generate and compile dummy translation files
 
 upgrade: export CUSTOM_COMPILE_COMMAND=make upgrade
-upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
+
+# Define PIP_COMPILE_OPTS="-v" to get more information during make compile-requirements.
+compile-requirements: export CUSTOM_COMPILE_COMMAND=make upgrade
+compile-requirements: ## Re-compile requirements/*.in files to *.txt.
 	pip install -r requirements/pip-tools.txt
-	pip-compile --upgrade --allow-unsafe --rebuild -o requirements/pip.txt requirements/pip.in
-	pip-compile --no-emit-trusted-host --no-emit-index-url --rebuild --upgrade -o requirements/pip-tools.txt requirements/pip-tools.in
+	pip-compile $(COMPILE_OPTS) --allow-unsafe requirements/pip.in
+	pip-compile $(COMPILE_OPTS) requirements/pip-tools.in
 	pip install -qr requirements/pip.txt
 	pip install -qr requirements/pip-tools.txt
-	pip-compile --no-emit-trusted-host --no-emit-index-url --rebuild --upgrade -o requirements/base.txt requirements/base.in
-	pip-compile --no-emit-trusted-host --no-emit-index-url --rebuild --upgrade -o requirements/test.txt requirements/test.in
-	pip-compile --no-emit-trusted-host --no-emit-index-url --rebuild --upgrade -o requirements/doc.txt requirements/doc.in
-	pip-compile --no-emit-trusted-host --no-emit-index-url --rebuild --upgrade -o requirements/quality.txt requirements/quality.in
-	pip-compile --no-emit-trusted-host --no-emit-index-url --rebuild --upgrade -o requirements/ci.txt requirements/ci.in
-	pip-compile --no-emit-trusted-host --no-emit-index-url --rebuild --upgrade -o requirements/dev.txt requirements/dev.in
+	pip-compile $(COMPILE_OPTS) requirements/base.in
+	pip-compile $(COMPILE_OPTS) requirements/test.in
+	pip-compile $(COMPILE_OPTS) requirements/doc.in
+	pip-compile $(COMPILE_OPTS) requirements/quality.in
+	pip-compile $(COMPILE_OPTS) requirements/ci.in
+	pip-compile $(COMPILE_OPTS) requirements/dev.in
 	# Let tox control the Django and djangorestframework versions for tests
 	sed -i.tmp '/^[d|D]jango==/d' requirements/test.txt
 	sed -i.tmp '/^djangorestframework==/d' requirements/test.txt
 	rm requirements/test.txt.tmp
+
+upgrade: ## update the requirements/*.txt files with the latest packages satisfying requirements/*.in
+	$(MAKE) compile-requirements COMPILE_OPTS="--upgrade"
 
 pull_translations: ## pull translations from Transifex
 	tx pull -t -a
