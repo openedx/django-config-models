@@ -9,7 +9,7 @@
 # linking to it here is good.
 
 # This file contains all common constraints for edx-repos
--c common_constraints.txt
+-c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
 
 # Temporary to Support the python 3.11 Upgrade
 backports.zoneinfo;python_version<"3.9"  # Newer versions have zoneinfo available in the standard library
