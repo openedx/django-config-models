@@ -41,7 +41,7 @@ cryptography==44.0.2
     # via secretstorage
 ddt==1.7.2
     # via -r requirements/test.txt
-django==4.2.19
+django==4.2.20
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -107,7 +107,7 @@ more-itertools==10.6.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-newrelic==10.6.0
+newrelic==10.7.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
