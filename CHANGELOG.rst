@@ -11,6 +11,11 @@ Change Log
 
 .. There should always be an "Unreleased" section for changes pending release.
 
+[2.9.0] - 2025-04-12
+~~~~~~~~~~~~~~~~~~~~
+
+* Added support for `Django 5.2`.
+
 [2.8.0] - 2025-02-10
 ~~~~~~~~~~~~~~~~~~~~
 
