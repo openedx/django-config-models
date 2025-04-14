@@ -39,13 +39,13 @@ django-waffle==4.2.0
     # via -r requirements/base.txt
 edx-django-release-util==1.4.0
     # via -r requirements/test.in
-edx-django-utils==7.2.0
+edx-django-utils==7.4.0
     # via -r requirements/base.txt
 freezegun==1.5.1
     # via -r requirements/test.in
 iniconfig==2.1.0
     # via pytest
-newrelic==10.8.1
+newrelic==10.9.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils

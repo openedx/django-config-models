@@ -67,7 +67,7 @@ docutils==0.21.2
     #   sphinx
 edx-django-release-util==1.4.0
     # via -r requirements/test.txt
-edx-django-utils==7.2.0
+edx-django-utils==7.4.0
     # via -r requirements/test.txt
 freezegun==1.5.1
     # via -r requirements/test.txt
@@ -107,7 +107,7 @@ more-itertools==10.6.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-newrelic==10.8.1
+newrelic==10.9.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -224,7 +224,7 @@ stevedore==5.4.1
     #   edx-django-utils
 twine==6.1.0
     # via -r requirements/doc.in
-typing-extensions==4.13.1
+typing-extensions==4.13.2
     # via
     #   beautifulsoup4
     #   pydata-sphinx-theme
