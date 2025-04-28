@@ -54,7 +54,7 @@ django-waffle==4.2.0
     #   edx-django-utils
 djangorestframework==3.16.0
     # via -r requirements/test.txt
-edx-django-release-util==1.4.0
+edx-django-release-util==1.5.0
     # via -r requirements/test.txt
 edx-django-utils==7.4.0
     # via -r requirements/test.txt
@@ -74,7 +74,7 @@ markupsafe==3.0.2
     # via jinja2
 mccabe==0.7.0
     # via pylint
-newrelic==10.9.0
+newrelic==10.10.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
