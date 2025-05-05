@@ -74,7 +74,7 @@ markupsafe==3.0.2
     # via jinja2
 mccabe==0.7.0
     # via pylint
-newrelic==10.10.0
+newrelic==10.11.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -104,7 +104,7 @@ pycparser==2.22
     #   cffi
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pylint==3.3.6
+pylint==3.3.7
     # via
     #   edx-lint
     #   pylint-celery
