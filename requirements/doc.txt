@@ -29,7 +29,7 @@ cffi==1.17.1
     #   pynacl
 charset-normalizer==3.4.2
     # via requests
-click==8.1.8
+click==8.2.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
@@ -41,7 +41,7 @@ cryptography==44.0.3
     # via secretstorage
 ddt==1.7.2
     # via -r requirements/test.txt
-django==4.2.20
+django==4.2.21
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
@@ -191,7 +191,7 @@ six==1.17.0
     #   -r requirements/test.txt
     #   edx-django-release-util
     #   python-dateutil
-snowballstemmer==2.2.0
+snowballstemmer==3.0.1
     # via sphinx
 soupsieve==2.7
     # via beautifulsoup4
