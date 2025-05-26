@@ -17,7 +17,7 @@ build==1.2.2.post1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-cachetools==5.5.2
+cachetools==6.0.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -29,7 +29,7 @@ chardet==5.2.0
     # via
     #   -r requirements/ci.txt
     #   tox
-click==8.2.0
+click==8.2.1
     # via
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
@@ -50,7 +50,7 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.8.0
+coverage[toml]==7.8.2
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -86,7 +86,7 @@ djangorestframework==3.16.0
     # via -r requirements/quality.txt
 edx-django-release-util==1.5.0
     # via -r requirements/quality.txt
-edx-django-utils==7.4.0
+edx-django-utils==8.0.0
     # via -r requirements/quality.txt
 edx-i18n-tools==1.9.0
     # via -r requirements/dev.in
@@ -97,7 +97,7 @@ filelock==3.18.0
     #   -r requirements/ci.txt
     #   tox
     #   virtualenv
-freezegun==1.5.1
+freezegun==1.5.2
     # via -r requirements/quality.txt
 iniconfig==2.1.0
     # via
@@ -125,10 +125,6 @@ mccabe==0.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-newrelic==10.12.0
-    # via
-    #   -r requirements/quality.txt
-    #   edx-django-utils
 packaging==25.0
     # via
     #   -r requirements/ci.txt

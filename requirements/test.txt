@@ -12,11 +12,11 @@ cffi==1.17.1
     # via
     #   -r requirements/base.txt
     #   pynacl
-click==8.2.0
+click==8.2.1
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.8.0
+coverage[toml]==7.8.2
     # via pytest-cov
 ddt==1.7.2
     # via -r requirements/test.in
@@ -39,16 +39,12 @@ django-waffle==4.2.0
     # via -r requirements/base.txt
 edx-django-release-util==1.5.0
     # via -r requirements/test.in
-edx-django-utils==7.4.0
+edx-django-utils==8.0.0
     # via -r requirements/base.txt
-freezegun==1.5.1
+freezegun==1.5.2
     # via -r requirements/test.in
 iniconfig==2.1.0
     # via pytest
-newrelic==10.12.0
-    # via
-    #   -r requirements/base.txt
-    #   edx-django-utils
 packaging==25.0
     # via pytest
 pbr==6.1.1
