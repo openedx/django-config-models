@@ -29,15 +29,15 @@ cffi==1.17.1
     #   pynacl
 charset-normalizer==3.4.2
     # via requests
-click==8.2.0
+click==8.2.1
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-coverage[toml]==7.8.0
+coverage[toml]==7.8.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==45.0.2
+cryptography==45.0.3
     # via secretstorage
 ddt==1.7.2
     # via -r requirements/test.txt
@@ -67,9 +67,9 @@ docutils==0.21.2
     #   sphinx
 edx-django-release-util==1.5.0
     # via -r requirements/test.txt
-edx-django-utils==7.4.0
+edx-django-utils==8.0.0
     # via -r requirements/test.txt
-freezegun==1.5.1
+freezegun==1.5.2
     # via -r requirements/test.txt
 id==1.5.0
     # via twine
@@ -107,10 +107,6 @@ more-itertools==10.7.0
     # via
     #   jaraco-classes
     #   jaraco-functools
-newrelic==10.12.0
-    # via
-    #   -r requirements/test.txt
-    #   edx-django-utils
 nh3==0.2.21
     # via readme-renderer
 packaging==25.0
