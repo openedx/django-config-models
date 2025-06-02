@@ -229,7 +229,7 @@ urllib3==2.2.3
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   requests
     #   twine
-zipp==3.21.0
+zipp==3.22.0
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
