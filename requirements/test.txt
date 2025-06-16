@@ -16,7 +16,7 @@ click==8.2.1
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.8.2
+coverage[toml]==7.9.1
     # via pytest-cov
 ddt==1.7.2
     # via -r requirements/test.in
@@ -32,7 +32,7 @@ django-crum==0.7.9
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-django-waffle==4.2.0
+django-waffle==5.0.0
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
@@ -52,7 +52,9 @@ pbr==6.1.1
     #   -r requirements/base.txt
     #   stevedore
 pluggy==1.6.0
-    # via pytest
+    # via
+    #   pytest
+    #   pytest-cov
 psutil==7.0.0
     # via
     #   -r requirements/base.txt
@@ -71,7 +73,7 @@ pytest==8.4.0
     # via
     #   pytest-cov
     #   pytest-django
-pytest-cov==6.1.1
+pytest-cov==6.2.1
     # via -r requirements/test.in
 pytest-django==4.11.1
     # via -r requirements/test.in
