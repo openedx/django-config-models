@@ -4,11 +4,11 @@
 #
 #    make upgrade
 #
-asgiref==3.8.1
+asgiref==3.9.1
     # via
     #   -r requirements/test.txt
     #   django
-astroid==3.3.10
+astroid==3.3.11
     # via
     #   pylint
     #   pylint-celery
@@ -27,7 +27,7 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==2.3.0
     # via edx-lint
-coverage[toml]==7.9.1
+coverage[toml]==7.10.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -37,7 +37,7 @@ dill==0.4.0
     # via pylint
 django==4.2.23
     # via
-    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
+    #   -c https:/raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/test.txt
     #   django-crum
     #   django-waffle
@@ -60,7 +60,7 @@ edx-django-utils==8.0.0
     # via -r requirements/test.txt
 edx-lint==5.6.0
     # via -r requirements/quality.in
-freezegun==1.5.2
+freezegun==1.5.4
     # via -r requirements/test.txt
 iniconfig==2.1.0
     # via
@@ -93,7 +93,7 @@ psutil==7.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pycodestyle==2.13.0
+pycodestyle==2.14.0
     # via -r requirements/quality.in
 pycparser==2.22
     # via
@@ -101,7 +101,7 @@ pycparser==2.22
     #   cffi
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pygments==2.19.1
+pygments==2.19.2
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -115,7 +115,7 @@ pylint-celery==0.3
     # via edx-lint
 pylint-django==2.6.1
     # via edx-lint
-pylint-plugin-utils==0.8.2
+pylint-plugin-utils==0.9.0
     # via
     #   pylint-celery
     #   pylint-django
@@ -123,7 +123,7 @@ pynacl==1.5.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-pytest==8.4.0
+pytest==8.4.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
