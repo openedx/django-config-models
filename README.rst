@@ -46,26 +46,34 @@ Usage
 -----
 
 Create a subclass of ``ConfigurationModel``, with fields for each
-value that needs to be configured::
+value that needs to be configured:
+
+.. code-block:: python
+
+    from django.db import models
+    from config_models.models import ConfigurationModel
 
     class MyConfiguration(ConfigurationModel):
-        frobble_timeout = IntField(default=10)
-        frazzle_target = TextField(defalut="debug")
+        frobble_timeout = models.IntegerField(default=10)
+        frazzle_target = models.TextField(default="debug")
 
 This is a normal django model, so it must be synced and migrated as usual.
 
 The default values for the fields in the ``ConfigurationModel`` will be
 used if no configuration has yet been created.
 
-Register that class with the Admin site, using the ``ConfigurationAdminModel``::
+Register that class with the Admin site, using the ``ConfigurationAdminModel``:
+
+.. code-block:: python
 
     from django.contrib import admin
-
     from config_models.admin import ConfigurationModelAdmin
 
     admin.site.register(MyConfiguration, ConfigurationModelAdmin)
 
-Use the configuration in your code::
+Use the configuration in your code:
+
+.. code-block:: python
 
     def my_view(self, request):
         config = MyConfiguration.current()
@@ -105,7 +113,9 @@ License
 The code in this repository is licensed under the AGPL 3.0 unless
 otherwise noted.
 
-Please see ``LICENSE.txt`` for details.
+Please see `LICENSE.txt`_ for details.
+
+.. _LICENSE.txt: https://github.com/openedx/django-config-models/blob/master/LICENSE.txt
 
 Getting Help
 ------------
@@ -156,4 +166,6 @@ file in this repo.
 Reporting Security Issues
 -------------------------
 
-Please do not report security issues in public. Please email security@openedx.org.
+Please do not report security issues in public. Please email `security@openedx.org`_.
+
+.. _security@openedx.org: security@openedx.org
