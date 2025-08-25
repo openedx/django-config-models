@@ -16,7 +16,7 @@ click==8.2.1
     # via
     #   -r requirements/base.txt
     #   edx-django-utils
-coverage[toml]==7.10.4
+coverage[toml]==7.10.5
     # via pytest-cov
 ddt==1.7.2
     # via -r requirements/test.in
@@ -47,7 +47,7 @@ iniconfig==2.1.0
     # via pytest
 packaging==25.0
     # via pytest
-pbr==7.0.0
+pbr==7.0.1
     # via
     #   -r requirements/base.txt
     #   stevedore
