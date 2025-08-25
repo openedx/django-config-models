@@ -26,7 +26,7 @@ djangorestframework==3.16.1
     # via -r requirements/base.in
 edx-django-utils==8.0.0
     # via -r requirements/base.in
-pbr==7.0.0
+pbr==7.0.1
     # via stevedore
 psutil==7.0.0
     # via edx-django-utils
