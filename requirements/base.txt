@@ -26,8 +26,6 @@ djangorestframework==3.16.1
     # via -r requirements/base.in
 edx-django-utils==8.0.0
     # via -r requirements/base.in
-pbr==7.0.0
-    # via stevedore
 psutil==7.0.0
     # via edx-django-utils
 pycparser==2.22
@@ -36,8 +34,5 @@ pynacl==1.5.0
     # via edx-django-utils
 sqlparse==0.5.3
     # via django
-stevedore==5.4.1
+stevedore==5.5.0
     # via edx-django-utils
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
