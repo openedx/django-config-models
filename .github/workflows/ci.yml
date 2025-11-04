@@ -20,7 +20,7 @@ jobs:
         - '3.12'
         toxenv: [quality, docs, django42-drflatest, django52-drflatest, check_keywords]
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: setup python
       uses: actions/setup-python@v6
       with:
