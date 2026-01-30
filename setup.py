@@ -148,6 +148,7 @@ setup(
         'Framework :: Django',
         'Framework :: Django :: 4.2',
         'Framework :: Django :: 5.2',
+        'Framework :: Django :: 6.0',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
         'Natural Language :: English',

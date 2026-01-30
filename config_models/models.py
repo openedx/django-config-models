@@ -101,10 +101,10 @@ class ConfigurationModel(models.Model):
         # Always create a new entry, instead of updating an existing model
         self.pk = None
         super().save(
-            force_insert,
-            force_update,
-            using,
-            update_fields
+            force_insert=force_insert,
+            force_update=force_update,
+            using=using,
+            update_fields=update_fields
         )
         TieredCache.delete_all_tiers(self.cache_key_name(*[getattr(self, key) for key in self.KEY_FIELDS]))
         if self.KEY_FIELDS:
