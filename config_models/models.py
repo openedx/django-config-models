@@ -94,7 +94,7 @@ class ConfigurationModel(models.Model):
     enabled = models.BooleanField(default=False, verbose_name=_("Enabled"))
 
     def save(self, force_insert=False, force_update=False, using=None,
-             update_fields=None):
+             update_fields=None, **kwargs):
         """
         Clear the cached value when saving a new configuration entry
         """
@@ -104,7 +104,8 @@ class ConfigurationModel(models.Model):
             force_insert,
             force_update,
             using,
-            update_fields
+            update_fields,
+            **kwargs
         )
         TieredCache.delete_all_tiers(self.cache_key_name(*[getattr(self, key) for key in self.KEY_FIELDS]))
         if self.KEY_FIELDS:
