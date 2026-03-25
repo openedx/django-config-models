@@ -17,7 +17,7 @@ build==1.4.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-cachetools==7.0.3
+cachetools==7.0.5
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -38,7 +38,7 @@ click-log==0.4.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-code-annotations==2.3.2
+code-annotations==3.0.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -46,7 +46,7 @@ colorama==0.4.6
     # via
     #   -r requirements/ci.txt
     #   tox
-coverage[toml]==7.13.4
+coverage[toml]==7.13.5
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -78,17 +78,17 @@ django-waffle==5.0.0
     # via
     #   -r requirements/quality.txt
     #   edx-django-utils
-djangorestframework==3.16.1
+djangorestframework==3.17.0
     # via -r requirements/quality.txt
 edx-django-release-util==1.5.0
     # via -r requirements/quality.txt
 edx-django-utils==8.0.1
     # via -r requirements/quality.txt
-edx-i18n-tools==1.9.0
+edx-i18n-tools==2.0.0
     # via -r requirements/dev.in
-edx-lint==5.6.0
+edx-lint==6.0.0
     # via -r requirements/quality.txt
-filelock==3.25.0
+filelock==3.25.2
     # via
     #   -r requirements/ci.txt
     #   python-discovery
@@ -207,7 +207,7 @@ pytest==9.0.2
     #   -r requirements/quality.txt
     #   pytest-cov
     #   pytest-django
-pytest-cov==7.0.0
+pytest-cov==7.1.0
     # via -r requirements/quality.txt
 pytest-django==4.12.0
     # via -r requirements/quality.txt
@@ -215,7 +215,7 @@ python-dateutil==2.9.0.post0
     # via
     #   -r requirements/quality.txt
     #   freezegun
-python-discovery==1.1.0
+python-discovery==1.2.0
     # via
     #   -r requirements/ci.txt
     #   virtualenv
@@ -260,9 +260,9 @@ tomlkit==0.14.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==4.48.1
+tox==4.50.3
     # via -r requirements/ci.txt
-virtualenv==21.1.0
+virtualenv==21.2.0
     # via
     #   -r requirements/ci.txt
     #   tox

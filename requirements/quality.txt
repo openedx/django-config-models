@@ -25,9 +25,9 @@ click==8.3.1
     #   edx-lint
 click-log==0.4.0
     # via edx-lint
-code-annotations==2.3.2
+code-annotations==3.0.0
     # via edx-lint
-coverage[toml]==7.13.4
+coverage[toml]==7.13.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -52,13 +52,13 @@ django-waffle==5.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-djangorestframework==3.16.1
+djangorestframework==3.17.0
     # via -r requirements/test.txt
 edx-django-release-util==1.5.0
     # via -r requirements/test.txt
 edx-django-utils==8.0.1
     # via -r requirements/test.txt
-edx-lint==5.6.0
+edx-lint==6.0.0
     # via -r requirements/quality.in
 freezegun==1.5.5
     # via -r requirements/test.txt
@@ -124,7 +124,7 @@ pytest==9.0.2
     #   -r requirements/test.txt
     #   pytest-cov
     #   pytest-django
-pytest-cov==7.0.0
+pytest-cov==7.1.0
     # via -r requirements/test.txt
 pytest-django==4.12.0
     # via -r requirements/test.txt

@@ -22,7 +22,7 @@ django-crum==0.7.9
     # via edx-django-utils
 django-waffle==5.0.0
     # via edx-django-utils
-djangorestframework==3.16.1
+djangorestframework==3.17.0
     # via -r requirements/base.in
 edx-django-utils==8.0.1
     # via -r requirements/base.in

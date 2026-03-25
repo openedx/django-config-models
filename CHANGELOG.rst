@@ -11,6 +11,11 @@ Change Log
 
 .. There should always be an "Unreleased" section for changes pending release.
 
+Unreleased
+~~~~~~~~~~~~~~~~~~~~
+
+* Dropped Django 4.2 support; updated Sphinx intersphinx to Django 5.2 docs; bumped djangorestframework
+
 [2.9.0] - 2025-04-12
 ~~~~~~~~~~~~~~~~~~~~
 

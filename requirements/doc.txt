@@ -23,20 +23,17 @@ certifi==2026.2.25
 cffi==2.0.0
     # via
     #   -r requirements/test.txt
-    #   cryptography
     #   pynacl
-charset-normalizer==3.4.5
+charset-normalizer==3.4.6
     # via requests
 click==8.3.1
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-coverage[toml]==7.13.4
+coverage[toml]==7.13.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-cryptography==46.0.5
-    # via secretstorage
 ddt==1.7.2
     # via -r requirements/test.txt
 django==5.2.12
@@ -56,7 +53,7 @@ django-waffle==5.0.0
     # via
     #   -r requirements/test.txt
     #   edx-django-utils
-djangorestframework==3.16.1
+djangorestframework==3.17.0
     # via -r requirements/test.txt
 docutils==0.22.4
     # via
@@ -81,14 +78,10 @@ iniconfig==2.3.0
     #   pytest
 jaraco-classes==3.4.0
     # via keyring
-jaraco-context==6.1.0
+jaraco-context==6.1.2
     # via keyring
 jaraco-functools==4.4.0
     # via keyring
-jeepney==0.9.0
-    # via
-    #   keyring
-    #   secretstorage
 jinja2==3.1.6
     # via sphinx
 keyring==25.7.0
@@ -108,7 +101,6 @@ nh3==0.3.3
 packaging==26.0
     # via
     #   -r requirements/test.txt
-    #   pydata-sphinx-theme
     #   pytest
     #   sphinx
     #   twine
@@ -125,7 +117,7 @@ pycparser==3.0
     # via
     #   -r requirements/test.txt
     #   cffi
-pydata-sphinx-theme==0.15.4
+pydata-sphinx-theme==0.16.1
     # via sphinx-book-theme
 pygments==2.19.2
     # via
@@ -145,7 +137,7 @@ pytest==9.0.2
     #   -r requirements/test.txt
     #   pytest-cov
     #   pytest-django
-pytest-cov==7.0.0
+pytest-cov==7.1.0
     # via -r requirements/test.txt
 pytest-django==4.12.0
     # via -r requirements/test.txt
@@ -174,8 +166,6 @@ rich==14.3.3
     # via twine
 roman-numerals==4.1.0
     # via sphinx
-secretstorage==3.5.0
-    # via keyring
 six==1.17.0
     # via
     #   -r requirements/test.txt
@@ -190,7 +180,7 @@ sphinx==9.1.0
     #   -r requirements/doc.in
     #   pydata-sphinx-theme
     #   sphinx-book-theme
-sphinx-book-theme==1.1.4
+sphinx-book-theme==1.2.0
     # via -r requirements/doc.in
 sphinxcontrib-applehelp==2.0.0
     # via sphinx
