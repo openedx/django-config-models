@@ -8,7 +8,7 @@ asgiref==3.11.1
     # via django
 cffi==2.0.0
     # via pynacl
-click==8.3.3
+click==8.4.0
     # via edx-django-utils
 django==5.2.14
     # via
