@@ -19,9 +19,9 @@ jobs:
         - '3.12'
         toxenv: [quality, docs, django52-drflatest, check_keywords]
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
     - name: setup python
-      uses: actions/setup-python@v6
+      uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -38,7 +38,7 @@ jobs:
 
     - name: Run Coverage
       if: matrix.python-version == '3.12' && matrix.toxenv=='django52-drflatest'
-      uses: codecov/codecov-action@v5
+      uses: codecov/codecov-action@75cd11691c0faa626561e295848008c8a7dddffe # v5.5.4
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         files: htmlcov/index.html
