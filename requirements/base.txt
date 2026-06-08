@@ -8,9 +8,9 @@ asgiref==3.11.1
     # via django
 cffi==2.0.0
     # via pynacl
-click==8.3.3
+click==8.4.1
     # via edx-django-utils
-django==5.2.14
+django==5.2.15
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/base.in
@@ -34,5 +34,5 @@ pynacl==1.6.2
     # via edx-django-utils
 sqlparse==0.5.5
     # via django
-stevedore==5.7.0
+stevedore==5.8.0
     # via edx-django-utils
