@@ -1,5 +1,5 @@
 .PHONY: clean compile_translations coverage docs dummy_translations extract_translations \
-	fake_translations help pull_translations push_translations quality requirements test \
+	fake_translations help pull_translations push_translations quality quality-python requirements test \
 	test-all validate check_keywords
 
 .DEFAULT_GOAL := help
@@ -81,6 +81,8 @@ push_translations: ## push source translation files (.po) from Transifex
 
 quality: ## check coding style with pycodestyle and pylint
 	tox -e quality
+
+quality-python: quality ## Alias kept for the Open edX repo health checks
 
 requirements: ## install development environment requirements
 	pip install -qr requirements/pip.txt
