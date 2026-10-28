@@ -23,5 +23,8 @@ build:
 # Optionally set the version of Python and requirements required to build your docs
 python:
    install:
-   - requirements: requirements/doc.txt
+   - method: uv
+     command: sync
+     groups:
+       - doc
 

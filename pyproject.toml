@@ -1,0 +1,128 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm>8.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-config-models"
+description = "Configuration models for Django allowing config management with auditing."
+requires-python = ">=3.12"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE*", "AUTHORS"]
+authors = [
+    {name = "Open edX Project", email = "oscm@openedx.org"},
+]
+keywords = [
+    "Django",
+    "edx",
+]
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Framework :: Django',
+    'Framework :: Django :: 5.2',
+    'Intended Audience :: Developers',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.12',
+]
+
+dynamic = ["readme", "version"]
+
+dependencies = [
+    "Django",
+    "djangorestframework>=3.6",
+    "edx-django-utils",
+]
+
+[project.urls]
+Homepage = "https://github.com/openedx/django-config-models"
+Repository = "https://github.com/openedx/django-config-models"
+
+[dependency-groups]
+test = [
+    "pytest-cov",
+    "pytest-django",
+    "ddt",
+    "freezegun",
+    "edx-django-release-util",
+    "Django>=5.2,<6.0",
+]
+quality = [
+    {include-group = "test"},
+    "edx-lint",
+    "pycodestyle",
+    "pydocstyle",
+]
+doc = [
+    {include-group = "test"},
+    "build",
+    "sphinx-book-theme",
+    "readme_renderer",
+    "Sphinx",
+    "twine",
+]
+ci = [
+    "tox",
+    "tox-uv",
+]
+dev = [
+    {include-group = "quality"},
+    {include-group = "ci"},
+    "edx-i18n-tools",
+]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.rst"], content-type = "text/x-rst"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = [
+    "**/*.html",
+    "**/*.png",
+    "**/*.gif",
+    "**/*js",
+    "**/*.css",
+    "**/*jpg",
+    "**/*jpeg",
+    "**/*svg",
+]
+
+[tool.semantic_release]
+build_command = "pip install build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
+
+[tool.setuptools_scm]
+version_scheme = 'only-version'
+local_scheme = 'no-local-version'
+fallback_version = "0.0.0.dev0"
+
+[tool.uv]
+constraint-dependencies = [
+    "Django<6.0",
+    "elasticsearch<7.14.0",
+    "social-auth-app-django<6.0.0",
+    "social-auth-core<5.0.0",
+    "pip<26.2.1",
+]
+
+[tool.edx_lint]
+uv_constraints = []
+
+[tool.coverage.run]
+branch = true
+data_file = ".coverage"
+source = ["src"]
+omit = [
+    "test_settings",
+    "*migrations*",
+    "*admin.py",
+    "*static*",
+    "*templates*",
+]
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report term-missing"
+norecursedirs = [".*", "docs"]
