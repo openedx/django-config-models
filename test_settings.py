@@ -38,7 +38,7 @@ INSTALLED_APPS = (
 )
 
 LOCALE_PATHS = [
-    root('config_models', 'conf', 'locale'),
+    root('src', 'config_models', 'conf', 'locale'),
 ]
 
 ROOT_URLCONF = 'config_models.urls'
