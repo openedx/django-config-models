@@ -1,8 +1,0 @@
-# Requirements for code quality checks
--c constraints.txt
-
--r test.txt               # Core and test dependencies, for pylint analysis
-
-edx-lint                  # edX pylint rules and plugins
-pycodestyle               # PEP 8 compliance validation
-pydocstyle                # PEP 257 compliance validation

@@ -12,29 +12,14 @@ All configuration values have a default; values that are commented out
 serve to show the default.
 """
 
+import importlib.metadata
 import os
-import re
 import sys
 from datetime import datetime
 from subprocess import check_call
 
 # Configure Django for autodoc usage
 import django
-
-
-def get_version(*file_paths):
-    """
-    Extract the version string from the file.
-    Input:
-     - file_paths: relative path fragments to file with
-                   version string
-    """
-    filename = os.path.join(os.path.dirname(__file__), *file_paths)
-    version_file = open(filename).read()
-    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", version_file, re.M)
-    if version_match:
-        return version_match.group(1)
-    raise RuntimeError('Unable to find version string.')
 
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -48,7 +33,7 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(REPO_ROOT)
 sys.path.append(os.path.join(REPO_ROOT, 'mock_apps'))
 
-VERSION = get_version('../config_models', '__init__.py')
+VERSION = importlib.metadata.version("django-config-models")
 
 if not os.environ.get('DJANGO_SETTINGS_MODULE'):
     os.environ['DJANGO_SETTINGS_MODULE'] = 'test_settings'
@@ -519,7 +504,7 @@ def on_init(app):  # pylint: disable=unused-argument
         # If we are, assemble the path manually
         bin_path = os.path.abspath(os.path.join(sys.prefix, 'bin'))
         apidoc_path = os.path.join(bin_path, apidoc_path)
-    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, 'config_models')])
+    check_call([apidoc_path, '-o', docs_path, os.path.join(root_path, 'src', 'config_models')])
 
 
 def setup(app):
